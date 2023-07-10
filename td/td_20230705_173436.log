@@ -1,0 +1,18 @@
+============================================================
+   Tang Dynasty, V5.6.71036
+      Copyright (c) 2012-2023 Anlogic Inc.
+   Executable = /data/Tools/TD_5.6.2_71036_NL/bin/td
+   Built by =   zhangfan
+   Built at =   19:43, 3月 21
+   Run by =     zhangfan
+   Run Date =   Wed Jul  5 17:34:36 2023
+
+   Run on =     zhangfan-desktop
+============================================================
+RUN-001 : GUI based run...
+Copyright (c) 1998-2019 The OpenSSL Project.  All rights reserved.
+This product includes software developed by the OpenSSL Project
+for use in the OpenSSL Toolkit (http://www.openssl.org/)
+Copyright (C) 1995-1998 Eric Young (eay@cryptsoft.com)
+All rights reserved.
+This product includes cryptographic software written by Eric Young (eay@cryptsoft.com)

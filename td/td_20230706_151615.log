@@ -1,0 +1,33 @@
+============================================================
+   Tang Dynasty, V5.6.71036
+      Copyright (c) 2012-2023 Anlogic Inc.
+   Executable = /data/Tools/TD_5.6.2_71036_NL/bin/td
+   Built by =   zhangfan
+   Built at =   19:43, 3月 21
+   Run by =     zhangfan
+   Run Date =   Thu Jul  6 15:16:15 2023
+
+   Run on =     zhangfan-desktop
+============================================================
+RUN-001 : GUI based run...
+RUN-1002 : start command "import_device ph1_90.db -package PH1A90SBG484"
+ARC-1001 : Device Initialization.
+ARC-1001 : -----------------------------------------------------------
+ARC-1001 :           OPTION          |        IO        |   SETTING   
+ARC-1001 : -----------------------------------------------------------
+ARC-1001 :   non_jtag_persist(none)  |      36 IOs      |    gpio    
+ARC-1001 :            jtag           |  M7/K7/L6/K6/J6  |  dedicate  
+ARC-1001 : -----------------------------------------------------------
+RUN-1003 : finish command "import_device ph1_90.db -package PH1A90SBG484" in  3.871862s wall, 3.770000s user + 0.110000s system = 3.880000s CPU (100.2%)
+
+RUN-1004 : used memory is 672 MB, reserved memory is 688 MB, peak memory is 688 MB
+SYN-2571 : Optimize after map_dsp, round 1
+SYN-1032 : 1363/620 useful/useless nets, 834/592 useful/useless insts
+SYN-1016 : Merged 163 instances.
+SYN-2571 : Optimize after map_dsp, round 1, 1268 better
+SYN-2571 : Optimize after map_dsp, round 2
+SYN-2571 : Optimize after map_dsp, round 2, 0 better
+SYN-1032 : 1172/148 useful/useless nets, 671/0 useful/useless insts
+RUN-1002 : start command "write_verilog /data/Tasks/FrequencyResponseDetector/td/al_ip/dds_mul_0.v -top dds_mul_0"
+HDL-1201 : write out verilog file /data/Tasks/FrequencyResponseDetector/td/al_ip/dds_mul_0.v
+GUI-2000 : The IP files have been created successfully :{PH1A90SBG484(/data/Tasks/FrequencyResponseDetector/td/al_ip/dds_mul_0.ipc)}
