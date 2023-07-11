@@ -156,10 +156,23 @@
     <Runs>
         <Run Name="syn_1" Type="Synthesis" ConstraintSet="constraint_1" Description="" Active="true">
             <Strategy Name="Default_Synthesis_Strategy">
+                <GateProperty>
+                    <opt_area>low</opt_area>
+                    <opt_timing>high</opt_timing>
+                    <retiming>on</retiming>
+                </GateProperty>
             </Strategy>
         </Run>
         <Run Name="phy_1" Type="PhysicalDesign" ConstraintSet="constraint_1" Description="" SynRun="syn_1" Active="true">
             <Strategy Name="Default_PhysicalDesign_Strategy">
+                <PlaceProperty>
+                    <effort>high</effort>
+                    <opt_timing>ultra</opt_timing>
+                </PlaceProperty>
+                <RouteProperty>
+                    <effort>high</effort>
+                    <opt_timing>high</opt_timing>
+                </RouteProperty>
             </Strategy>
         </Run>
     </Runs>

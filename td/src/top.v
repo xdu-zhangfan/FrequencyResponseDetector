@@ -20,21 +20,21 @@ module top (
     output spi_m_sck,
     output spi_m_csn,
 
-    output                     dac_clk_1,
-    output                     dac_wrt_1,
+    output                      dac_clk_1,
+    output                      dac_wrt_1,
     output [`DAC_WIDTH - 1 : 0] dac_data_1,
 
-    output                     dac_clk_2,
-    output                     dac_wrt_2,
+    output                      dac_clk_2,
+    output                      dac_wrt_2,
     output [`DAC_WIDTH - 1 : 0] dac_data_2,
 
-    output                     adc_clk_1,
+    output                      adc_clk_1,
     input  [`ADC_WIDTH - 1 : 0] adc_data_1,
-    input                      adc_otr_1,
+    input                       adc_otr_1,
 
-    output                     adc_clk_2,
+    output                      adc_clk_2,
     input  [`ADC_WIDTH - 1 : 0] adc_data_2,
-    input                      adc_otr_2
+    input                       adc_otr_2
 );
 
   wire sys_clk;
