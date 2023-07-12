@@ -8,9 +8,9 @@ module dds #(
     input clk,
     input rstn,
 
-    input                      dac_clk,
-    output [DAC_WIDTH - 1 : 0] dac_data_1,
-    output [DAC_WIDTH - 1 : 0] dac_data_2,
+    input                          dac_clk,
+    output reg [DAC_WIDTH - 1 : 0] dac_data_1,
+    output reg [DAC_WIDTH - 1 : 0] dac_data_2,
 
     input                     adc_clk,
     input [ADC_WIDTH - 1 : 0] adc_data_1,
@@ -48,11 +48,37 @@ module dds #(
     input [31 : 0] adc_amp_ch_sel,
     input [31 : 0] adc_amp_zero_cal
 );
-  wire [DAC_WIDTH - 1 : 0] dac_data_1_i;
-  wire [DAC_WIDTH - 1 : 0] dac_data_2_i;
+  wire [31 : 0] dac_data_1_i;
+  wire [31 : 0] dac_data_2_i;
+  reg  [31 : 0] dac_data_1_i_r0;
+  reg  [31 : 0] dac_data_2_i_r0;
+  wire          divider_done_1;
+  wire          divider_done_2;
 
-  assign dac_data_1 = (dds_phy_rdy) ? dac_data_1_i + (1 << (DAC_WIDTH - 1)) : {DAC_WIDTH{1'b0}};
-  assign dac_data_2 = (dds_phy_rdy) ? dac_data_2_i + (1 << (DAC_WIDTH - 1)) : {DAC_WIDTH{1'b0}};
+  always @(posedge dac_clk) begin
+    if (!rstn) begin
+      dac_data_1      <= 32'h0;
+      dac_data_2      <= 32'h0;
+      dac_data_1_i_r0 <= 32'h0;
+      dac_data_2_i_r0 <= 32'h0;
+    end else begin
+      if (divider_done_1) begin
+        dac_data_1      <= dac_data_1_i_r0[31 : 32-DAC_WIDTH];
+        dac_data_1_i_r0 <= dac_data_1_i + (1 << 31);
+      end else begin
+        dac_data_1      <= dac_data_1;
+        dac_data_1_i_r0 <= dac_data_1_i_r0;
+      end
+
+      if (divider_done_2) begin
+        dac_data_2      <= dac_data_2_i_r0[31 : 32-DAC_WIDTH];
+        dac_data_2_i_r0 <= dac_data_2_i + (1 << 31);
+      end else begin
+        dac_data_2      <= dac_data_2;
+        dac_data_2_i_r0 <= dac_data_2_i_r0;
+      end
+    end
+  end
 
   reg [31 : 0] dds_fword_source_buf;
   reg [31 : 0] dds_pword_source_buf;
@@ -167,9 +193,12 @@ module dds #(
       .adc_output_amp  (adc_output_amp)
   );
 
-  reg [31 : 0] phase_fword_i;
-  reg [31 : 0] phase_pword_i;
-  reg [31 : 0] amptitude;
+  reg  [31 : 0] phase_fword_i;
+  reg  [31 : 0] phase_pword_i;
+  reg  [31 : 0] amptitude;
+  wire [31 : 0] dds_cos_output;
+  wire [31 : 0] dds_sin_output;
+  wire          dds_phy_rdy;
   dds_phy dds_phy_inst (
       .clk  (dac_clk),
       .rst_n(rstn),
@@ -179,8 +208,34 @@ module dds #(
 
       .phase_out(dds_phy_phase_out),
       .rdy      (dds_phy_rdy),
-      .wave_cos (dac_data_1_i),
-      .wave_sin (dac_data_2_i)
+      .wave_cos (dds_cos_output),
+      .wave_sin (dds_sin_output)
+  );
+
+  dds_divider_0 dds_divider_0_inst_1 (
+      .clk(dac_clk),
+      .rst(~rstn),
+
+      .numerator  (dds_cos_output),
+      .denominator(amptitude),
+
+      .start    (dds_phy_rdy),
+      .done     (divider_done_1),
+      .quotient (dac_data_1_i),
+      .remainder()
+  );
+
+  dds_divider_0 dds_divider_0_inst_2 (
+      .clk(dac_clk),
+      .rst(~rstn),
+
+      .numerator  (dds_sin_output),
+      .denominator(amptitude),
+
+      .start    (dds_phy_rdy),
+      .done     (divider_done_2),
+      .quotient (dac_data_2_i),
+      .remainder()
   );
 
   always @(posedge dac_clk) begin

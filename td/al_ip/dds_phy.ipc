@@ -4,7 +4,7 @@
         <CE>0</CE>
         <FM>1</FM>
         <FREC_OUT>1.000</FREC_OUT>
-        <FREC_SYS>120.000</FREC_SYS>
+        <FREC_SYS>140.000</FREC_SYS>
         <LATENCY_ROM>1</LATENCY_ROM>
         <PHASE_JITTER>0</PHASE_JITTER>
         <PHASE_OUT>1</PHASE_OUT>
@@ -13,10 +13,10 @@
         <RST_LL>low</RST_LL>
         <SIN_WAVE>sin+cos</SIN_WAVE>
         <SYN_CLEAR>0</SYN_CLEAR>
-        <W_DOUT>14</W_DOUT>
+        <W_DOUT>32</W_DOUT>
         <W_JITTER>0</W_JITTER>
         <W_PHASE>32</W_PHASE>
-        <W_PHASE_ANGLE>14</W_PHASE_ANGLE>
+        <W_PHASE_ANGLE>32</W_PHASE_ANGLE>
     </Config>
     <GeneralConfig>
         <Device>PH1A90SBG484</Device>
