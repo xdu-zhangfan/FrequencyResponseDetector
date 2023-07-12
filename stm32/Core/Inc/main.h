@@ -31,8 +31,9 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "stdio.h"
-#include "string.h"
+#include <stdio.h>
+
+#include "fpga.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
@@ -54,23 +55,16 @@ extern "C" {
 void Error_Handler(void);
 
 /* USER CODE BEGIN EFP */
-uint32_t getCurrentMicros(void);
+
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define LED_Pin GPIO_PIN_13
+#define LED_Pin GPIO_PIN_0
 #define LED_GPIO_Port GPIOC
 
 /* USER CODE BEGIN Private defines */
-#define DDS_FREQ 120000000
-#define HMI_SEND_BUF_SIZE 128
-
-#define BASEADDR_ADC_RX_BUF ((unsigned int *)0x20004000)
-#define LENGTH_ADC_RX_BUF 1000
-#define BASEADDR_HMI_RX_BUF ((unsigned char *)(BASEADDR_ADC_RX_BUF + LENGTH_ADC_RX_BUF))
-#define LENGTH_HMI_RX_BUF 2
-#define BASEADDR_HMI_NUM_BUF ((unsigned char *)(BASEADDR_HMI_RX_BUF + LENGTH_HMI_RX_BUF))
-#define LENGTH_HMI_NUM_BUF 8
+#define DDS_FREQ 140000000.0f
+#define FWORD_BANDWIDTH 4294967296.0f
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus

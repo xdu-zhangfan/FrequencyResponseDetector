@@ -5,6 +5,6 @@ openocd \
 -c "init" \
 -c "transport select swd" \
 -c "halt" \
--c "flash write_image erase build/FrequencyResponseDetector.hex" \
+-c "flash write_image erase build/FrequencyResponseDetector.elf" \
 -c "reset" \
 -c "shutdown"

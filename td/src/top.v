@@ -1,6 +1,6 @@
-`define SYS_CLK 200000000
-`define ADC_CLK 60000000
-`define DAC_CLK 100000000
+`define SYS_CLK 280000000
+`define ADC_CLK 70000000
+`define DAC_CLK 140000000
 
 `define DAC_WIDTH 14
 `define ADC_WIDTH 12
@@ -28,13 +28,13 @@ module top (
     output                      dac_wrt_2,
     output [`DAC_WIDTH - 1 : 0] dac_data_2,
 
-    output                      adc_clk_1,
-    input  [`ADC_WIDTH - 1 : 0] adc_data_1,
-    input                       adc_otr_1,
+             output                      adc_clk_1,
+    (*keep*) input  [`ADC_WIDTH - 1 : 0] adc_data_1,
+             input                       adc_otr_1,
 
-    output                      adc_clk_2,
-    input  [`ADC_WIDTH - 1 : 0] adc_data_2,
-    input                       adc_otr_2
+             output                      adc_clk_2,
+    (*keep*) input  [`ADC_WIDTH - 1 : 0] adc_data_2,
+             input                       adc_otr_2
 );
 
   wire sys_clk;
@@ -73,12 +73,18 @@ module top (
   wire [31 : 0] drg_a_start;
   wire [31 : 0] drg_a_end;
   wire [31 : 0] drg_a_step;
-  wire [31 : 0] adc_amp_center;
-  wire [31 : 0] adc_amp_kf;
-  wire [31 : 0] adc_amp_ch_sel;
   wire [31 : 0] adc_freq_center;
   wire [31 : 0] adc_freq_kf;
   wire [31 : 0] adc_freq_ch_sel;
+  wire [31 : 0] adc_freq_zero_cal;
+  wire [31 : 0] adc_phase_center;
+  wire [31 : 0] adc_phase_kf;
+  wire [31 : 0] adc_phase_ch_sel;
+  wire [31 : 0] adc_phase_zero_cal;
+  wire [31 : 0] adc_amp_center;
+  wire [31 : 0] adc_amp_kf;
+  wire [31 : 0] adc_amp_ch_sel;
+  wire [31 : 0] adc_amp_zero_cal;
   spi #(
       .SYSCLK_FREQ(`SYS_CLK),
       .SPICLK_FREQ(1000000),
@@ -101,26 +107,32 @@ module top (
       .spi_m_mosi(spi_m_mosi),
       .spi_m_miso(spi_m_miso),
 
-      .param_wen      (param_wen),
-      .mode           (mode),
-      .direct_fword   (direct_fword),
-      .direct_pword   (direct_pword),
-      .direct_amp     (direct_amp),
-      .drg_f_start    (drg_f_start),
-      .drg_f_end      (drg_f_end),
-      .drg_f_step     (drg_f_step),
-      .drg_p_start    (drg_p_start),
-      .drg_p_end      (drg_p_end),
-      .drg_p_step     (drg_p_step),
-      .drg_a_start    (drg_a_start),
-      .drg_a_end      (drg_a_end),
-      .drg_a_step     (drg_a_step),
-      .adc_amp_center (adc_amp_center),
-      .adc_amp_kf     (adc_amp_kf),
-      .adc_amp_ch_sel (adc_amp_ch_sel),
-      .adc_freq_center(adc_freq_center),
-      .adc_freq_kf    (adc_freq_kf),
-      .adc_freq_ch_sel(adc_freq_ch_sel)
+      .param_wen         (param_wen),
+      .mode              (mode),
+      .direct_fword      (direct_fword),
+      .direct_pword      (direct_pword),
+      .direct_amp        (direct_amp),
+      .drg_f_start       (drg_f_start),
+      .drg_f_end         (drg_f_end),
+      .drg_f_step        (drg_f_step),
+      .drg_p_start       (drg_p_start),
+      .drg_p_end         (drg_p_end),
+      .drg_p_step        (drg_p_step),
+      .drg_a_start       (drg_a_start),
+      .drg_a_end         (drg_a_end),
+      .drg_a_step        (drg_a_step),
+      .adc_freq_center   (adc_freq_center),
+      .adc_freq_kf       (adc_freq_kf),
+      .adc_freq_ch_sel   (adc_freq_ch_sel),
+      .adc_freq_zero_cal (adc_freq_zero_cal),
+      .adc_phase_center  (adc_phase_center),
+      .adc_phase_kf      (adc_phase_kf),
+      .adc_phase_ch_sel  (adc_phase_ch_sel),
+      .adc_phase_zero_cal(adc_phase_zero_cal),
+      .adc_amp_center    (adc_amp_center),
+      .adc_amp_kf        (adc_amp_kf),
+      .adc_amp_ch_sel    (adc_amp_ch_sel),
+      .adc_amp_zero_cal  (adc_amp_zero_cal)
   );
 
   dds #(
@@ -139,26 +151,32 @@ module top (
       .adc_data_1(adc_data_1),
       .adc_data_2(adc_data_2),
 
-      .param_wen      (param_wen),
-      .mode           (mode),
-      .direct_fword   (direct_fword),
-      .direct_pword   (direct_pword),
-      .direct_amp     (direct_amp),
-      .drg_f_start    (drg_f_start),
-      .drg_f_end      (drg_f_end),
-      .drg_f_step     (drg_f_step),
-      .drg_p_start    (drg_p_start),
-      .drg_p_end      (drg_p_end),
-      .drg_p_step     (drg_p_step),
-      .drg_a_start    (drg_a_start),
-      .drg_a_end      (drg_a_end),
-      .drg_a_step     (drg_a_step),
-      .adc_amp_center (adc_amp_center),
-      .adc_amp_kf     (adc_amp_kf),
-      .adc_amp_ch_sel (adc_amp_ch_sel),
-      .adc_freq_center(adc_freq_center),
-      .adc_freq_kf    (adc_freq_kf),
-      .adc_freq_ch_sel(adc_freq_ch_sel)
+      .param_wen         (param_wen),
+      .mode              (mode),
+      .direct_fword      (direct_fword),
+      .direct_pword      (direct_pword),
+      .direct_amp        (direct_amp),
+      .drg_f_start       (drg_f_start),
+      .drg_f_end         (drg_f_end),
+      .drg_f_step        (drg_f_step),
+      .drg_p_start       (drg_p_start),
+      .drg_p_end         (drg_p_end),
+      .drg_p_step        (drg_p_step),
+      .drg_a_start       (drg_a_start),
+      .drg_a_end         (drg_a_end),
+      .drg_a_step        (drg_a_step),
+      .adc_freq_center   (adc_freq_center),
+      .adc_freq_kf       (adc_freq_kf),
+      .adc_freq_ch_sel   (adc_freq_ch_sel),
+      .adc_freq_zero_cal (adc_freq_zero_cal),
+      .adc_phase_center  (adc_phase_center),
+      .adc_phase_kf      (adc_phase_kf),
+      .adc_phase_ch_sel  (adc_phase_ch_sel),
+      .adc_phase_zero_cal(adc_phase_zero_cal),
+      .adc_amp_center    (adc_amp_center),
+      .adc_amp_kf        (adc_amp_kf),
+      .adc_amp_ch_sel    (adc_amp_ch_sel),
+      .adc_amp_zero_cal  (adc_amp_zero_cal)
   );
 
   reg [31 : 0] led_cnt;

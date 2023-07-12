@@ -34,12 +34,18 @@ module spi #(
     output     [31 : 0] drg_a_start,
     output     [31 : 0] drg_a_end,
     output     [31 : 0] drg_a_step,
+    output     [31 : 0] adc_freq_center,
+    output     [31 : 0] adc_freq_kf,
+    output     [31 : 0] adc_freq_ch_sel,
+    output     [31 : 0] adc_freq_zero_cal,
+    output     [31 : 0] adc_phase_center,
+    output     [31 : 0] adc_phase_kf,
+    output     [31 : 0] adc_phase_ch_sel,
+    output     [31 : 0] adc_phase_zero_cal,
     output     [31 : 0] adc_amp_center,
     output     [31 : 0] adc_amp_kf,
     output     [31 : 0] adc_amp_ch_sel,
-    output     [31 : 0] adc_freq_center,
-    output     [31 : 0] adc_freq_kf,
-    output     [31 : 0] adc_freq_ch_sel
+    output     [31 : 0] adc_amp_zero_cal
 );
 
   wire                 spi_m_valid;
@@ -107,7 +113,7 @@ module spi #(
 
   localparam CONFIGURE_RAM_CI_MAX = 256;
   reg [31 : 0] configure_ram[0 : 255];
-  reg [8 : 0] configure_ram_ci;
+  reg [15 : 0] configure_ram_ci;
 
   always @(posedge clk) begin
     if (!rstn) begin
@@ -182,21 +188,20 @@ module spi #(
           end
 
           CONFIG_STATE_RECV_DATA_B0: begin
-            addr_buf  <= addr_buf;
+            addr_buf      <= addr_buf;
+            spi_s_tx_data <= addr_buf;
 
-            param_wen <= 1'b0;
+            param_wen     <= 1'b0;
 
             if (spi_s_valid && spi_s_ready) begin
               spi_s_ready     <= 1'b0;
-              spi_s_tx_data   <= 8'h0;
               data_buf[7 : 0] <= spi_s_rx_data;
 
               config_state    <= CONFIG_STATE_RECV_DATA_B1;
             end else begin
-              spi_s_ready   <= 1'b1;
-              spi_s_tx_data <= addr_buf;
+              spi_s_ready  <= 1'b1;
 
-              config_state  <= CONFIG_STATE_RECV_DATA_B0;
+              config_state <= CONFIG_STATE_RECV_DATA_B0;
             end
           end
 
@@ -282,24 +287,29 @@ module spi #(
     end
   end
 
-  assign mode            = configure_ram[1];
-  assign direct_fword    = configure_ram[2];
-  assign direct_pword    = configure_ram[3];
-  assign direct_amp      = configure_ram[4];
-  assign drg_f_start     = configure_ram[5];
-  assign drg_f_end       = configure_ram[6];
-  assign drg_f_step      = configure_ram[7];
-  assign drg_p_start     = configure_ram[8];
-  assign drg_p_end       = configure_ram[9];
-  assign drg_p_step      = configure_ram[10];
-  assign drg_a_start     = configure_ram[11];
-  assign drg_a_end       = configure_ram[12];
-  assign drg_a_step      = configure_ram[13];
-  assign adc_amp_center  = configure_ram[14];
-  assign adc_amp_kf      = configure_ram[15];
-  assign adc_amp_ch_sel  = configure_ram[16];
-  assign adc_freq_center = configure_ram[17];
-  assign adc_freq_kf     = configure_ram[18];
-  assign adc_freq_ch_sel = configure_ram[19];
-
+  assign mode               = configure_ram[0];
+  assign direct_fword       = configure_ram[1];
+  assign direct_pword       = configure_ram[2];
+  assign direct_amp         = configure_ram[3];
+  assign drg_f_start        = configure_ram[4];
+  assign drg_f_end          = configure_ram[5];
+  assign drg_f_step         = configure_ram[6];
+  assign drg_p_start        = configure_ram[7];
+  assign drg_p_end          = configure_ram[8];
+  assign drg_p_step         = configure_ram[9];
+  assign drg_a_start        = configure_ram[10];
+  assign drg_a_end          = configure_ram[11];
+  assign drg_a_step         = configure_ram[12];
+  assign adc_freq_center    = configure_ram[13];
+  assign adc_freq_kf        = configure_ram[14];
+  assign adc_freq_ch_sel    = configure_ram[15];
+  assign adc_freq_zero_cal  = configure_ram[16];
+  assign adc_phase_center   = configure_ram[17];
+  assign adc_phase_kf       = configure_ram[18];
+  assign adc_phase_ch_sel   = configure_ram[19];
+  assign adc_phase_zero_cal = configure_ram[20];
+  assign adc_amp_center     = configure_ram[21];
+  assign adc_amp_kf         = configure_ram[22];
+  assign adc_amp_ch_sel     = configure_ram[23];
+  assign adc_amp_zero_cal   = configure_ram[24];
 endmodule

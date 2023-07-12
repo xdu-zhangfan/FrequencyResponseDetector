@@ -1,8 +1,3 @@
-`define DDS_MODE_DISABLE 32'h0000_0000
-`define DDS_MODE_DIRECT 32'h0000_0001
-`define DDS_MODE_DRG_PHASE 32'h0000_0002
-`define DDS_MODE_ADC_PHASE 32'h0000_0003
-
 module dds #(
     parameter DDS_FREQ  = 32'd120000000,
     parameter DAC_WIDTH = 14,
@@ -33,18 +28,24 @@ module dds #(
     input [31 : 0] drg_a_start,
     input [31 : 0] drg_a_end,
     input [31 : 0] drg_a_step,
+    input [31 : 0] adc_freq_center,
+    input [31 : 0] adc_freq_kf,
+    input [31 : 0] adc_freq_ch_sel,
+    input [31 : 0] adc_freq_zero_cal,
+    input [31 : 0] adc_phase_center,
+    input [31 : 0] adc_phase_kf,
+    input [31 : 0] adc_phase_ch_sel,
+    input [31 : 0] adc_phase_zero_cal,
     input [31 : 0] adc_amp_center,
     input [31 : 0] adc_amp_kf,
     input [31 : 0] adc_amp_ch_sel,
-    input [31 : 0] adc_freq_center,
-    input [31 : 0] adc_freq_kf,
-    input [31 : 0] adc_freq_ch_sel
+    input [31 : 0] adc_amp_zero_cal
 );
   wire [DAC_WIDTH - 1 : 0] dac_data_1_i;
   wire [DAC_WIDTH - 1 : 0] dac_data_2_i;
 
-  assign dac_data_1 = (dds_phy_rdy) ? dac_data_1_i + 14'd8192 : 14'b0;
-  assign dac_data_2 = (dds_phy_rdy) ? dac_data_2_i + 14'd8192 : 14'b0;
+  assign dac_data_1 = (dds_phy_rdy) ? dac_data_1_i + (1 << (DAC_WIDTH - 1)) : {DAC_WIDTH{1'b0}};
+  assign dac_data_2 = (dds_phy_rdy) ? dac_data_2_i + (1 << (DAC_WIDTH - 1)) : {DAC_WIDTH{1'b0}};
 
   (*keep*) reg [31 : 0] mode_buf;
   always @(posedge clk) begin
@@ -122,13 +123,19 @@ module dds #(
       .clk (dac_clk),
       .rstn(rstn),
 
-      .param_wen      (param_wen),
-      .adc_freq_center(adc_freq_center),
-      .adc_freq_kf    (adc_freq_kf),
-      .adc_freq_ch_sel(adc_freq_ch_sel),
-      .adc_amp_center (adc_amp_center),
-      .adc_amp_kf     (adc_amp_kf),
-      .adc_amp_ch_sel (adc_amp_ch_sel),
+      .param_wen         (param_wen),
+      .adc_freq_center   (adc_freq_center),
+      .adc_freq_kf       (adc_freq_kf),
+      .adc_freq_ch_sel   (adc_freq_ch_sel),
+      .adc_freq_zero_cal (adc_freq_zero_cal),
+      .adc_phase_center  (adc_phase_center),
+      .adc_phase_kf      (adc_phase_kf),
+      .adc_phase_ch_sel  (adc_phase_ch_sel),
+      .adc_phase_zero_cal(adc_phase_zero_cal),
+      .adc_amp_center    (adc_amp_center),
+      .adc_amp_kf        (adc_amp_kf),
+      .adc_amp_ch_sel    (adc_amp_ch_sel),
+      .adc_amp_zero_cal  (adc_amp_zero_cal),
 
       .adc_en(adc_en),
 
@@ -170,7 +177,7 @@ module dds #(
     end
     begin
       case (mode_buf)
-        `DDS_MODE_DISABLE: begin
+        32'h0000_0000: begin
           direct_en     <= 1'b0;
           drg_en        <= 1'b0;
           adc_en        <= 1'b0;
@@ -180,7 +187,7 @@ module dds #(
           amptitude     <= 32'h0;
         end
 
-        `DDS_MODE_DIRECT: begin
+        32'h0000_0001: begin
           direct_en     <= 1'b1;
           drg_en        <= 1'b0;
           adc_en        <= 1'b0;
@@ -190,7 +197,7 @@ module dds #(
           amptitude     <= direct_output_amp;
         end
 
-        `DDS_MODE_DRG_PHASE: begin
+        32'h0000_0002: begin
           direct_en     <= 1'b0;
           drg_en        <= 1'b1;
           adc_en        <= 1'b0;
@@ -200,7 +207,7 @@ module dds #(
           amptitude     <= drg_output_amp;
         end
 
-        `DDS_MODE_ADC_PHASE: begin
+        32'h0000_0003: begin
           direct_en     <= 1'b0;
           drg_en        <= 1'b0;
           adc_en        <= 1'b1;

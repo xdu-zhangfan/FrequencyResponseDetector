@@ -18,8 +18,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-#include "adc.h"
-#include "dma.h"
+#include "rng.h"
 #include "spi.h"
 #include "tim.h"
 #include "usart.h"
@@ -49,22 +48,6 @@
 
 /* USER CODE BEGIN PV */
 unsigned int led_state = 0;
-
-unsigned int *adc_buffer = BASEADDR_ADC_RX_BUF;
-unsigned char *hmi_buffer = BASEADDR_HMI_RX_BUF;
-unsigned char *hmi_num_buffer = BASEADDR_HMI_NUM_BUF;
-unsigned int hmi_num_buffer_index = 0;
-
-unsigned int hmi_single_tone_freq = 0;
-unsigned int hmi_single_tone_phase_delay = 0;
-unsigned int hmi_single_tone_amp_attenuation = 0;
-
-unsigned int hmi_sweep_freq_start = 100000;
-unsigned int hmi_sweep_freq_end = 10000000;
-unsigned int hmi_sweep_freq_step = 10000;
-
-unsigned int hmi_page_n = 0;
-unsigned int hmi_page_2_box_n = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -78,34 +61,15 @@ void SystemClock_Config(void);
 int _write(int file, char *ptr, int len)
 {
   HAL_UART_Transmit(&huart1, (const uint8_t *)ptr, len, HAL_MAX_DELAY);
+
   return len;
-}
-
-__STATIC_INLINE uint32_t GXT_SYSTICK_IsActiveCounterFlag(void)
-{
-  return ((SysTick->CTRL & SysTick_CTRL_COUNTFLAG_Msk) == (SysTick_CTRL_COUNTFLAG_Msk));
-}
-
-uint32_t getCurrentMicros(void)
-{
-  /* Ensure COUNTFLAG is reset by reading SysTick control and status register */
-  GXT_SYSTICK_IsActiveCounterFlag();
-  uint32_t m = HAL_GetTick();
-  const uint32_t tms = SysTick->LOAD + 1;
-  __IO uint32_t u = tms - SysTick->VAL;
-  if (GXT_SYSTICK_IsActiveCounterFlag())
-  {
-    m = HAL_GetTick();
-    u = tms - SysTick->VAL;
-  }
-  return (m * 1000 + (u * 1000) / tms);
 }
 /* USER CODE END 0 */
 
 /**
-  * @brief  The application entry point.
-  * @retval int
-  */
+ * @brief  The application entry point.
+ * @retval int
+ */
 int main(void)
 {
   /* USER CODE BEGIN 1 */
@@ -130,60 +94,32 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
-  MX_DMA_Init();
-  MX_ADC1_Init();
   MX_TIM1_Init();
-  MX_TIM2_Init();
-  MX_SPI1_Init();
-  MX_SPI2_Init();
   MX_USART1_UART_Init();
-  MX_USART2_UART_Init();
+  MX_RNG_Init();
+  MX_SPI1_Init();
   /* USER CODE BEGIN 2 */
 
-  char hmi_send_buf[HMI_SEND_BUF_SIZE] = {0};
-
-  printf("Hello World.\r\n");
-
-#ifdef DEBUG
-  printf("[%.3f] MAIN: Initializing TIMs.\r\n", 1.0f * getCurrentMicros() / 1000.0f);
-#endif
+  printf("Hello world.\r\n");
 
   HAL_TIM_Base_Start_IT(&htim1);
-  HAL_TIM_Base_Start_IT(&htim2);
+  fpga_init(&hspi1, NULL);
 
-#ifdef DEBUG
-  printf("[%.3f] MAIN: Initializing ADC.\r\n", 1.0f * getCurrentMicros() / 1000.0f);
-#endif
+  // fpga_write_reg(0x00, 1);
+  // fpga_write_reg(0x01, 2000000.0f * FWORD_BANDWIDTH / DDS_FREQ);
+  // fpga_write_reg(0x02, 0);
+  // fpga_write_reg(0x03, 0);
 
-  HAL_ADC_Start_DMA(&hadc1, adc_buffer, LENGTH_ADC_RX_BUF);
+  // fpga_write_reg(0x00, 2);
+  // fpga_write_reg(0x04, 1000.0f * FWORD_BANDWIDTH / DDS_FREQ);
+  // fpga_write_reg(0x05, 10000000.0f * FWORD_BANDWIDTH / DDS_FREQ);
+  // fpga_write_reg(0x06, 10.0f * FWORD_BANDWIDTH / DDS_FREQ);
 
-#ifdef DEBUG
-  printf("[%.3f] MAIN: Initializing HMI.\r\n", 1.0f * getCurrentMicros() / 1000.0f);
-#endif
-
-  HAL_UART_Receive_DMA(&huart2, hmi_buffer, LENGTH_HMI_RX_BUF);
-
-#ifdef DEBUG
-  printf("[%.3f] MAIN: Initializing FPGA.\r\n", 1.0f * getCurrentMicros() / 1000.0f);
-#endif
-
-  unsigned int sine_freq = 10000000;
-
-  unsigned int phase_fword = 1.0f * sine_freq * 0x100000000 / DDS_FREQ + 0.5f;
-  unsigned int offset_pos_cal = 0;
-  unsigned int offset_neg_cal = 0;
-
-  unsigned char spi_tx_buffer[6] = {0};
-  unsigned char spi_rx_buffer[6] = {0};
-  spi_tx_buffer[0] = 0x5a;
-
-#ifdef DEBUG
-  printf("[%.3f] MAIN: \r\n", 1.0f * getCurrentMicros() / 1000.0f);
-#endif
-
-  memset(hmi_send_buf, 0x00, HMI_SEND_BUF_SIZE);
-  sprintf(hmi_send_buf, "page 0\xff\xff\xff");
-  HAL_UART_Transmit(&huart2, hmi_send_buf, strlen(hmi_send_buf), HAL_MAX_DELAY);
+  fpga_write_reg(0x00, 3);
+  fpga_write_reg(13, 8800000.0f * FWORD_BANDWIDTH / DDS_FREQ);
+  fpga_write_reg(14, 65536);
+  fpga_write_reg(15, 1);
+  fpga_write_reg(16, 2051);
 
   /* USER CODE END 2 */
 
@@ -194,67 +130,45 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-    // spi_tx_buffer[1] = 0x00;
-    // memcpy(&(spi_tx_buffer[2]), &phase_fword, sizeof(unsigned int));
-    // HAL_SPI_TransmitReceive(&hspi1, spi_tx_buffer, spi_rx_buffer, 6, 100);
-    // printf("[%.3f] MAIN: %02x %02x %02x %02x %02x %02x\r\n", 1.0f * getCurrentMicros() / 1000.0f,
-    //  spi_rx_buffer[0], spi_rx_buffer[1], spi_rx_buffer[2], spi_rx_buffer[3], spi_rx_buffer[4], spi_rx_buffer[5]);
 
-    // HAL_Delay(10);
-
-    // spi_tx_buffer[1] = 0x01;
-    // memcpy(&(spi_tx_buffer[2]), &offset_pos_cal, sizeof(unsigned int));
-    // HAL_SPI_TransmitReceive(&hspi1, spi_tx_buffer, spi_rx_buffer, 6, 100);
-    // printf("[%.3f] MAIN: %02x %02x %02x %02x %02x %02x\r\n", 1.0f * getCurrentMicros() / 1000.0f,
-    //  spi_rx_buffer[0], spi_rx_buffer[1], spi_rx_buffer[2], spi_rx_buffer[3], spi_rx_buffer[4], spi_rx_buffer[5]);
-
-    // HAL_Delay(10);
-
-    // spi_tx_buffer[1] = 0x02;
-    // memcpy(&(spi_tx_buffer[2]), &offset_neg_cal, sizeof(unsigned int));
-    // HAL_SPI_TransmitReceive(&hspi1, spi_tx_buffer, spi_rx_buffer, 6, 100);
-    // printf("[%.3f] MAIN: %02x %02x %02x %02x %02x %02x\r\n", 1.0f * getCurrentMicros() / 1000.0f,
-    //  spi_rx_buffer[0], spi_rx_buffer[1], spi_rx_buffer[2], spi_rx_buffer[3], spi_rx_buffer[4], spi_rx_buffer[5]);
-
-    HAL_Delay(500);
+    HAL_Delay(100);
   }
   /* USER CODE END 3 */
 }
 
 /**
-  * @brief System Clock Configuration
-  * @retval None
-  */
+ * @brief System Clock Configuration
+ * @retval None
+ */
 void SystemClock_Config(void)
 {
   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
 
   /** Configure the main internal regulator output voltage
-  */
+   */
   __HAL_RCC_PWR_CLK_ENABLE();
-  __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE2);
+  __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE1);
 
   /** Initializes the RCC Oscillators according to the specified parameters
-  * in the RCC_OscInitTypeDef structure.
-  */
+   * in the RCC_OscInitTypeDef structure.
+   */
   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
   RCC_OscInitStruct.HSEState = RCC_HSE_ON;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
-  RCC_OscInitStruct.PLL.PLLM = 25;
-  RCC_OscInitStruct.PLL.PLLN = 168;
+  RCC_OscInitStruct.PLL.PLLM = 4;
+  RCC_OscInitStruct.PLL.PLLN = 72;
   RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
-  RCC_OscInitStruct.PLL.PLLQ = 4;
+  RCC_OscInitStruct.PLL.PLLQ = 3;
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
   {
     Error_Handler();
   }
 
   /** Initializes the CPU, AHB and APB buses clocks
-  */
-  RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
-                              |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
+   */
+  RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_SYSCLK | RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2;
   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
@@ -266,7 +180,7 @@ void SystemClock_Config(void)
   }
 
   /** Enables the Clock Security System
-  */
+   */
   HAL_RCC_EnableCSS();
 }
 
@@ -275,9 +189,9 @@ void SystemClock_Config(void)
 /* USER CODE END 4 */
 
 /**
-  * @brief  This function is executed in case of error occurrence.
-  * @retval None
-  */
+ * @brief  This function is executed in case of error occurrence.
+ * @retval None
+ */
 void Error_Handler(void)
 {
   /* USER CODE BEGIN Error_Handler_Debug */
@@ -289,14 +203,14 @@ void Error_Handler(void)
   /* USER CODE END Error_Handler_Debug */
 }
 
-#ifdef  USE_FULL_ASSERT
+#ifdef USE_FULL_ASSERT
 /**
-  * @brief  Reports the name of the source file and the source line number
-  *         where the assert_param error has occurred.
-  * @param  file: pointer to the source file name
-  * @param  line: assert_param error line source number
-  * @retval None
-  */
+ * @brief  Reports the name of the source file and the source line number
+ *         where the assert_param error has occurred.
+ * @param  file: pointer to the source file name
+ * @param  line: assert_param error line source number
+ * @retval None
+ */
 void assert_failed(uint8_t *file, uint32_t line)
 {
   /* USER CODE BEGIN 6 */
