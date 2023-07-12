@@ -21,19 +21,24 @@ module spi #(
     input  spi_m_miso,
 
     output reg          param_wen,
-    output     [31 : 0] mode,
+    output     [31 : 0] dds_fword_source,
+    output     [31 : 0] dds_pword_source,
+    output     [31 : 0] dds_amp_source,
     output     [31 : 0] direct_fword,
     output     [31 : 0] direct_pword,
     output     [31 : 0] direct_amp,
-    output     [31 : 0] drg_f_start,
-    output     [31 : 0] drg_f_end,
-    output     [31 : 0] drg_f_step,
-    output     [31 : 0] drg_p_start,
-    output     [31 : 0] drg_p_end,
-    output     [31 : 0] drg_p_step,
-    output     [31 : 0] drg_a_start,
-    output     [31 : 0] drg_a_end,
-    output     [31 : 0] drg_a_step,
+    output     [31 : 0] drg_freq_start,
+    output     [31 : 0] drg_freq_end,
+    output     [31 : 0] drg_freq_step,
+    output     [31 : 0] drg_freq_pulse,
+    output     [31 : 0] drg_phase_start,
+    output     [31 : 0] drg_phase_end,
+    output     [31 : 0] drg_phase_step,
+    output     [31 : 0] drg_phase_pulse,
+    output     [31 : 0] drg_amp_start,
+    output     [31 : 0] drg_amp_end,
+    output     [31 : 0] drg_amp_step,
+    output     [31 : 0] drg_amp_pulse,
     output     [31 : 0] adc_freq_center,
     output     [31 : 0] adc_freq_kf,
     output     [31 : 0] adc_freq_ch_sel,
@@ -287,29 +292,34 @@ module spi #(
     end
   end
 
-  assign mode               = configure_ram[0];
-  assign direct_fword       = configure_ram[1];
-  assign direct_pword       = configure_ram[2];
-  assign direct_amp         = configure_ram[3];
-  assign drg_f_start        = configure_ram[4];
-  assign drg_f_end          = configure_ram[5];
-  assign drg_f_step         = configure_ram[6];
-  assign drg_p_start        = configure_ram[7];
-  assign drg_p_end          = configure_ram[8];
-  assign drg_p_step         = configure_ram[9];
-  assign drg_a_start        = configure_ram[10];
-  assign drg_a_end          = configure_ram[11];
-  assign drg_a_step         = configure_ram[12];
-  assign adc_freq_center    = configure_ram[13];
-  assign adc_freq_kf        = configure_ram[14];
-  assign adc_freq_ch_sel    = configure_ram[15];
-  assign adc_freq_zero_cal  = configure_ram[16];
-  assign adc_phase_center   = configure_ram[17];
-  assign adc_phase_kf       = configure_ram[18];
-  assign adc_phase_ch_sel   = configure_ram[19];
-  assign adc_phase_zero_cal = configure_ram[20];
-  assign adc_amp_center     = configure_ram[21];
-  assign adc_amp_kf         = configure_ram[22];
-  assign adc_amp_ch_sel     = configure_ram[23];
-  assign adc_amp_zero_cal   = configure_ram[24];
+  assign dds_fword_source   = configure_ram[8'h01];
+  assign dds_pword_source   = configure_ram[8'h02];
+  assign dds_amp_source     = configure_ram[8'h03];
+  assign direct_fword       = configure_ram[8'h11];
+  assign direct_pword       = configure_ram[8'h12];
+  assign direct_amp         = configure_ram[8'h13];
+  assign drg_freq_start     = configure_ram[8'h21];
+  assign drg_freq_end       = configure_ram[8'h22];
+  assign drg_freq_step      = configure_ram[8'h23];
+  assign drg_freq_pulse     = configure_ram[8'h24];
+  assign drg_phase_start    = configure_ram[8'h25];
+  assign drg_phase_end      = configure_ram[8'h26];
+  assign drg_phase_step     = configure_ram[8'h27];
+  assign drg_phase_pulse    = configure_ram[8'h28];
+  assign drg_amp_start      = configure_ram[8'h29];
+  assign drg_amp_end        = configure_ram[8'h2a];
+  assign drg_amp_step       = configure_ram[8'h2b];
+  assign drg_amp_pulse      = configure_ram[8'h2c];
+  assign adc_freq_center    = configure_ram[8'h31];
+  assign adc_freq_kf        = configure_ram[8'h32];
+  assign adc_freq_ch_sel    = configure_ram[8'h33];
+  assign adc_freq_zero_cal  = configure_ram[8'h34];
+  assign adc_phase_center   = configure_ram[8'h35];
+  assign adc_phase_kf       = configure_ram[8'h36];
+  assign adc_phase_ch_sel   = configure_ram[8'h37];
+  assign adc_phase_zero_cal = configure_ram[8'h38];
+  assign adc_amp_center     = configure_ram[8'h39];
+  assign adc_amp_kf         = configure_ram[8'h3a];
+  assign adc_amp_ch_sel     = configure_ram[8'h3b];
+  assign adc_amp_zero_cal   = configure_ram[8'h3c];
 endmodule

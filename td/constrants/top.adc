@@ -27,7 +27,7 @@ set_pin_assignment	{ adc_data_2[9] }	{ LOCATION = A16; IOSTANDARD = LVCMOS33; PU
 set_pin_assignment	{ adc_otr_1 }	{ LOCATION = C12; IOSTANDARD = LVCMOS33; PULLTYPE = NONE; }
 set_pin_assignment	{ adc_otr_2 }	{ LOCATION = B17; IOSTANDARD = LVCMOS33; PULLTYPE = NONE; }
 set_pin_assignment	{ clk_100m }	{ LOCATION = V7; IOSTANDARD = DIFF_SSTL15; }
-set_pin_assignment	{ dac_clk_1 }	{ LOCATION = F15; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 16; PULLTYPE = PULLDOWN; SLEWRATE = FAST; }
+set_pin_assignment	{ dac_clk_1 }	{ LOCATION = F15; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 16; PULLTYPE = PULLUP; SLEWRATE = FAST; }
 set_pin_assignment	{ dac_clk_2 }	{ LOCATION = J17; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 16; PULLTYPE = PULLUP; SLEWRATE = FAST; }
 set_pin_assignment	{ dac_data_1[0] }	{ LOCATION = H17; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 16; PULLTYPE = NONE; SLEWRATE = FAST; }
 set_pin_assignment	{ dac_data_1[10] }	{ LOCATION = F18; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 16; PULLTYPE = NONE; SLEWRATE = FAST; }
@@ -79,6 +79,7 @@ set_pin_assignment	{ spi_s_csn }	{ LOCATION = F8; IOSTANDARD = LVCMOS18; PULLTYP
 set_pin_assignment	{ spi_s_miso }	{ LOCATION = A8; IOSTANDARD = LVCMOS18; DRIVESTRENGTH = 16; PULLTYPE = NONE; SLEWRATE = FAST; }
 set_pin_assignment	{ spi_s_mosi }	{ LOCATION = H8; IOSTANDARD = LVCMOS18; PULLTYPE = NONE; }
 set_pin_assignment	{ spi_s_sck }	{ LOCATION = E9; IOSTANDARD = LVCMOS18; PULLTYPE = NONE; }
+
 
 
 

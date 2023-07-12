@@ -119,7 +119,7 @@ module adc #(
     input [31 : 0] adc_amp_ch_sel,
     input [31 : 0] adc_amp_zero_cal,
 
-    input adc_en,
+    input [2 : 0] adc_en,
 
     input          adc_clk,
     input [11 : 0] adc_data_1,
@@ -144,7 +144,7 @@ module adc #(
       .adc_ch_sel  (adc_freq_ch_sel),
       .adc_zero_cal(adc_freq_zero_cal),
 
-      .adc_en(adc_en),
+      .adc_en(adc_en[0]),
 
       .adc_clk   (adc_clk),
       .adc_data_1(adc_data_1),
@@ -167,7 +167,7 @@ module adc #(
       .adc_ch_sel  (adc_phase_ch_sel),
       .adc_zero_cal(adc_phase_zero_cal),
 
-      .adc_en(adc_en),
+      .adc_en(adc_en[1]),
 
       .adc_clk   (adc_clk),
       .adc_data_1(adc_data_1),
@@ -190,7 +190,7 @@ module adc #(
       .adc_ch_sel  (adc_amp_ch_sel),
       .adc_zero_cal(adc_amp_zero_cal),
 
-      .adc_en(adc_en),
+      .adc_en(adc_en[2]),
 
       .adc_clk   (adc_clk),
       .adc_data_1(adc_data_1),

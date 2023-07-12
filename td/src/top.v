@@ -60,19 +60,24 @@ module top (
   assign dac_wrt_2 = dac_clk;
 
   wire          param_wen;
-  wire [31 : 0] mode;
+  wire [31 : 0] dds_fword_source;
+  wire [31 : 0] dds_pword_source;
+  wire [31 : 0] dds_amp_source;
   wire [31 : 0] direct_fword;
   wire [31 : 0] direct_pword;
   wire [31 : 0] direct_amp;
-  wire [31 : 0] drg_f_start;
-  wire [31 : 0] drg_f_end;
-  wire [31 : 0] drg_f_step;
-  wire [31 : 0] drg_p_start;
-  wire [31 : 0] drg_p_end;
-  wire [31 : 0] drg_p_step;
-  wire [31 : 0] drg_a_start;
-  wire [31 : 0] drg_a_end;
-  wire [31 : 0] drg_a_step;
+  wire [31 : 0] drg_freq_start;
+  wire [31 : 0] drg_freq_end;
+  wire [31 : 0] drg_freq_step;
+  wire [31 : 0] drg_freq_pulse;
+  wire [31 : 0] drg_phase_start;
+  wire [31 : 0] drg_phase_end;
+  wire [31 : 0] drg_phase_step;
+  wire [31 : 0] drg_phase_pulse;
+  wire [31 : 0] drg_amp_start;
+  wire [31 : 0] drg_amp_end;
+  wire [31 : 0] drg_amp_step;
+  wire [31 : 0] drg_amp_pulse;
   wire [31 : 0] adc_freq_center;
   wire [31 : 0] adc_freq_kf;
   wire [31 : 0] adc_freq_ch_sel;
@@ -108,19 +113,24 @@ module top (
       .spi_m_miso(spi_m_miso),
 
       .param_wen         (param_wen),
-      .mode              (mode),
+      .dds_fword_source  (dds_fword_source),
+      .dds_pword_source  (dds_pword_source),
+      .dds_amp_source    (dds_amp_source),
       .direct_fword      (direct_fword),
       .direct_pword      (direct_pword),
       .direct_amp        (direct_amp),
-      .drg_f_start       (drg_f_start),
-      .drg_f_end         (drg_f_end),
-      .drg_f_step        (drg_f_step),
-      .drg_p_start       (drg_p_start),
-      .drg_p_end         (drg_p_end),
-      .drg_p_step        (drg_p_step),
-      .drg_a_start       (drg_a_start),
-      .drg_a_end         (drg_a_end),
-      .drg_a_step        (drg_a_step),
+      .drg_freq_start    (drg_freq_start),
+      .drg_freq_end      (drg_freq_end),
+      .drg_freq_step     (drg_freq_step),
+      .drg_freq_pulse    (drg_freq_pulse),
+      .drg_phase_start   (drg_phase_start),
+      .drg_phase_end     (drg_phase_end),
+      .drg_phase_step    (drg_phase_step),
+      .drg_phase_pulse   (drg_phase_pulse),
+      .drg_amp_start     (drg_amp_start),
+      .drg_amp_end       (drg_amp_end),
+      .drg_amp_step      (drg_amp_step),
+      .drg_amp_pulse     (drg_amp_pulse),
       .adc_freq_center   (adc_freq_center),
       .adc_freq_kf       (adc_freq_kf),
       .adc_freq_ch_sel   (adc_freq_ch_sel),
@@ -152,19 +162,24 @@ module top (
       .adc_data_2(adc_data_2),
 
       .param_wen         (param_wen),
-      .mode              (mode),
+      .dds_fword_source  (dds_fword_source),
+      .dds_pword_source  (dds_pword_source),
+      .dds_amp_source    (dds_amp_source),
       .direct_fword      (direct_fword),
       .direct_pword      (direct_pword),
       .direct_amp        (direct_amp),
-      .drg_f_start       (drg_f_start),
-      .drg_f_end         (drg_f_end),
-      .drg_f_step        (drg_f_step),
-      .drg_p_start       (drg_p_start),
-      .drg_p_end         (drg_p_end),
-      .drg_p_step        (drg_p_step),
-      .drg_a_start       (drg_a_start),
-      .drg_a_end         (drg_a_end),
-      .drg_a_step        (drg_a_step),
+      .drg_freq_start    (drg_freq_start),
+      .drg_freq_end      (drg_freq_end),
+      .drg_freq_step     (drg_freq_step),
+      .drg_freq_pulse    (drg_freq_pulse),
+      .drg_phase_start   (drg_phase_start),
+      .drg_phase_end     (drg_phase_end),
+      .drg_phase_step    (drg_phase_step),
+      .drg_phase_pulse   (drg_phase_pulse),
+      .drg_amp_start     (drg_amp_start),
+      .drg_amp_end       (drg_amp_end),
+      .drg_amp_step      (drg_amp_step),
+      .drg_amp_pulse     (drg_amp_pulse),
       .adc_freq_center   (adc_freq_center),
       .adc_freq_kf       (adc_freq_kf),
       .adc_freq_ch_sel   (adc_freq_ch_sel),
