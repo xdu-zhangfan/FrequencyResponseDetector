@@ -118,15 +118,25 @@ int main(void)
 
     fpga_write_reg(0x01, 1);
     fpga_write_reg(0x02, 0);
-    fpga_write_reg(0x03, 3);
+    fpga_write_reg(0x03, 2);
 
-    fpga_write_reg(0x11, 1000000.0f * FWORD_BANDWIDTH / DDS_FREQ);
+    fpga_write_reg(0x11, 5000000.0f * FWORD_BANDWIDTH / DDS_FREQ);
     fpga_write_reg(0x13, 600000);
 
     fpga_write_reg(0x21, 1000000.0f * FWORD_BANDWIDTH / DDS_FREQ);
     fpga_write_reg(0x22, 5000000.0f * FWORD_BANDWIDTH / DDS_FREQ);
     fpga_write_reg(0x23, 1000);
     fpga_write_reg(0x24, 1);
+
+    fpga_write_reg(0x25, 1000000.0f * FWORD_BANDWIDTH / DDS_FREQ);
+    fpga_write_reg(0x26, 5000000.0f * FWORD_BANDWIDTH / DDS_FREQ);
+    fpga_write_reg(0x27, 1000);
+    fpga_write_reg(0x28, 1);
+
+    fpga_write_reg(0x29, 300000);
+    fpga_write_reg(0x2a, 10000000);
+    fpga_write_reg(0x2b, 100);
+    fpga_write_reg(0x2c, 1);
 
     fpga_write_reg(0x31, 1000000.0f * FWORD_BANDWIDTH / DDS_FREQ);
     fpga_write_reg(0x32, 10000);

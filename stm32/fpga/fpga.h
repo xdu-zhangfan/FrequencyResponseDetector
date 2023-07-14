@@ -6,7 +6,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define DDS_FREQ 130000000.0f
+#define DDS_FREQ 125000000.0f
 #define FWORD_BANDWIDTH 4294967296.0f
 
 int fpga_init(SPI_HandleTypeDef *hspi_master_i, SPI_HandleTypeDef *hspi_slave_i);

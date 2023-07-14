@@ -65,7 +65,7 @@ module dds #(
       dac_data_2_i0 <= {DAC_WIDTH{1'b0}};
     end else begin
       if (dds_divider_0_inst_cos_done) begin
-        dac_data_1_i  <= dds_div_cos_output + (1 << (DAC_WIDTH - 1));
+        dac_data_1_i  <= dds_div_cos_output + (1 << 31);
         dac_data_1_i0 <= dac_data_1_i[DAC_WIDTH-1 : 0];
       end else begin
         dac_data_1_i  <= dac_data_1_i;
@@ -73,7 +73,7 @@ module dds #(
       end
 
       if (dds_divider_0_inst_cos_done) begin
-        dac_data_2_i  <= dds_div_sin_output + (1 << (DAC_WIDTH - 1));
+        dac_data_2_i  <= dds_div_sin_output + (1 << 31);
         dac_data_2_i0 <= dac_data_2_i[DAC_WIDTH-1 : 0];
       end else begin
         dac_data_2_i  <= dac_data_2_i;
@@ -88,13 +88,13 @@ module dds #(
       dac_data_2 <= 32'h0;
     end else begin
       if (dds_divider_0_inst_cos_done) begin
-        dac_data_1 <= dac_data_1_i0;
+        dac_data_1 <= dac_data_1_i0 + (1 << (DAC_WIDTH - 1));
       end else begin
         dac_data_1 <= dac_data_1;
       end
 
       if (dds_divider_0_inst_cos_done) begin
-        dac_data_2 <= dac_data_2_i0;
+        dac_data_2 <= dac_data_2_i0 + (1 << (DAC_WIDTH - 1));
       end else begin
         dac_data_2 <= dac_data_2;
       end
@@ -124,12 +124,12 @@ module dds #(
       .clk(dac_clk),
       .rst(~rstn),
 
-      .numerator(dds_cos_output),
+      .numerator  (dds_cos_output),
       .denominator(amptitude),
-      .start(dds_phy_rdy),
+      .start      (dds_phy_rdy),
 
-      .done(dds_divider_0_inst_cos_done),
-      .quotient(dds_div_cos_output),
+      .done     (dds_divider_0_inst_cos_done),
+      .quotient (dds_div_cos_output),
       .remainder()
   );
 
@@ -137,12 +137,12 @@ module dds #(
       .clk(dac_clk),
       .rst(~rstn),
 
-      .numerator(dds_sin_output),
+      .numerator  (dds_sin_output),
       .denominator(amptitude),
-      .start(dds_phy_rdy),
+      .start      (dds_phy_rdy),
 
-      .done(dds_divider_0_inst_sin_done),
-      .quotient(dds_div_sin_output),
+      .done     (dds_divider_0_inst_sin_done),
+      .quotient (dds_div_sin_output),
       .remainder()
   );
 
