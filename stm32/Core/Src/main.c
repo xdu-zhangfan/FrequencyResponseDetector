@@ -105,22 +105,6 @@ int main(void)
   HAL_TIM_Base_Start_IT(&htim1);
   fpga_init(&hspi1, NULL);
 
-  // fpga_write_reg(0x00, 1);
-  // fpga_write_reg(0x01, 2000000.0f * FWORD_BANDWIDTH / DDS_FREQ);
-  // fpga_write_reg(0x02, 0);
-  // fpga_write_reg(0x03, 0);
-
-  // fpga_write_reg(0x00, 2);
-  // fpga_write_reg(0x04, 1000.0f * FWORD_BANDWIDTH / DDS_FREQ);
-  // fpga_write_reg(0x05, 10000000.0f * FWORD_BANDWIDTH / DDS_FREQ);
-  // fpga_write_reg(0x06, 10.0f * FWORD_BANDWIDTH / DDS_FREQ);
-
-  fpga_write_reg(0x00, 3);
-  fpga_write_reg(13, 8800000.0f * FWORD_BANDWIDTH / DDS_FREQ);
-  fpga_write_reg(14, 65536);
-  fpga_write_reg(15, 1);
-  fpga_write_reg(16, 2051);
-
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -130,8 +114,34 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+    HAL_Delay(500);
 
-    HAL_Delay(100);
+    fpga_write_reg(0x01, 1);
+    fpga_write_reg(0x02, 0);
+    fpga_write_reg(0x03, 3);
+
+    fpga_write_reg(0x11, 1000000.0f * FWORD_BANDWIDTH / DDS_FREQ);
+    fpga_write_reg(0x13, 600000);
+
+    fpga_write_reg(0x21, 1000000.0f * FWORD_BANDWIDTH / DDS_FREQ);
+    fpga_write_reg(0x22, 5000000.0f * FWORD_BANDWIDTH / DDS_FREQ);
+    fpga_write_reg(0x23, 1000);
+    fpga_write_reg(0x24, 1);
+
+    fpga_write_reg(0x31, 1000000.0f * FWORD_BANDWIDTH / DDS_FREQ);
+    fpga_write_reg(0x32, 10000);
+    fpga_write_reg(0x33, 1);
+    fpga_write_reg(0x34, 2051);
+
+    fpga_write_reg(0x35, 1000000.0f * FWORD_BANDWIDTH / DDS_FREQ);
+    fpga_write_reg(0x36, 100000);
+    fpga_write_reg(0x37, 1);
+    fpga_write_reg(0x38, 2051);
+
+    fpga_write_reg(0x39, 600000);
+    fpga_write_reg(0x3a, 200);
+    fpga_write_reg(0x3b, 1);
+    fpga_write_reg(0x3c, 2051);
   }
   /* USER CODE END 3 */
 }

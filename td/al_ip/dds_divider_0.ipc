@@ -5,7 +5,7 @@
         <denom_width>32</denom_width>
         <level_nu>34</level_nu>
         <model_select>pipline</model_select>
-        <nu_str>UNSIGNED</nu_str>
+        <nu_str>SIGNED</nu_str>
         <numer_width>32</numer_width>
     </DIVIDER_OPTIONS>
     <GeneralConfig>

@@ -63,8 +63,7 @@ void Error_Handler(void);
 #define LED_GPIO_Port GPIOC
 
 /* USER CODE BEGIN Private defines */
-#define DDS_FREQ 140000000.0f
-#define FWORD_BANDWIDTH 4294967296.0f
+
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus

@@ -4,8 +4,8 @@
         <CE>0</CE>
         <FM>1</FM>
         <FREC_OUT>1.000</FREC_OUT>
-        <FREC_SYS>140.000</FREC_SYS>
-        <LATENCY_ROM>1</LATENCY_ROM>
+        <FREC_SYS>130.000</FREC_SYS>
+        <LATENCY_ROM>0</LATENCY_ROM>
         <PHASE_JITTER>0</PHASE_JITTER>
         <PHASE_OUT>1</PHASE_OUT>
         <PM>1</PM>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Project Version="3" Minor="2" Path="D:/Tasks/FrequencyResponseDetector/td">
+<Project Version="3" Minor="2" Path="/data/Tasks/FrequencyResponseDetector/td">
     <Project_Created_Time></Project_Created_Time>
     <TD_Version>5.6.71036</TD_Version>
     <Name>FrequencyResponseDetector</Name>
@@ -98,7 +98,6 @@
         <CWC_FILE>
             <File Path="constrants/main.cwc">
                 <FileInfo>
-                    <Attr Name="Enable" Val="false"/>
                     <Attr Name="UsedInSyn" Val="true"/>
                     <Attr Name="UsedInP&R" Val="true"/>
                     <Attr Name="BelongTo" Val="design_1"/>
@@ -137,6 +136,14 @@
                     <Attr Name="UsedInP&R" Val="true"/>
                     <Attr Name="BelongTo" Val="design_1"/>
                     <Attr Name="CompileOrder" Val="13"/>
+                </FileInfo>
+            </File>
+            <File Path="al_ip/adc_core_fifo_0.ipc">
+                <FileInfo>
+                    <Attr Name="UsedInSyn" Val="true"/>
+                    <Attr Name="UsedInP&R" Val="true"/>
+                    <Attr Name="BelongTo" Val="design_1"/>
+                    <Attr Name="CompileOrder" Val="14"/>
                 </FileInfo>
             </File>
         </IP_FILE>

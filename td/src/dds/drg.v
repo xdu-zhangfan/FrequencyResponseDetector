@@ -44,7 +44,7 @@ module drg_core #(
   always @(posedge dds_clk) begin
     if (!rstn) begin
       drg_pulse_cnt <= 32'h0;
-      drg_output <= drg_start_buf;
+      drg_output    <= drg_start_buf;
     end else begin
       if (drg_en) begin
         if (drg_pulse_cnt >= drg_pulse_buf) begin

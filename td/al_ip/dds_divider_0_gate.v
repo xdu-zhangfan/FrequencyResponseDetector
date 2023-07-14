@@ -1,5 +1,5 @@
 // Verilog netlist created by Tang Dynasty v5.6.71036
-// Wed Jul 12 23:02:35 2023
+// Fri Jul 14 08:56:41 2023
 
 `timescale 1ns / 1ps
 module dds_divider_0
@@ -25,7 +25,7 @@ module dds_divider_0
 
   parameter PIPLE = 34;
   parameter S_DEN = "UNSIGNED";
-  parameter S_NUM = "UNSIGNED";
+  parameter S_NUM = "SIGNED";
   parameter W_DEN = 32;
   parameter W_NUM = 32;
   parameter W_REM = 32;
@@ -251,8 +251,112 @@ module dds_divider_0
   wire [2:0] al_ae5d831a;
   wire [62:0] al_9d1d5c0;
   wire [31:0] al_a5806bc7;
+  wire [31:0] al_509e0fe5;
+  wire [31:0] al_aaf30d21;
   wire [31:0] al_3519ff8d;
+  wire [31:0] al_8fb6bbc3;
+  wire [31:0] al_dd9da09a;
   wire [31:0] al_18157fe8;
+  wire [31:0] al_c24772ff;
+  wire [31:0] al_50fbc01b;
+  wire al_b5a98930;
+  wire al_8e7525de;
+  wire al_f1fa30af;
+  wire al_3dfedab9;
+  wire al_8b3e74c8;
+  wire al_2307db88;
+  wire al_bdfed7a6;
+  wire al_71a40c63;
+  wire al_49d04e4;
+  wire al_a63de8d6;
+  wire al_acd38fcc;
+  wire al_f44272df;
+  wire al_ccd05129;
+  wire al_2717dc0a;
+  wire al_5e2879c6;
+  wire al_1703f5dc;
+  wire al_c8f7c149;
+  wire al_46b83025;
+  wire al_f349bf8f;
+  wire al_728fc1bd;
+  wire al_4c9ce4a7;
+  wire al_bb62b844;
+  wire al_1800ef93;
+  wire al_26713494;
+  wire al_6deefd98;
+  wire al_1db8621d;
+  wire al_f323d8cf;
+  wire al_a114c34b;
+  wire al_89046bb6;
+  wire al_44c67168;
+  wire al_ea1a29ac;
+  wire al_231247c6;
+  wire al_e67aa136;
+  wire al_5060820b;
+  wire al_9413bd59;
+  wire al_aadd9fb6;
+  wire al_5c7e293d;
+  wire al_ed9f1a15;
+  wire al_d19815f0;
+  wire al_1cbbed92;
+  wire al_1f8b9036;
+  wire al_f40c2aba;
+  wire al_48e4d1f5;
+  wire al_a012e878;
+  wire al_6fbd687d;
+  wire al_3af4b7f2;
+  wire al_9743bbe7;
+  wire al_617170a6;
+  wire al_ba617641;
+  wire al_a4321505;
+  wire al_1bafe615;
+  wire al_75856867;
+  wire al_25dbda90;
+  wire al_6578de79;
+  wire al_f79579ec;
+  wire al_f7c90235;
+  wire al_83bf52a3;
+  wire al_149812f;
+  wire al_1affdf6a;
+  wire al_485fa6b9;
+  wire al_40c1d45a;
+  wire al_c24f6b37;
+  wire al_8ca7a7c3;
+  wire al_aa80a08;
+  wire al_714e364c;
+  wire al_1c658141;
+  wire al_a64be757;
+  wire al_b431af9b;
+  wire al_fcb8c140;
+  wire al_b3754c82;
+  wire al_b4572e0e;
+  wire al_f415e6f2;
+  wire al_7df9fae0;
+  wire al_abb04a28;
+  wire al_e8e36fd9;
+  wire al_aad265f2;
+  wire al_8792f9ab;
+  wire al_c303eec0;
+  wire al_4380ddfc;
+  wire al_99be124a;
+  wire al_203976b;
+  wire al_774ceb3c;
+  wire al_a0b58ab5;
+  wire al_f45d56ad;
+  wire al_17a8c33e;
+  wire al_8a8793aa;
+  wire al_cd279093;
+  wire al_4cf8b6e7;
+  wire al_92feecb0;
+  wire al_9d92f6a0;
+  wire al_c3c8e02d;
+  wire al_1d707917;
+  wire al_4396ef03;
+  wire al_10202227;
+  wire al_ffdc368b;
+  wire al_45e5e8a2;
+  wire al_1e40e921;
+  wire al_f1a38dd5;
   wire al_51794c84;
   wire al_8d24c5a7;
   wire al_bff2070;
@@ -1056,6 +1160,15 @@ module dds_divider_0
     .sr(1'b0),
     .ss(1'b0),
     .q(al_3da4ff6f[0]));
+  AL_DFF_X al_96ac7bdd (
+    .ar(1'b0),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_f1a38dd5),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_3da4ff6f[1]));
   AL_DFF_X al_f17869c2 (
     .ar(1'b0),
     .as(1'b0),
@@ -1904,6 +2017,15 @@ module dds_divider_0
     .sr(1'b0),
     .ss(1'b0),
     .q(al_adb04807[0]));
+  AL_DFF_X al_ad62c478 (
+    .ar(1'b0),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_4b6a4daa[1]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_adb04807[1]));
   AL_DFF_X al_cbebd2d (
     .ar(1'b0),
     .as(1'b0),
@@ -2858,6 +2980,15 @@ module dds_divider_0
     .sr(1'b0),
     .ss(1'b0),
     .q(al_2e1bd9dc[0]));
+  AL_DFF_X al_7121e69f (
+    .ar(1'b0),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_adb04807[1]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_2e1bd9dc[1]));
   AL_DFF_X al_34c200c9 (
     .ar(1'b0),
     .as(1'b0),
@@ -3844,6 +3975,15 @@ module dds_divider_0
     .sr(1'b0),
     .ss(1'b0),
     .q(al_c6d10c98[0]));
+  AL_DFF_X al_a2b3979 (
+    .ar(1'b0),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_2e1bd9dc[1]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_c6d10c98[1]));
   AL_DFF_X al_748f363d (
     .ar(1'b0),
     .as(1'b0),
@@ -4842,6 +4982,15 @@ module dds_divider_0
     .sr(1'b0),
     .ss(1'b0),
     .q(al_599810dd[0]));
+  AL_DFF_X al_f29508dc (
+    .ar(1'b0),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_c6d10c98[1]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_599810dd[1]));
   AL_DFF_X al_698ce9b1 (
     .ar(1'b0),
     .as(1'b0),
@@ -5850,6 +5999,15 @@ module dds_divider_0
     .sr(1'b0),
     .ss(1'b0),
     .q(al_903e8807[0]));
+  AL_DFF_X al_aafd17f3 (
+    .ar(1'b0),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_599810dd[1]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_903e8807[1]));
   AL_DFF_X al_561cfc3 (
     .ar(1'b0),
     .as(1'b0),
@@ -6882,6 +7040,15 @@ module dds_divider_0
     .sr(1'b0),
     .ss(1'b0),
     .q(al_5ed5f44b[0]));
+  AL_DFF_X al_60fc3743 (
+    .ar(1'b0),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_903e8807[1]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_5ed5f44b[1]));
   AL_DFF_X al_1d78660c (
     .ar(1'b0),
     .as(1'b0),
@@ -7938,6 +8105,15 @@ module dds_divider_0
     .sr(1'b0),
     .ss(1'b0),
     .q(al_54284e1f[0]));
+  AL_DFF_X al_659b1f66 (
+    .ar(1'b0),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_5ed5f44b[1]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_54284e1f[1]));
   AL_DFF_X al_da690016 (
     .ar(1'b0),
     .as(1'b0),
@@ -9048,6 +9224,15 @@ module dds_divider_0
     .sr(1'b0),
     .ss(1'b0),
     .q(al_f83a6cd4[0]));
+  AL_DFF_X al_e69a98ae (
+    .ar(1'b0),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_54284e1f[1]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_f83a6cd4[1]));
   AL_DFF_X al_1ac62b61 (
     .ar(1'b0),
     .as(1'b0),
@@ -10165,6 +10350,15 @@ module dds_divider_0
     .sr(1'b0),
     .ss(1'b0),
     .q(al_b0a2efb7[0]));
+  AL_DFF_X al_2f06baef (
+    .ar(1'b0),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_f83a6cd4[1]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_b0a2efb7[1]));
   AL_DFF_X al_480e70af (
     .ar(1'b0),
     .as(1'b0),
@@ -11287,6 +11481,15 @@ module dds_divider_0
     .sr(1'b0),
     .ss(1'b0),
     .q(al_1c8da1e8[0]));
+  AL_DFF_X al_42dac97f (
+    .ar(1'b0),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_b0a2efb7[1]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_1c8da1e8[1]));
   AL_DFF_X al_4071744e (
     .ar(1'b0),
     .as(1'b0),
@@ -12184,6 +12387,15 @@ module dds_divider_0
     .sr(1'b0),
     .ss(1'b0),
     .q(al_67f5b0b3[0]));
+  AL_DFF_X al_2edf9c0b (
+    .ar(1'b0),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_3da4ff6f[1]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_67f5b0b3[1]));
   AL_DFF_X al_d0b5d0bf (
     .ar(1'b0),
     .as(1'b0),
@@ -13141,6 +13353,15 @@ module dds_divider_0
     .sr(1'b0),
     .ss(1'b0),
     .q(al_acb3303d[0]));
+  AL_DFF_X al_8e6c7939 (
+    .ar(1'b0),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_1c8da1e8[1]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_acb3303d[1]));
   AL_DFF_X al_aad69b55 (
     .ar(1'b0),
     .as(1'b0),
@@ -14277,6 +14498,15 @@ module dds_divider_0
     .sr(1'b0),
     .ss(1'b0),
     .q(al_14a1a59a[0]));
+  AL_DFF_X al_eef882bf (
+    .ar(1'b0),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_acb3303d[1]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_14a1a59a[1]));
   AL_DFF_X al_1bad7c3c (
     .ar(1'b0),
     .as(1'b0),
@@ -15436,6 +15666,15 @@ module dds_divider_0
     .sr(1'b0),
     .ss(1'b0),
     .q(al_21143207[0]));
+  AL_DFF_X al_637f09f1 (
+    .ar(1'b0),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_14a1a59a[1]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_21143207[1]));
   AL_DFF_X al_3e3b493b (
     .ar(1'b0),
     .as(1'b0),
@@ -16618,6 +16857,15 @@ module dds_divider_0
     .sr(1'b0),
     .ss(1'b0),
     .q(al_e0dc7e9e[0]));
+  AL_DFF_X al_4a9758d6 (
+    .ar(1'b0),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_21143207[1]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_e0dc7e9e[1]));
   AL_DFF_X al_d29dd6bf (
     .ar(1'b0),
     .as(1'b0),
@@ -17823,6 +18071,15 @@ module dds_divider_0
     .sr(1'b0),
     .ss(1'b0),
     .q(al_bade9fae[0]));
+  AL_DFF_X al_d7ea3f4e (
+    .ar(1'b0),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_e0dc7e9e[1]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_bade9fae[1]));
   AL_DFF_X al_9cc9fe2c (
     .ar(1'b0),
     .as(1'b0),
@@ -19051,6 +19308,15 @@ module dds_divider_0
     .sr(1'b0),
     .ss(1'b0),
     .q(al_8f9ab06[0]));
+  AL_DFF_X al_69f30ff8 (
+    .ar(1'b0),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_bade9fae[1]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_8f9ab06[1]));
   AL_DFF_X al_7adc28d7 (
     .ar(1'b0),
     .as(1'b0),
@@ -20296,6 +20562,15 @@ module dds_divider_0
     .sr(1'b0),
     .ss(1'b0),
     .q(al_fee4bd37[0]));
+  AL_DFF_X al_fbe8dd33 (
+    .ar(1'b0),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_8f9ab06[1]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_fee4bd37[1]));
   AL_DFF_X al_357f1a32 (
     .ar(1'b0),
     .as(1'b0),
@@ -21564,6 +21839,15 @@ module dds_divider_0
     .sr(1'b0),
     .ss(1'b0),
     .q(al_e0e2aae4[0]));
+  AL_DFF_X al_dd69c176 (
+    .ar(1'b0),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_fee4bd37[1]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_e0e2aae4[1]));
   AL_DFF_X al_744243ee (
     .ar(1'b0),
     .as(1'b0),
@@ -22855,6 +23139,15 @@ module dds_divider_0
     .sr(1'b0),
     .ss(1'b0),
     .q(al_5db428bb[0]));
+  AL_DFF_X al_682c9fb4 (
+    .ar(1'b0),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_e0e2aae4[1]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_5db428bb[1]));
   AL_DFF_X al_c7056efe (
     .ar(1'b0),
     .as(1'b0),
@@ -24169,6 +24462,15 @@ module dds_divider_0
     .sr(1'b0),
     .ss(1'b0),
     .q(al_8d805738[0]));
+  AL_DFF_X al_fdfcd1 (
+    .ar(1'b0),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_5db428bb[1]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_8d805738[1]));
   AL_DFF_X al_8e895fb8 (
     .ar(1'b0),
     .as(1'b0),
@@ -25156,6 +25458,15 @@ module dds_divider_0
     .sr(1'b0),
     .ss(1'b0),
     .q(al_44882eca[0]));
+  AL_DFF_X al_380ce4d5 (
+    .ar(1'b0),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_67f5b0b3[1]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_44882eca[1]));
   AL_DFF_X al_26872ba6 (
     .ar(1'b0),
     .as(1'b0),
@@ -26250,6 +26561,15 @@ module dds_divider_0
     .sr(1'b0),
     .ss(1'b0),
     .q(al_74993dd2[0]));
+  AL_DFF_X al_a489fc71 (
+    .ar(1'b0),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_8d805738[1]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_74993dd2[1]));
   AL_DFF_X al_48129714 (
     .ar(1'b0),
     .as(1'b0),
@@ -27370,6 +27690,15 @@ module dds_divider_0
     .sr(1'b0),
     .ss(1'b0),
     .q(al_ae5d831a[0]));
+  AL_DFF_X al_1564cd4a (
+    .ar(1'b0),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_74993dd2[1]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_ae5d831a[1]));
   AL_DFF_X al_2a4a0d84 (
     .ar(1'b0),
     .as(1'b0),
@@ -28356,6 +28685,15 @@ module dds_divider_0
     .sr(1'b0),
     .ss(1'b0),
     .q(al_f336c405[0]));
+  AL_DFF_X al_e3fa3932 (
+    .ar(1'b0),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_44882eca[1]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_f336c405[1]));
   AL_DFF_X al_629edd14 (
     .ar(1'b0),
     .as(1'b0),
@@ -29170,6 +29508,15 @@ module dds_divider_0
     .sr(1'b0),
     .ss(1'b0),
     .q(al_f23786d8[0]));
+  AL_DFF_X al_ae72638c (
+    .ar(1'b0),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_f336c405[1]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_f23786d8[1]));
   AL_DFF_X al_16c9a7e (
     .ar(1'b0),
     .as(1'b0),
@@ -29980,6 +30327,15 @@ module dds_divider_0
     .sr(1'b0),
     .ss(1'b0),
     .q(al_6e4d5f5f[0]));
+  AL_DFF_X al_7f3e513b (
+    .ar(1'b0),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_f23786d8[1]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_6e4d5f5f[1]));
   AL_DFF_X al_2c1c2b5d (
     .ar(1'b0),
     .as(1'b0),
@@ -30808,6 +31164,15 @@ module dds_divider_0
     .sr(1'b0),
     .ss(1'b0),
     .q(al_d255f877[0]));
+  AL_DFF_X al_fb3e9205 (
+    .ar(1'b0),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_6e4d5f5f[1]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_d255f877[1]));
   AL_DFF_X al_cf7645d3 (
     .ar(1'b0),
     .as(1'b0),
@@ -31660,6 +32025,15 @@ module dds_divider_0
     .sr(1'b0),
     .ss(1'b0),
     .q(al_30922aac[0]));
+  AL_DFF_X al_6942516d (
+    .ar(1'b0),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_d255f877[1]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_30922aac[1]));
   AL_DFF_X al_31b6bc1b (
     .ar(1'b0),
     .as(1'b0),
@@ -32536,6 +32910,15 @@ module dds_divider_0
     .sr(1'b0),
     .ss(1'b0),
     .q(al_36d845bb[0]));
+  AL_DFF_X al_8f2684fc (
+    .ar(1'b0),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_30922aac[1]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_36d845bb[1]));
   AL_DFF_X al_39778347 (
     .ar(1'b0),
     .as(1'b0),
@@ -33440,6 +33823,15 @@ module dds_divider_0
     .sr(1'b0),
     .ss(1'b0),
     .q(al_4b6a4daa[0]));
+  AL_DFF_X al_5c7c6e35 (
+    .ar(1'b0),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_36d845bb[1]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_4b6a4daa[1]));
   AL_DFF_X al_e4a574bd (
     .ar(1'b0),
     .as(1'b0),
@@ -34106,6 +34498,693 @@ module dds_divider_0
     .sr(1'b0),
     .ss(1'b0),
     .q(al_fac191b8[7]));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_fd7c4084 (
+    .a(1'b0),
+    .b(numerator[18]),
+    .c(al_f45d56ad),
+    .o({al_17a8c33e,al_aaf30d21[18]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_31e42ab (
+    .a(1'b0),
+    .b(numerator[19]),
+    .c(al_17a8c33e),
+    .o({al_8a8793aa,al_aaf30d21[19]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_5a4def95 (
+    .a(1'b0),
+    .b(numerator[20]),
+    .c(al_8a8793aa),
+    .o({al_cd279093,al_aaf30d21[20]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_2613a900 (
+    .a(1'b0),
+    .b(numerator[21]),
+    .c(al_cd279093),
+    .o({al_4cf8b6e7,al_aaf30d21[21]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_9b0d0a87 (
+    .a(1'b0),
+    .b(numerator[22]),
+    .c(al_4cf8b6e7),
+    .o({al_92feecb0,al_aaf30d21[22]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_6c785d46 (
+    .a(1'b0),
+    .b(numerator[23]),
+    .c(al_92feecb0),
+    .o({al_9d92f6a0,al_aaf30d21[23]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_9e2ee170 (
+    .a(1'b0),
+    .b(numerator[24]),
+    .c(al_9d92f6a0),
+    .o({al_c3c8e02d,al_aaf30d21[24]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_538bc051 (
+    .a(1'b0),
+    .b(numerator[25]),
+    .c(al_c3c8e02d),
+    .o({al_1d707917,al_aaf30d21[25]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_a1523f19 (
+    .a(1'b0),
+    .b(numerator[26]),
+    .c(al_1d707917),
+    .o({al_4396ef03,al_aaf30d21[26]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_838400dd (
+    .a(1'b0),
+    .b(numerator[27]),
+    .c(al_4396ef03),
+    .o({al_10202227,al_aaf30d21[27]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_3f17861f (
+    .a(1'b0),
+    .b(numerator[28]),
+    .c(al_10202227),
+    .o({al_ffdc368b,al_aaf30d21[28]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_14d3beef (
+    .a(1'b0),
+    .b(numerator[29]),
+    .c(al_ffdc368b),
+    .o({al_45e5e8a2,al_aaf30d21[29]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_fd76fa2e (
+    .a(1'b0),
+    .b(numerator[30]),
+    .c(al_45e5e8a2),
+    .o({al_1e40e921,al_aaf30d21[30]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_6067d216 (
+    .a(1'b0),
+    .b(numerator[31]),
+    .c(al_1e40e921),
+    .o({open_n160,al_aaf30d21[31]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB_CARRY"))
+    al_e1416521 (
+    .a(1'b0),
+    .o({al_8e7525de,open_n163}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_1fb9f750 (
+    .a(1'b0),
+    .b(al_18157fe8[0]),
+    .c(al_8e7525de),
+    .o({al_f1fa30af,open_n164}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_3ba2cf17 (
+    .a(1'b0),
+    .b(al_18157fe8[1]),
+    .c(al_f1fa30af),
+    .o({al_3dfedab9,al_dd9da09a[1]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_be038bda (
+    .a(1'b0),
+    .b(al_18157fe8[2]),
+    .c(al_3dfedab9),
+    .o({al_8b3e74c8,al_dd9da09a[2]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_73863703 (
+    .a(1'b0),
+    .b(al_18157fe8[3]),
+    .c(al_8b3e74c8),
+    .o({al_2307db88,al_dd9da09a[3]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_605a9566 (
+    .a(1'b0),
+    .b(al_18157fe8[4]),
+    .c(al_2307db88),
+    .o({al_bdfed7a6,al_dd9da09a[4]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_d8a814fe (
+    .a(1'b0),
+    .b(al_18157fe8[5]),
+    .c(al_bdfed7a6),
+    .o({al_71a40c63,al_dd9da09a[5]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_8f1d46d (
+    .a(1'b0),
+    .b(al_18157fe8[6]),
+    .c(al_71a40c63),
+    .o({al_49d04e4,al_dd9da09a[6]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_66bb641e (
+    .a(1'b0),
+    .b(al_18157fe8[7]),
+    .c(al_49d04e4),
+    .o({al_a63de8d6,al_dd9da09a[7]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_c7616116 (
+    .a(1'b0),
+    .b(al_18157fe8[8]),
+    .c(al_a63de8d6),
+    .o({al_acd38fcc,al_dd9da09a[8]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_ab345056 (
+    .a(1'b0),
+    .b(al_18157fe8[9]),
+    .c(al_acd38fcc),
+    .o({al_f44272df,al_dd9da09a[9]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_27b48239 (
+    .a(1'b0),
+    .b(al_18157fe8[10]),
+    .c(al_f44272df),
+    .o({al_ccd05129,al_dd9da09a[10]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_72b8dd79 (
+    .a(1'b0),
+    .b(al_18157fe8[11]),
+    .c(al_ccd05129),
+    .o({al_2717dc0a,al_dd9da09a[11]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_e1f38c58 (
+    .a(1'b0),
+    .b(al_18157fe8[12]),
+    .c(al_2717dc0a),
+    .o({al_5e2879c6,al_dd9da09a[12]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_b15f44e (
+    .a(1'b0),
+    .b(al_18157fe8[13]),
+    .c(al_5e2879c6),
+    .o({al_1703f5dc,al_dd9da09a[13]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_cfcf733 (
+    .a(1'b0),
+    .b(al_18157fe8[14]),
+    .c(al_1703f5dc),
+    .o({al_c8f7c149,al_dd9da09a[14]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_f51858d (
+    .a(1'b0),
+    .b(al_18157fe8[15]),
+    .c(al_c8f7c149),
+    .o({al_46b83025,al_dd9da09a[15]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_a95ce8cd (
+    .a(1'b0),
+    .b(al_18157fe8[16]),
+    .c(al_46b83025),
+    .o({al_f349bf8f,al_dd9da09a[16]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_ce7d84b2 (
+    .a(1'b0),
+    .b(al_18157fe8[17]),
+    .c(al_f349bf8f),
+    .o({al_728fc1bd,al_dd9da09a[17]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_89c7696f (
+    .a(1'b0),
+    .b(al_18157fe8[18]),
+    .c(al_728fc1bd),
+    .o({al_4c9ce4a7,al_dd9da09a[18]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_d24c47f1 (
+    .a(1'b0),
+    .b(al_18157fe8[19]),
+    .c(al_4c9ce4a7),
+    .o({al_bb62b844,al_dd9da09a[19]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_be21b300 (
+    .a(1'b0),
+    .b(al_18157fe8[20]),
+    .c(al_bb62b844),
+    .o({al_1800ef93,al_dd9da09a[20]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_d068d68f (
+    .a(1'b0),
+    .b(al_18157fe8[21]),
+    .c(al_1800ef93),
+    .o({al_26713494,al_dd9da09a[21]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_c94b90c1 (
+    .a(1'b0),
+    .b(al_18157fe8[22]),
+    .c(al_26713494),
+    .o({al_6deefd98,al_dd9da09a[22]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_d7849ccb (
+    .a(1'b0),
+    .b(al_18157fe8[23]),
+    .c(al_6deefd98),
+    .o({al_1db8621d,al_dd9da09a[23]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_e2970a65 (
+    .a(1'b0),
+    .b(al_18157fe8[24]),
+    .c(al_1db8621d),
+    .o({al_f323d8cf,al_dd9da09a[24]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_5bedb7ad (
+    .a(1'b0),
+    .b(al_18157fe8[25]),
+    .c(al_f323d8cf),
+    .o({al_a114c34b,al_dd9da09a[25]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_af8643a2 (
+    .a(1'b0),
+    .b(al_18157fe8[26]),
+    .c(al_a114c34b),
+    .o({al_89046bb6,al_dd9da09a[26]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_4ad66d76 (
+    .a(1'b0),
+    .b(al_18157fe8[27]),
+    .c(al_89046bb6),
+    .o({al_44c67168,al_dd9da09a[27]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_cc59c71a (
+    .a(1'b0),
+    .b(al_18157fe8[28]),
+    .c(al_44c67168),
+    .o({al_ea1a29ac,al_dd9da09a[28]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_e083313 (
+    .a(1'b0),
+    .b(al_18157fe8[29]),
+    .c(al_ea1a29ac),
+    .o({al_231247c6,al_dd9da09a[29]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_cf808f36 (
+    .a(1'b0),
+    .b(al_18157fe8[30]),
+    .c(al_231247c6),
+    .o({al_e67aa136,al_dd9da09a[30]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_cd50f1da (
+    .a(1'b0),
+    .b(al_18157fe8[31]),
+    .c(al_e67aa136),
+    .o({open_n165,al_dd9da09a[31]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB_CARRY"))
+    al_a730b483 (
+    .a(1'b0),
+    .o({al_5060820b,open_n168}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_4fb32404 (
+    .a(1'b0),
+    .b(al_3519ff8d[0]),
+    .c(al_5060820b),
+    .o({al_9413bd59,open_n169}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_aa6983a (
+    .a(1'b0),
+    .b(al_3519ff8d[1]),
+    .c(al_9413bd59),
+    .o({al_aadd9fb6,al_50fbc01b[1]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_35a39ce1 (
+    .a(1'b0),
+    .b(al_3519ff8d[2]),
+    .c(al_aadd9fb6),
+    .o({al_5c7e293d,al_50fbc01b[2]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_7c4429b3 (
+    .a(1'b0),
+    .b(al_3519ff8d[3]),
+    .c(al_5c7e293d),
+    .o({al_ed9f1a15,al_50fbc01b[3]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_6a4430d2 (
+    .a(1'b0),
+    .b(al_3519ff8d[4]),
+    .c(al_ed9f1a15),
+    .o({al_d19815f0,al_50fbc01b[4]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_c2f94c29 (
+    .a(1'b0),
+    .b(al_3519ff8d[5]),
+    .c(al_d19815f0),
+    .o({al_1cbbed92,al_50fbc01b[5]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_8fda4972 (
+    .a(1'b0),
+    .b(al_3519ff8d[6]),
+    .c(al_1cbbed92),
+    .o({al_1f8b9036,al_50fbc01b[6]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_ef8c938f (
+    .a(1'b0),
+    .b(al_3519ff8d[7]),
+    .c(al_1f8b9036),
+    .o({al_f40c2aba,al_50fbc01b[7]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_12b92ed (
+    .a(1'b0),
+    .b(al_3519ff8d[8]),
+    .c(al_f40c2aba),
+    .o({al_48e4d1f5,al_50fbc01b[8]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_152b5410 (
+    .a(1'b0),
+    .b(al_3519ff8d[9]),
+    .c(al_48e4d1f5),
+    .o({al_a012e878,al_50fbc01b[9]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_2f169f5 (
+    .a(1'b0),
+    .b(al_3519ff8d[10]),
+    .c(al_a012e878),
+    .o({al_6fbd687d,al_50fbc01b[10]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_702dc01e (
+    .a(1'b0),
+    .b(al_3519ff8d[11]),
+    .c(al_6fbd687d),
+    .o({al_3af4b7f2,al_50fbc01b[11]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_9d7a2c76 (
+    .a(1'b0),
+    .b(al_3519ff8d[12]),
+    .c(al_3af4b7f2),
+    .o({al_9743bbe7,al_50fbc01b[12]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_f6c5d24b (
+    .a(1'b0),
+    .b(al_3519ff8d[13]),
+    .c(al_9743bbe7),
+    .o({al_617170a6,al_50fbc01b[13]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_6f5a1fb2 (
+    .a(1'b0),
+    .b(al_3519ff8d[14]),
+    .c(al_617170a6),
+    .o({al_ba617641,al_50fbc01b[14]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_c8a166b7 (
+    .a(1'b0),
+    .b(al_3519ff8d[15]),
+    .c(al_ba617641),
+    .o({al_a4321505,al_50fbc01b[15]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_82116e7 (
+    .a(1'b0),
+    .b(al_3519ff8d[16]),
+    .c(al_a4321505),
+    .o({al_1bafe615,al_50fbc01b[16]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_7a6d4132 (
+    .a(1'b0),
+    .b(al_3519ff8d[17]),
+    .c(al_1bafe615),
+    .o({al_75856867,al_50fbc01b[17]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_bdd3262 (
+    .a(1'b0),
+    .b(al_3519ff8d[18]),
+    .c(al_75856867),
+    .o({al_25dbda90,al_50fbc01b[18]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_e7080794 (
+    .a(1'b0),
+    .b(al_3519ff8d[19]),
+    .c(al_25dbda90),
+    .o({al_6578de79,al_50fbc01b[19]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_a0271847 (
+    .a(1'b0),
+    .b(al_3519ff8d[20]),
+    .c(al_6578de79),
+    .o({al_f79579ec,al_50fbc01b[20]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_e30fbaa6 (
+    .a(1'b0),
+    .b(al_3519ff8d[21]),
+    .c(al_f79579ec),
+    .o({al_f7c90235,al_50fbc01b[21]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_4b42f2ed (
+    .a(1'b0),
+    .b(al_3519ff8d[22]),
+    .c(al_f7c90235),
+    .o({al_83bf52a3,al_50fbc01b[22]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_d16ec56f (
+    .a(1'b0),
+    .b(al_3519ff8d[23]),
+    .c(al_83bf52a3),
+    .o({al_149812f,al_50fbc01b[23]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_311c4d32 (
+    .a(1'b0),
+    .b(al_3519ff8d[24]),
+    .c(al_149812f),
+    .o({al_1affdf6a,al_50fbc01b[24]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_4b315140 (
+    .a(1'b0),
+    .b(al_3519ff8d[25]),
+    .c(al_1affdf6a),
+    .o({al_485fa6b9,al_50fbc01b[25]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_9c614a27 (
+    .a(1'b0),
+    .b(al_3519ff8d[26]),
+    .c(al_485fa6b9),
+    .o({al_40c1d45a,al_50fbc01b[26]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_cb752631 (
+    .a(1'b0),
+    .b(al_3519ff8d[27]),
+    .c(al_40c1d45a),
+    .o({al_c24f6b37,al_50fbc01b[27]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_620a8225 (
+    .a(1'b0),
+    .b(al_3519ff8d[28]),
+    .c(al_c24f6b37),
+    .o({al_8ca7a7c3,al_50fbc01b[28]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_f8390b84 (
+    .a(1'b0),
+    .b(al_3519ff8d[29]),
+    .c(al_8ca7a7c3),
+    .o({al_aa80a08,al_50fbc01b[29]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_397768e0 (
+    .a(1'b0),
+    .b(al_3519ff8d[30]),
+    .c(al_aa80a08),
+    .o({al_714e364c,al_50fbc01b[30]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_9cede4be (
+    .a(1'b0),
+    .b(al_3519ff8d[31]),
+    .c(al_714e364c),
+    .o({open_n170,al_50fbc01b[31]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB_CARRY"))
+    al_94f2e990 (
+    .a(1'b0),
+    .o({al_1c658141,open_n173}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_aa196299 (
+    .a(1'b0),
+    .b(numerator[0]),
+    .c(al_1c658141),
+    .o({al_a64be757,open_n174}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_e5f8ccc2 (
+    .a(1'b0),
+    .b(numerator[1]),
+    .c(al_a64be757),
+    .o({al_b431af9b,al_aaf30d21[1]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_845acdd5 (
+    .a(1'b0),
+    .b(numerator[2]),
+    .c(al_b431af9b),
+    .o({al_fcb8c140,al_aaf30d21[2]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_c82df596 (
+    .a(1'b0),
+    .b(numerator[3]),
+    .c(al_fcb8c140),
+    .o({al_b3754c82,al_aaf30d21[3]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_799be686 (
+    .a(1'b0),
+    .b(numerator[4]),
+    .c(al_b3754c82),
+    .o({al_b4572e0e,al_aaf30d21[4]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_9717c6f6 (
+    .a(1'b0),
+    .b(numerator[5]),
+    .c(al_b4572e0e),
+    .o({al_f415e6f2,al_aaf30d21[5]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_18df3154 (
+    .a(1'b0),
+    .b(numerator[6]),
+    .c(al_f415e6f2),
+    .o({al_7df9fae0,al_aaf30d21[6]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_182e060a (
+    .a(1'b0),
+    .b(numerator[7]),
+    .c(al_7df9fae0),
+    .o({al_abb04a28,al_aaf30d21[7]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_2068bc1b (
+    .a(1'b0),
+    .b(numerator[8]),
+    .c(al_abb04a28),
+    .o({al_e8e36fd9,al_aaf30d21[8]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_74e05d02 (
+    .a(1'b0),
+    .b(numerator[9]),
+    .c(al_e8e36fd9),
+    .o({al_aad265f2,al_aaf30d21[9]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_4abf1982 (
+    .a(1'b0),
+    .b(numerator[10]),
+    .c(al_aad265f2),
+    .o({al_8792f9ab,al_aaf30d21[10]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_e6fcde9b (
+    .a(1'b0),
+    .b(numerator[11]),
+    .c(al_8792f9ab),
+    .o({al_c303eec0,al_aaf30d21[11]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_41ce2dde (
+    .a(1'b0),
+    .b(numerator[12]),
+    .c(al_c303eec0),
+    .o({al_4380ddfc,al_aaf30d21[12]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_4eaaff00 (
+    .a(1'b0),
+    .b(numerator[13]),
+    .c(al_4380ddfc),
+    .o({al_99be124a,al_aaf30d21[13]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_9d241a3c (
+    .a(1'b0),
+    .b(numerator[14]),
+    .c(al_99be124a),
+    .o({al_203976b,al_aaf30d21[14]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_43557774 (
+    .a(1'b0),
+    .b(numerator[15]),
+    .c(al_203976b),
+    .o({al_774ceb3c,al_aaf30d21[15]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_f34ad3ed (
+    .a(1'b0),
+    .b(numerator[16]),
+    .c(al_774ceb3c),
+    .o({al_a0b58ab5,al_aaf30d21[16]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("SUB"))
+    al_4c7e5631 (
+    .a(1'b0),
+    .b(numerator[17]),
+    .c(al_a0b58ab5),
+    .o({al_f45d56ad,al_aaf30d21[17]}));
   AL_DFF_X al_35b11324 (
     .ar(rst),
     .as(1'b0),
@@ -34115,6 +35194,503 @@ module dds_divider_0
     .sr(1'b0),
     .ss(1'b0),
     .q(done));
+  AL_MAP_LUT3 #(
+    .EQN("(B*~(C)*~(A)+B*C*~(A)+~(B)*C*A+B*C*A)"),
+    .INIT(8'he4))
+    al_d49e95bf (
+    .a(numerator[31]),
+    .b(numerator[10]),
+    .c(al_aaf30d21[10]),
+    .o(al_509e0fe5[10]));
+  AL_MAP_LUT3 #(
+    .EQN("(B*~(C)*~(A)+B*C*~(A)+~(B)*C*A+B*C*A)"),
+    .INIT(8'he4))
+    al_2af96281 (
+    .a(numerator[31]),
+    .b(numerator[11]),
+    .c(al_aaf30d21[11]),
+    .o(al_509e0fe5[11]));
+  AL_MAP_LUT3 #(
+    .EQN("(B*~(C)*~(A)+B*C*~(A)+~(B)*C*A+B*C*A)"),
+    .INIT(8'he4))
+    al_bc460c66 (
+    .a(numerator[31]),
+    .b(numerator[12]),
+    .c(al_aaf30d21[12]),
+    .o(al_509e0fe5[12]));
+  AL_MAP_LUT3 #(
+    .EQN("(B*~(C)*~(A)+B*C*~(A)+~(B)*C*A+B*C*A)"),
+    .INIT(8'he4))
+    al_912a80c3 (
+    .a(numerator[31]),
+    .b(numerator[13]),
+    .c(al_aaf30d21[13]),
+    .o(al_509e0fe5[13]));
+  AL_MAP_LUT3 #(
+    .EQN("(B*~(C)*~(A)+B*C*~(A)+~(B)*C*A+B*C*A)"),
+    .INIT(8'he4))
+    al_6098e619 (
+    .a(numerator[31]),
+    .b(numerator[14]),
+    .c(al_aaf30d21[14]),
+    .o(al_509e0fe5[14]));
+  AL_MAP_LUT3 #(
+    .EQN("(B*~(C)*~(A)+B*C*~(A)+~(B)*C*A+B*C*A)"),
+    .INIT(8'he4))
+    al_3860346d (
+    .a(numerator[31]),
+    .b(numerator[15]),
+    .c(al_aaf30d21[15]),
+    .o(al_509e0fe5[15]));
+  AL_MAP_LUT3 #(
+    .EQN("(B*~(C)*~(A)+B*C*~(A)+~(B)*C*A+B*C*A)"),
+    .INIT(8'he4))
+    al_612561bc (
+    .a(numerator[31]),
+    .b(numerator[16]),
+    .c(al_aaf30d21[16]),
+    .o(al_509e0fe5[16]));
+  AL_MAP_LUT3 #(
+    .EQN("(B*~(C)*~(A)+B*C*~(A)+~(B)*C*A+B*C*A)"),
+    .INIT(8'he4))
+    al_130ff81d (
+    .a(numerator[31]),
+    .b(numerator[17]),
+    .c(al_aaf30d21[17]),
+    .o(al_509e0fe5[17]));
+  AL_MAP_LUT3 #(
+    .EQN("(B*~(C)*~(A)+B*C*~(A)+~(B)*C*A+B*C*A)"),
+    .INIT(8'he4))
+    al_f74a857e (
+    .a(numerator[31]),
+    .b(numerator[18]),
+    .c(al_aaf30d21[18]),
+    .o(al_509e0fe5[18]));
+  AL_MAP_LUT3 #(
+    .EQN("(B*~(C)*~(A)+B*C*~(A)+~(B)*C*A+B*C*A)"),
+    .INIT(8'he4))
+    al_c96f2b05 (
+    .a(numerator[31]),
+    .b(numerator[19]),
+    .c(al_aaf30d21[19]),
+    .o(al_509e0fe5[19]));
+  AL_MAP_LUT3 #(
+    .EQN("(B*~(C)*~(A)+B*C*~(A)+~(B)*C*A+B*C*A)"),
+    .INIT(8'he4))
+    al_2a8e4f49 (
+    .a(numerator[31]),
+    .b(numerator[1]),
+    .c(al_aaf30d21[1]),
+    .o(al_509e0fe5[1]));
+  AL_MAP_LUT3 #(
+    .EQN("(B*~(C)*~(A)+B*C*~(A)+~(B)*C*A+B*C*A)"),
+    .INIT(8'he4))
+    al_e99184f4 (
+    .a(numerator[31]),
+    .b(numerator[20]),
+    .c(al_aaf30d21[20]),
+    .o(al_509e0fe5[20]));
+  AL_MAP_LUT3 #(
+    .EQN("(B*~(C)*~(A)+B*C*~(A)+~(B)*C*A+B*C*A)"),
+    .INIT(8'he4))
+    al_1949d57a (
+    .a(numerator[31]),
+    .b(numerator[21]),
+    .c(al_aaf30d21[21]),
+    .o(al_509e0fe5[21]));
+  AL_MAP_LUT3 #(
+    .EQN("(B*~(C)*~(A)+B*C*~(A)+~(B)*C*A+B*C*A)"),
+    .INIT(8'he4))
+    al_51c70195 (
+    .a(numerator[31]),
+    .b(numerator[22]),
+    .c(al_aaf30d21[22]),
+    .o(al_509e0fe5[22]));
+  AL_MAP_LUT3 #(
+    .EQN("(B*~(C)*~(A)+B*C*~(A)+~(B)*C*A+B*C*A)"),
+    .INIT(8'he4))
+    al_b8e4a621 (
+    .a(numerator[31]),
+    .b(numerator[23]),
+    .c(al_aaf30d21[23]),
+    .o(al_509e0fe5[23]));
+  AL_MAP_LUT3 #(
+    .EQN("(B*~(C)*~(A)+B*C*~(A)+~(B)*C*A+B*C*A)"),
+    .INIT(8'he4))
+    al_86c48d95 (
+    .a(numerator[31]),
+    .b(numerator[24]),
+    .c(al_aaf30d21[24]),
+    .o(al_509e0fe5[24]));
+  AL_MAP_LUT3 #(
+    .EQN("(B*~(C)*~(A)+B*C*~(A)+~(B)*C*A+B*C*A)"),
+    .INIT(8'he4))
+    al_8b57d9d5 (
+    .a(numerator[31]),
+    .b(numerator[25]),
+    .c(al_aaf30d21[25]),
+    .o(al_509e0fe5[25]));
+  AL_MAP_LUT3 #(
+    .EQN("(B*~(C)*~(A)+B*C*~(A)+~(B)*C*A+B*C*A)"),
+    .INIT(8'he4))
+    al_df1ee0af (
+    .a(numerator[31]),
+    .b(numerator[26]),
+    .c(al_aaf30d21[26]),
+    .o(al_509e0fe5[26]));
+  AL_MAP_LUT3 #(
+    .EQN("(B*~(C)*~(A)+B*C*~(A)+~(B)*C*A+B*C*A)"),
+    .INIT(8'he4))
+    al_8e07bc50 (
+    .a(numerator[31]),
+    .b(numerator[27]),
+    .c(al_aaf30d21[27]),
+    .o(al_509e0fe5[27]));
+  AL_MAP_LUT3 #(
+    .EQN("(B*~(C)*~(A)+B*C*~(A)+~(B)*C*A+B*C*A)"),
+    .INIT(8'he4))
+    al_d8907715 (
+    .a(numerator[31]),
+    .b(numerator[28]),
+    .c(al_aaf30d21[28]),
+    .o(al_509e0fe5[28]));
+  AL_MAP_LUT3 #(
+    .EQN("(B*~(C)*~(A)+B*C*~(A)+~(B)*C*A+B*C*A)"),
+    .INIT(8'he4))
+    al_fc38dc1b (
+    .a(numerator[31]),
+    .b(numerator[29]),
+    .c(al_aaf30d21[29]),
+    .o(al_509e0fe5[29]));
+  AL_MAP_LUT3 #(
+    .EQN("(B*~(C)*~(A)+B*C*~(A)+~(B)*C*A+B*C*A)"),
+    .INIT(8'he4))
+    al_2d55c8a5 (
+    .a(numerator[31]),
+    .b(numerator[2]),
+    .c(al_aaf30d21[2]),
+    .o(al_509e0fe5[2]));
+  AL_MAP_LUT3 #(
+    .EQN("(B*~(C)*~(A)+B*C*~(A)+~(B)*C*A+B*C*A)"),
+    .INIT(8'he4))
+    al_3e804f6d (
+    .a(numerator[31]),
+    .b(numerator[30]),
+    .c(al_aaf30d21[30]),
+    .o(al_509e0fe5[30]));
+  AL_MAP_LUT3 #(
+    .EQN("(B*~(C)*~(A)+B*C*~(A)+~(B)*C*A+B*C*A)"),
+    .INIT(8'he4))
+    al_59a95594 (
+    .a(numerator[31]),
+    .b(numerator[3]),
+    .c(al_aaf30d21[3]),
+    .o(al_509e0fe5[3]));
+  AL_MAP_LUT3 #(
+    .EQN("(B*~(C)*~(A)+B*C*~(A)+~(B)*C*A+B*C*A)"),
+    .INIT(8'he4))
+    al_224fe346 (
+    .a(numerator[31]),
+    .b(numerator[4]),
+    .c(al_aaf30d21[4]),
+    .o(al_509e0fe5[4]));
+  AL_MAP_LUT3 #(
+    .EQN("(B*~(C)*~(A)+B*C*~(A)+~(B)*C*A+B*C*A)"),
+    .INIT(8'he4))
+    al_ec354063 (
+    .a(numerator[31]),
+    .b(numerator[5]),
+    .c(al_aaf30d21[5]),
+    .o(al_509e0fe5[5]));
+  AL_MAP_LUT3 #(
+    .EQN("(B*~(C)*~(A)+B*C*~(A)+~(B)*C*A+B*C*A)"),
+    .INIT(8'he4))
+    al_45f93e4c (
+    .a(numerator[31]),
+    .b(numerator[6]),
+    .c(al_aaf30d21[6]),
+    .o(al_509e0fe5[6]));
+  AL_MAP_LUT3 #(
+    .EQN("(B*~(C)*~(A)+B*C*~(A)+~(B)*C*A+B*C*A)"),
+    .INIT(8'he4))
+    al_77328ee3 (
+    .a(numerator[31]),
+    .b(numerator[7]),
+    .c(al_aaf30d21[7]),
+    .o(al_509e0fe5[7]));
+  AL_MAP_LUT3 #(
+    .EQN("(B*~(C)*~(A)+B*C*~(A)+~(B)*C*A+B*C*A)"),
+    .INIT(8'he4))
+    al_fd600072 (
+    .a(numerator[31]),
+    .b(numerator[8]),
+    .c(al_aaf30d21[8]),
+    .o(al_509e0fe5[8]));
+  AL_MAP_LUT3 #(
+    .EQN("(B*~(C)*~(A)+B*C*~(A)+~(B)*C*A+B*C*A)"),
+    .INIT(8'he4))
+    al_a3323173 (
+    .a(numerator[31]),
+    .b(numerator[9]),
+    .c(al_aaf30d21[9]),
+    .o(al_509e0fe5[9]));
+  AL_MAP_LUT3 #(
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
+    al_6dad756c (
+    .a(al_dd9da09a[10]),
+    .b(al_ae5d831a[1]),
+    .c(al_18157fe8[10]),
+    .o(al_8fb6bbc3[10]));
+  AL_MAP_LUT3 #(
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
+    al_4fe6ed93 (
+    .a(al_dd9da09a[11]),
+    .b(al_ae5d831a[1]),
+    .c(al_18157fe8[11]),
+    .o(al_8fb6bbc3[11]));
+  AL_MAP_LUT3 #(
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
+    al_1a4592a9 (
+    .a(al_dd9da09a[12]),
+    .b(al_ae5d831a[1]),
+    .c(al_18157fe8[12]),
+    .o(al_8fb6bbc3[12]));
+  AL_MAP_LUT3 #(
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
+    al_1780da6e (
+    .a(al_dd9da09a[13]),
+    .b(al_ae5d831a[1]),
+    .c(al_18157fe8[13]),
+    .o(al_8fb6bbc3[13]));
+  AL_MAP_LUT3 #(
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
+    al_a4f6e0fc (
+    .a(al_dd9da09a[14]),
+    .b(al_ae5d831a[1]),
+    .c(al_18157fe8[14]),
+    .o(al_8fb6bbc3[14]));
+  AL_MAP_LUT3 #(
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
+    al_7cf41f49 (
+    .a(al_dd9da09a[15]),
+    .b(al_ae5d831a[1]),
+    .c(al_18157fe8[15]),
+    .o(al_8fb6bbc3[15]));
+  AL_MAP_LUT3 #(
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
+    al_bfa4bd92 (
+    .a(al_dd9da09a[16]),
+    .b(al_ae5d831a[1]),
+    .c(al_18157fe8[16]),
+    .o(al_8fb6bbc3[16]));
+  AL_MAP_LUT3 #(
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
+    al_6a3c995e (
+    .a(al_dd9da09a[17]),
+    .b(al_ae5d831a[1]),
+    .c(al_18157fe8[17]),
+    .o(al_8fb6bbc3[17]));
+  AL_MAP_LUT3 #(
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
+    al_69f161b0 (
+    .a(al_dd9da09a[18]),
+    .b(al_ae5d831a[1]),
+    .c(al_18157fe8[18]),
+    .o(al_8fb6bbc3[18]));
+  AL_MAP_LUT3 #(
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
+    al_c9bd4f93 (
+    .a(al_dd9da09a[19]),
+    .b(al_ae5d831a[1]),
+    .c(al_18157fe8[19]),
+    .o(al_8fb6bbc3[19]));
+  AL_MAP_LUT3 #(
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
+    al_e185a90c (
+    .a(al_dd9da09a[1]),
+    .b(al_ae5d831a[1]),
+    .c(al_18157fe8[1]),
+    .o(al_8fb6bbc3[1]));
+  AL_MAP_LUT3 #(
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
+    al_ced12382 (
+    .a(al_dd9da09a[20]),
+    .b(al_ae5d831a[1]),
+    .c(al_18157fe8[20]),
+    .o(al_8fb6bbc3[20]));
+  AL_MAP_LUT3 #(
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
+    al_48cf99ba (
+    .a(al_dd9da09a[21]),
+    .b(al_ae5d831a[1]),
+    .c(al_18157fe8[21]),
+    .o(al_8fb6bbc3[21]));
+  AL_MAP_LUT3 #(
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
+    al_26712001 (
+    .a(al_dd9da09a[22]),
+    .b(al_ae5d831a[1]),
+    .c(al_18157fe8[22]),
+    .o(al_8fb6bbc3[22]));
+  AL_MAP_LUT3 #(
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
+    al_7c691fe9 (
+    .a(al_dd9da09a[23]),
+    .b(al_ae5d831a[1]),
+    .c(al_18157fe8[23]),
+    .o(al_8fb6bbc3[23]));
+  AL_MAP_LUT3 #(
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
+    al_ff5e7c77 (
+    .a(al_dd9da09a[24]),
+    .b(al_ae5d831a[1]),
+    .c(al_18157fe8[24]),
+    .o(al_8fb6bbc3[24]));
+  AL_MAP_LUT3 #(
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
+    al_b1f80dbc (
+    .a(al_dd9da09a[25]),
+    .b(al_ae5d831a[1]),
+    .c(al_18157fe8[25]),
+    .o(al_8fb6bbc3[25]));
+  AL_MAP_LUT3 #(
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
+    al_e539c225 (
+    .a(al_dd9da09a[26]),
+    .b(al_ae5d831a[1]),
+    .c(al_18157fe8[26]),
+    .o(al_8fb6bbc3[26]));
+  AL_MAP_LUT3 #(
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
+    al_1a888301 (
+    .a(al_dd9da09a[27]),
+    .b(al_ae5d831a[1]),
+    .c(al_18157fe8[27]),
+    .o(al_8fb6bbc3[27]));
+  AL_MAP_LUT3 #(
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
+    al_37c166cb (
+    .a(al_dd9da09a[28]),
+    .b(al_ae5d831a[1]),
+    .c(al_18157fe8[28]),
+    .o(al_8fb6bbc3[28]));
+  AL_MAP_LUT3 #(
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
+    al_c0a95ad4 (
+    .a(al_dd9da09a[29]),
+    .b(al_ae5d831a[1]),
+    .c(al_18157fe8[29]),
+    .o(al_8fb6bbc3[29]));
+  AL_MAP_LUT3 #(
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
+    al_e5d85422 (
+    .a(al_dd9da09a[2]),
+    .b(al_ae5d831a[1]),
+    .c(al_18157fe8[2]),
+    .o(al_8fb6bbc3[2]));
+  AL_MAP_LUT3 #(
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
+    al_2b1e176e (
+    .a(al_dd9da09a[30]),
+    .b(al_ae5d831a[1]),
+    .c(al_18157fe8[30]),
+    .o(al_8fb6bbc3[30]));
+  AL_MAP_LUT3 #(
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
+    al_cb4f6cb4 (
+    .a(al_dd9da09a[31]),
+    .b(al_ae5d831a[1]),
+    .c(al_18157fe8[31]),
+    .o(al_8fb6bbc3[31]));
+  AL_MAP_LUT3 #(
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
+    al_55faadd (
+    .a(al_dd9da09a[3]),
+    .b(al_ae5d831a[1]),
+    .c(al_18157fe8[3]),
+    .o(al_8fb6bbc3[3]));
+  AL_MAP_LUT3 #(
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
+    al_f0486fd1 (
+    .a(al_dd9da09a[4]),
+    .b(al_ae5d831a[1]),
+    .c(al_18157fe8[4]),
+    .o(al_8fb6bbc3[4]));
+  AL_MAP_LUT3 #(
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
+    al_7c99d731 (
+    .a(al_dd9da09a[5]),
+    .b(al_ae5d831a[1]),
+    .c(al_18157fe8[5]),
+    .o(al_8fb6bbc3[5]));
+  AL_MAP_LUT3 #(
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
+    al_a6a170f1 (
+    .a(al_dd9da09a[6]),
+    .b(al_ae5d831a[1]),
+    .c(al_18157fe8[6]),
+    .o(al_8fb6bbc3[6]));
+  AL_MAP_LUT3 #(
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
+    al_7948747 (
+    .a(al_dd9da09a[7]),
+    .b(al_ae5d831a[1]),
+    .c(al_18157fe8[7]),
+    .o(al_8fb6bbc3[7]));
+  AL_MAP_LUT3 #(
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
+    al_100026da (
+    .a(al_dd9da09a[8]),
+    .b(al_ae5d831a[1]),
+    .c(al_18157fe8[8]),
+    .o(al_8fb6bbc3[8]));
+  AL_MAP_LUT3 #(
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
+    al_1a1d58e1 (
+    .a(al_dd9da09a[9]),
+    .b(al_ae5d831a[1]),
+    .c(al_18157fe8[9]),
+    .o(al_8fb6bbc3[9]));
+  AL_DFF_X al_3b47d798 (
+    .ar(1'b0),
+    .as(1'b0),
+    .clk(clk),
+    .d(numerator[31]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_f1a38dd5));
   AL_DFF_X al_65d1adb3 (
     .ar(1'b0),
     .as(1'b0),
@@ -34407,7 +35983,7 @@ module dds_divider_0
     .ar(1'b0),
     .as(1'b0),
     .clk(clk),
-    .d(numerator[8]),
+    .d(al_509e0fe5[8]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -34416,7 +35992,7 @@ module dds_divider_0
     .ar(1'b0),
     .as(1'b0),
     .clk(clk),
-    .d(numerator[9]),
+    .d(al_509e0fe5[9]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -34425,7 +36001,7 @@ module dds_divider_0
     .ar(1'b0),
     .as(1'b0),
     .clk(clk),
-    .d(numerator[10]),
+    .d(al_509e0fe5[10]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -34434,7 +36010,7 @@ module dds_divider_0
     .ar(1'b0),
     .as(1'b0),
     .clk(clk),
-    .d(numerator[11]),
+    .d(al_509e0fe5[11]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -34443,7 +36019,7 @@ module dds_divider_0
     .ar(1'b0),
     .as(1'b0),
     .clk(clk),
-    .d(numerator[12]),
+    .d(al_509e0fe5[12]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -34452,7 +36028,7 @@ module dds_divider_0
     .ar(1'b0),
     .as(1'b0),
     .clk(clk),
-    .d(numerator[13]),
+    .d(al_509e0fe5[13]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -34461,7 +36037,7 @@ module dds_divider_0
     .ar(1'b0),
     .as(1'b0),
     .clk(clk),
-    .d(numerator[14]),
+    .d(al_509e0fe5[14]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -34470,7 +36046,7 @@ module dds_divider_0
     .ar(1'b0),
     .as(1'b0),
     .clk(clk),
-    .d(numerator[15]),
+    .d(al_509e0fe5[15]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -34479,7 +36055,7 @@ module dds_divider_0
     .ar(1'b0),
     .as(1'b0),
     .clk(clk),
-    .d(numerator[16]),
+    .d(al_509e0fe5[16]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -34488,7 +36064,7 @@ module dds_divider_0
     .ar(1'b0),
     .as(1'b0),
     .clk(clk),
-    .d(numerator[17]),
+    .d(al_509e0fe5[17]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -34506,7 +36082,7 @@ module dds_divider_0
     .ar(1'b0),
     .as(1'b0),
     .clk(clk),
-    .d(numerator[18]),
+    .d(al_509e0fe5[18]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -34515,7 +36091,7 @@ module dds_divider_0
     .ar(1'b0),
     .as(1'b0),
     .clk(clk),
-    .d(numerator[19]),
+    .d(al_509e0fe5[19]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -34524,7 +36100,7 @@ module dds_divider_0
     .ar(1'b0),
     .as(1'b0),
     .clk(clk),
-    .d(numerator[20]),
+    .d(al_509e0fe5[20]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -34533,7 +36109,7 @@ module dds_divider_0
     .ar(1'b0),
     .as(1'b0),
     .clk(clk),
-    .d(numerator[21]),
+    .d(al_509e0fe5[21]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -34542,7 +36118,7 @@ module dds_divider_0
     .ar(1'b0),
     .as(1'b0),
     .clk(clk),
-    .d(numerator[22]),
+    .d(al_509e0fe5[22]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -34551,7 +36127,7 @@ module dds_divider_0
     .ar(1'b0),
     .as(1'b0),
     .clk(clk),
-    .d(numerator[23]),
+    .d(al_509e0fe5[23]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -34560,7 +36136,7 @@ module dds_divider_0
     .ar(1'b0),
     .as(1'b0),
     .clk(clk),
-    .d(numerator[24]),
+    .d(al_509e0fe5[24]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -34569,7 +36145,7 @@ module dds_divider_0
     .ar(1'b0),
     .as(1'b0),
     .clk(clk),
-    .d(numerator[25]),
+    .d(al_509e0fe5[25]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -34578,7 +36154,7 @@ module dds_divider_0
     .ar(1'b0),
     .as(1'b0),
     .clk(clk),
-    .d(numerator[26]),
+    .d(al_509e0fe5[26]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -34587,7 +36163,7 @@ module dds_divider_0
     .ar(1'b0),
     .as(1'b0),
     .clk(clk),
-    .d(numerator[27]),
+    .d(al_509e0fe5[27]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -34596,7 +36172,7 @@ module dds_divider_0
     .ar(1'b0),
     .as(1'b0),
     .clk(clk),
-    .d(numerator[1]),
+    .d(al_509e0fe5[1]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -34605,7 +36181,7 @@ module dds_divider_0
     .ar(1'b0),
     .as(1'b0),
     .clk(clk),
-    .d(numerator[28]),
+    .d(al_509e0fe5[28]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -34614,7 +36190,7 @@ module dds_divider_0
     .ar(1'b0),
     .as(1'b0),
     .clk(clk),
-    .d(numerator[29]),
+    .d(al_509e0fe5[29]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -34623,7 +36199,7 @@ module dds_divider_0
     .ar(1'b0),
     .as(1'b0),
     .clk(clk),
-    .d(numerator[30]),
+    .d(al_509e0fe5[30]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -34632,16 +36208,23 @@ module dds_divider_0
     .ar(1'b0),
     .as(1'b0),
     .clk(clk),
-    .d(numerator[31]),
+    .d(al_b5a98930),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
     .q(al_a5806bc7[31]));
+  AL_MAP_LUT2 #(
+    .EQN("(B*A)"),
+    .INIT(4'h8))
+    al_84e187a8 (
+    .a(numerator[31]),
+    .b(al_aaf30d21[31]),
+    .o(al_b5a98930));
   AL_DFF_X al_b4cd3408 (
     .ar(1'b0),
     .as(1'b0),
     .clk(clk),
-    .d(numerator[2]),
+    .d(al_509e0fe5[2]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -34650,7 +36233,7 @@ module dds_divider_0
     .ar(1'b0),
     .as(1'b0),
     .clk(clk),
-    .d(numerator[3]),
+    .d(al_509e0fe5[3]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -34659,7 +36242,7 @@ module dds_divider_0
     .ar(1'b0),
     .as(1'b0),
     .clk(clk),
-    .d(numerator[4]),
+    .d(al_509e0fe5[4]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -34668,7 +36251,7 @@ module dds_divider_0
     .ar(1'b0),
     .as(1'b0),
     .clk(clk),
-    .d(numerator[5]),
+    .d(al_509e0fe5[5]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -34677,7 +36260,7 @@ module dds_divider_0
     .ar(1'b0),
     .as(1'b0),
     .clk(clk),
-    .d(numerator[6]),
+    .d(al_509e0fe5[6]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -34686,7 +36269,7 @@ module dds_divider_0
     .ar(1'b0),
     .as(1'b0),
     .clk(clk),
-    .d(numerator[7]),
+    .d(al_509e0fe5[7]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -34695,7 +36278,7 @@ module dds_divider_0
     .ar(rst),
     .as(1'b0),
     .clk(clk),
-    .d(al_18157fe8[8]),
+    .d(al_8fb6bbc3[8]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -34704,7 +36287,7 @@ module dds_divider_0
     .ar(rst),
     .as(1'b0),
     .clk(clk),
-    .d(al_18157fe8[9]),
+    .d(al_8fb6bbc3[9]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -34713,7 +36296,7 @@ module dds_divider_0
     .ar(rst),
     .as(1'b0),
     .clk(clk),
-    .d(al_18157fe8[10]),
+    .d(al_8fb6bbc3[10]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -34722,7 +36305,7 @@ module dds_divider_0
     .ar(rst),
     .as(1'b0),
     .clk(clk),
-    .d(al_18157fe8[11]),
+    .d(al_8fb6bbc3[11]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -34731,7 +36314,7 @@ module dds_divider_0
     .ar(rst),
     .as(1'b0),
     .clk(clk),
-    .d(al_18157fe8[12]),
+    .d(al_8fb6bbc3[12]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -34740,7 +36323,7 @@ module dds_divider_0
     .ar(rst),
     .as(1'b0),
     .clk(clk),
-    .d(al_18157fe8[13]),
+    .d(al_8fb6bbc3[13]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -34749,7 +36332,7 @@ module dds_divider_0
     .ar(rst),
     .as(1'b0),
     .clk(clk),
-    .d(al_18157fe8[14]),
+    .d(al_8fb6bbc3[14]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -34758,7 +36341,7 @@ module dds_divider_0
     .ar(rst),
     .as(1'b0),
     .clk(clk),
-    .d(al_18157fe8[15]),
+    .d(al_8fb6bbc3[15]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -34767,7 +36350,7 @@ module dds_divider_0
     .ar(rst),
     .as(1'b0),
     .clk(clk),
-    .d(al_18157fe8[16]),
+    .d(al_8fb6bbc3[16]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -34776,7 +36359,7 @@ module dds_divider_0
     .ar(rst),
     .as(1'b0),
     .clk(clk),
-    .d(al_18157fe8[17]),
+    .d(al_8fb6bbc3[17]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -34794,7 +36377,7 @@ module dds_divider_0
     .ar(rst),
     .as(1'b0),
     .clk(clk),
-    .d(al_18157fe8[18]),
+    .d(al_8fb6bbc3[18]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -34803,7 +36386,7 @@ module dds_divider_0
     .ar(rst),
     .as(1'b0),
     .clk(clk),
-    .d(al_18157fe8[19]),
+    .d(al_8fb6bbc3[19]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -34812,7 +36395,7 @@ module dds_divider_0
     .ar(rst),
     .as(1'b0),
     .clk(clk),
-    .d(al_18157fe8[20]),
+    .d(al_8fb6bbc3[20]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -34821,7 +36404,7 @@ module dds_divider_0
     .ar(rst),
     .as(1'b0),
     .clk(clk),
-    .d(al_18157fe8[21]),
+    .d(al_8fb6bbc3[21]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -34830,7 +36413,7 @@ module dds_divider_0
     .ar(rst),
     .as(1'b0),
     .clk(clk),
-    .d(al_18157fe8[22]),
+    .d(al_8fb6bbc3[22]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -34839,7 +36422,7 @@ module dds_divider_0
     .ar(rst),
     .as(1'b0),
     .clk(clk),
-    .d(al_18157fe8[23]),
+    .d(al_8fb6bbc3[23]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -34848,7 +36431,7 @@ module dds_divider_0
     .ar(rst),
     .as(1'b0),
     .clk(clk),
-    .d(al_18157fe8[24]),
+    .d(al_8fb6bbc3[24]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -34857,7 +36440,7 @@ module dds_divider_0
     .ar(rst),
     .as(1'b0),
     .clk(clk),
-    .d(al_18157fe8[25]),
+    .d(al_8fb6bbc3[25]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -34866,7 +36449,7 @@ module dds_divider_0
     .ar(rst),
     .as(1'b0),
     .clk(clk),
-    .d(al_18157fe8[26]),
+    .d(al_8fb6bbc3[26]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -34875,7 +36458,7 @@ module dds_divider_0
     .ar(rst),
     .as(1'b0),
     .clk(clk),
-    .d(al_18157fe8[27]),
+    .d(al_8fb6bbc3[27]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -34884,7 +36467,7 @@ module dds_divider_0
     .ar(rst),
     .as(1'b0),
     .clk(clk),
-    .d(al_18157fe8[1]),
+    .d(al_8fb6bbc3[1]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -34893,7 +36476,7 @@ module dds_divider_0
     .ar(rst),
     .as(1'b0),
     .clk(clk),
-    .d(al_18157fe8[28]),
+    .d(al_8fb6bbc3[28]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -34902,7 +36485,7 @@ module dds_divider_0
     .ar(rst),
     .as(1'b0),
     .clk(clk),
-    .d(al_18157fe8[29]),
+    .d(al_8fb6bbc3[29]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -34911,7 +36494,7 @@ module dds_divider_0
     .ar(rst),
     .as(1'b0),
     .clk(clk),
-    .d(al_18157fe8[30]),
+    .d(al_8fb6bbc3[30]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -34920,7 +36503,7 @@ module dds_divider_0
     .ar(rst),
     .as(1'b0),
     .clk(clk),
-    .d(al_18157fe8[31]),
+    .d(al_8fb6bbc3[31]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -34929,7 +36512,7 @@ module dds_divider_0
     .ar(rst),
     .as(1'b0),
     .clk(clk),
-    .d(al_18157fe8[2]),
+    .d(al_8fb6bbc3[2]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -34938,7 +36521,7 @@ module dds_divider_0
     .ar(rst),
     .as(1'b0),
     .clk(clk),
-    .d(al_18157fe8[3]),
+    .d(al_8fb6bbc3[3]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -34947,7 +36530,7 @@ module dds_divider_0
     .ar(rst),
     .as(1'b0),
     .clk(clk),
-    .d(al_18157fe8[4]),
+    .d(al_8fb6bbc3[4]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -34956,7 +36539,7 @@ module dds_divider_0
     .ar(rst),
     .as(1'b0),
     .clk(clk),
-    .d(al_18157fe8[5]),
+    .d(al_8fb6bbc3[5]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -34965,7 +36548,7 @@ module dds_divider_0
     .ar(rst),
     .as(1'b0),
     .clk(clk),
-    .d(al_18157fe8[6]),
+    .d(al_8fb6bbc3[6]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -34974,7 +36557,7 @@ module dds_divider_0
     .ar(rst),
     .as(1'b0),
     .clk(clk),
-    .d(al_18157fe8[7]),
+    .d(al_8fb6bbc3[7]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -34983,7 +36566,7 @@ module dds_divider_0
     .ar(rst),
     .as(1'b0),
     .clk(clk),
-    .d(al_3519ff8d[8]),
+    .d(al_c24772ff[8]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -34992,7 +36575,7 @@ module dds_divider_0
     .ar(rst),
     .as(1'b0),
     .clk(clk),
-    .d(al_3519ff8d[9]),
+    .d(al_c24772ff[9]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -35001,7 +36584,7 @@ module dds_divider_0
     .ar(rst),
     .as(1'b0),
     .clk(clk),
-    .d(al_3519ff8d[10]),
+    .d(al_c24772ff[10]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -35010,7 +36593,7 @@ module dds_divider_0
     .ar(rst),
     .as(1'b0),
     .clk(clk),
-    .d(al_3519ff8d[11]),
+    .d(al_c24772ff[11]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -35019,7 +36602,7 @@ module dds_divider_0
     .ar(rst),
     .as(1'b0),
     .clk(clk),
-    .d(al_3519ff8d[12]),
+    .d(al_c24772ff[12]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -35028,7 +36611,7 @@ module dds_divider_0
     .ar(rst),
     .as(1'b0),
     .clk(clk),
-    .d(al_3519ff8d[13]),
+    .d(al_c24772ff[13]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -35037,7 +36620,7 @@ module dds_divider_0
     .ar(rst),
     .as(1'b0),
     .clk(clk),
-    .d(al_3519ff8d[14]),
+    .d(al_c24772ff[14]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -35046,7 +36629,7 @@ module dds_divider_0
     .ar(rst),
     .as(1'b0),
     .clk(clk),
-    .d(al_3519ff8d[15]),
+    .d(al_c24772ff[15]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -35055,7 +36638,7 @@ module dds_divider_0
     .ar(rst),
     .as(1'b0),
     .clk(clk),
-    .d(al_3519ff8d[16]),
+    .d(al_c24772ff[16]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -35064,7 +36647,7 @@ module dds_divider_0
     .ar(rst),
     .as(1'b0),
     .clk(clk),
-    .d(al_3519ff8d[17]),
+    .d(al_c24772ff[17]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -35082,7 +36665,7 @@ module dds_divider_0
     .ar(rst),
     .as(1'b0),
     .clk(clk),
-    .d(al_3519ff8d[18]),
+    .d(al_c24772ff[18]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -35091,7 +36674,7 @@ module dds_divider_0
     .ar(rst),
     .as(1'b0),
     .clk(clk),
-    .d(al_3519ff8d[19]),
+    .d(al_c24772ff[19]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -35100,7 +36683,7 @@ module dds_divider_0
     .ar(rst),
     .as(1'b0),
     .clk(clk),
-    .d(al_3519ff8d[20]),
+    .d(al_c24772ff[20]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -35109,7 +36692,7 @@ module dds_divider_0
     .ar(rst),
     .as(1'b0),
     .clk(clk),
-    .d(al_3519ff8d[21]),
+    .d(al_c24772ff[21]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -35118,7 +36701,7 @@ module dds_divider_0
     .ar(rst),
     .as(1'b0),
     .clk(clk),
-    .d(al_3519ff8d[22]),
+    .d(al_c24772ff[22]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -35127,7 +36710,7 @@ module dds_divider_0
     .ar(rst),
     .as(1'b0),
     .clk(clk),
-    .d(al_3519ff8d[23]),
+    .d(al_c24772ff[23]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -35136,7 +36719,7 @@ module dds_divider_0
     .ar(rst),
     .as(1'b0),
     .clk(clk),
-    .d(al_3519ff8d[24]),
+    .d(al_c24772ff[24]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -35145,7 +36728,7 @@ module dds_divider_0
     .ar(rst),
     .as(1'b0),
     .clk(clk),
-    .d(al_3519ff8d[25]),
+    .d(al_c24772ff[25]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -35154,7 +36737,7 @@ module dds_divider_0
     .ar(rst),
     .as(1'b0),
     .clk(clk),
-    .d(al_3519ff8d[26]),
+    .d(al_c24772ff[26]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -35163,7 +36746,7 @@ module dds_divider_0
     .ar(rst),
     .as(1'b0),
     .clk(clk),
-    .d(al_3519ff8d[27]),
+    .d(al_c24772ff[27]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -35172,7 +36755,7 @@ module dds_divider_0
     .ar(rst),
     .as(1'b0),
     .clk(clk),
-    .d(al_3519ff8d[1]),
+    .d(al_c24772ff[1]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -35181,7 +36764,7 @@ module dds_divider_0
     .ar(rst),
     .as(1'b0),
     .clk(clk),
-    .d(al_3519ff8d[28]),
+    .d(al_c24772ff[28]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -35190,7 +36773,7 @@ module dds_divider_0
     .ar(rst),
     .as(1'b0),
     .clk(clk),
-    .d(al_3519ff8d[29]),
+    .d(al_c24772ff[29]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -35199,7 +36782,7 @@ module dds_divider_0
     .ar(rst),
     .as(1'b0),
     .clk(clk),
-    .d(al_3519ff8d[30]),
+    .d(al_c24772ff[30]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -35208,7 +36791,7 @@ module dds_divider_0
     .ar(rst),
     .as(1'b0),
     .clk(clk),
-    .d(al_3519ff8d[31]),
+    .d(al_c24772ff[31]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -35217,7 +36800,7 @@ module dds_divider_0
     .ar(rst),
     .as(1'b0),
     .clk(clk),
-    .d(al_3519ff8d[2]),
+    .d(al_c24772ff[2]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -35226,7 +36809,7 @@ module dds_divider_0
     .ar(rst),
     .as(1'b0),
     .clk(clk),
-    .d(al_3519ff8d[3]),
+    .d(al_c24772ff[3]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -35235,7 +36818,7 @@ module dds_divider_0
     .ar(rst),
     .as(1'b0),
     .clk(clk),
-    .d(al_3519ff8d[4]),
+    .d(al_c24772ff[4]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -35244,7 +36827,7 @@ module dds_divider_0
     .ar(rst),
     .as(1'b0),
     .clk(clk),
-    .d(al_3519ff8d[5]),
+    .d(al_c24772ff[5]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -35253,7 +36836,7 @@ module dds_divider_0
     .ar(rst),
     .as(1'b0),
     .clk(clk),
-    .d(al_3519ff8d[6]),
+    .d(al_c24772ff[6]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
@@ -35262,11 +36845,259 @@ module dds_divider_0
     .ar(rst),
     .as(1'b0),
     .clk(clk),
-    .d(al_3519ff8d[7]),
+    .d(al_c24772ff[7]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
     .q(remainder[7]));
+  AL_MAP_LUT3 #(
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
+    al_217d606e (
+    .a(al_50fbc01b[10]),
+    .b(al_ae5d831a[1]),
+    .c(al_3519ff8d[10]),
+    .o(al_c24772ff[10]));
+  AL_MAP_LUT3 #(
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
+    al_659117e9 (
+    .a(al_50fbc01b[11]),
+    .b(al_ae5d831a[1]),
+    .c(al_3519ff8d[11]),
+    .o(al_c24772ff[11]));
+  AL_MAP_LUT3 #(
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
+    al_38a3e306 (
+    .a(al_50fbc01b[12]),
+    .b(al_ae5d831a[1]),
+    .c(al_3519ff8d[12]),
+    .o(al_c24772ff[12]));
+  AL_MAP_LUT3 #(
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
+    al_5c16b329 (
+    .a(al_50fbc01b[13]),
+    .b(al_ae5d831a[1]),
+    .c(al_3519ff8d[13]),
+    .o(al_c24772ff[13]));
+  AL_MAP_LUT3 #(
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
+    al_ad121930 (
+    .a(al_50fbc01b[14]),
+    .b(al_ae5d831a[1]),
+    .c(al_3519ff8d[14]),
+    .o(al_c24772ff[14]));
+  AL_MAP_LUT3 #(
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
+    al_325e34f7 (
+    .a(al_50fbc01b[15]),
+    .b(al_ae5d831a[1]),
+    .c(al_3519ff8d[15]),
+    .o(al_c24772ff[15]));
+  AL_MAP_LUT3 #(
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
+    al_e4d7299a (
+    .a(al_50fbc01b[16]),
+    .b(al_ae5d831a[1]),
+    .c(al_3519ff8d[16]),
+    .o(al_c24772ff[16]));
+  AL_MAP_LUT3 #(
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
+    al_224530a9 (
+    .a(al_50fbc01b[17]),
+    .b(al_ae5d831a[1]),
+    .c(al_3519ff8d[17]),
+    .o(al_c24772ff[17]));
+  AL_MAP_LUT3 #(
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
+    al_59916413 (
+    .a(al_50fbc01b[18]),
+    .b(al_ae5d831a[1]),
+    .c(al_3519ff8d[18]),
+    .o(al_c24772ff[18]));
+  AL_MAP_LUT3 #(
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
+    al_203601ec (
+    .a(al_50fbc01b[19]),
+    .b(al_ae5d831a[1]),
+    .c(al_3519ff8d[19]),
+    .o(al_c24772ff[19]));
+  AL_MAP_LUT3 #(
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
+    al_44a14b40 (
+    .a(al_50fbc01b[1]),
+    .b(al_ae5d831a[1]),
+    .c(al_3519ff8d[1]),
+    .o(al_c24772ff[1]));
+  AL_MAP_LUT3 #(
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
+    al_fb50eed3 (
+    .a(al_50fbc01b[20]),
+    .b(al_ae5d831a[1]),
+    .c(al_3519ff8d[20]),
+    .o(al_c24772ff[20]));
+  AL_MAP_LUT3 #(
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
+    al_fb540909 (
+    .a(al_50fbc01b[21]),
+    .b(al_ae5d831a[1]),
+    .c(al_3519ff8d[21]),
+    .o(al_c24772ff[21]));
+  AL_MAP_LUT3 #(
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
+    al_d4a770cd (
+    .a(al_50fbc01b[22]),
+    .b(al_ae5d831a[1]),
+    .c(al_3519ff8d[22]),
+    .o(al_c24772ff[22]));
+  AL_MAP_LUT3 #(
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
+    al_6ce833c4 (
+    .a(al_50fbc01b[23]),
+    .b(al_ae5d831a[1]),
+    .c(al_3519ff8d[23]),
+    .o(al_c24772ff[23]));
+  AL_MAP_LUT3 #(
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
+    al_23c6c2fb (
+    .a(al_50fbc01b[24]),
+    .b(al_ae5d831a[1]),
+    .c(al_3519ff8d[24]),
+    .o(al_c24772ff[24]));
+  AL_MAP_LUT3 #(
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
+    al_148c09ac (
+    .a(al_50fbc01b[25]),
+    .b(al_ae5d831a[1]),
+    .c(al_3519ff8d[25]),
+    .o(al_c24772ff[25]));
+  AL_MAP_LUT3 #(
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
+    al_b10d3e02 (
+    .a(al_50fbc01b[26]),
+    .b(al_ae5d831a[1]),
+    .c(al_3519ff8d[26]),
+    .o(al_c24772ff[26]));
+  AL_MAP_LUT3 #(
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
+    al_b01d2f3b (
+    .a(al_50fbc01b[27]),
+    .b(al_ae5d831a[1]),
+    .c(al_3519ff8d[27]),
+    .o(al_c24772ff[27]));
+  AL_MAP_LUT3 #(
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
+    al_5e910f81 (
+    .a(al_50fbc01b[28]),
+    .b(al_ae5d831a[1]),
+    .c(al_3519ff8d[28]),
+    .o(al_c24772ff[28]));
+  AL_MAP_LUT3 #(
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
+    al_a2d0fa4c (
+    .a(al_50fbc01b[29]),
+    .b(al_ae5d831a[1]),
+    .c(al_3519ff8d[29]),
+    .o(al_c24772ff[29]));
+  AL_MAP_LUT3 #(
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
+    al_4d1327d9 (
+    .a(al_50fbc01b[2]),
+    .b(al_ae5d831a[1]),
+    .c(al_3519ff8d[2]),
+    .o(al_c24772ff[2]));
+  AL_MAP_LUT3 #(
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
+    al_48e21a7 (
+    .a(al_50fbc01b[30]),
+    .b(al_ae5d831a[1]),
+    .c(al_3519ff8d[30]),
+    .o(al_c24772ff[30]));
+  AL_MAP_LUT3 #(
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
+    al_14c1c803 (
+    .a(al_50fbc01b[31]),
+    .b(al_ae5d831a[1]),
+    .c(al_3519ff8d[31]),
+    .o(al_c24772ff[31]));
+  AL_MAP_LUT3 #(
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
+    al_edc445b1 (
+    .a(al_50fbc01b[3]),
+    .b(al_ae5d831a[1]),
+    .c(al_3519ff8d[3]),
+    .o(al_c24772ff[3]));
+  AL_MAP_LUT3 #(
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
+    al_529a3222 (
+    .a(al_50fbc01b[4]),
+    .b(al_ae5d831a[1]),
+    .c(al_3519ff8d[4]),
+    .o(al_c24772ff[4]));
+  AL_MAP_LUT3 #(
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
+    al_2b7f6ef (
+    .a(al_50fbc01b[5]),
+    .b(al_ae5d831a[1]),
+    .c(al_3519ff8d[5]),
+    .o(al_c24772ff[5]));
+  AL_MAP_LUT3 #(
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
+    al_7cfbb861 (
+    .a(al_50fbc01b[6]),
+    .b(al_ae5d831a[1]),
+    .c(al_3519ff8d[6]),
+    .o(al_c24772ff[6]));
+  AL_MAP_LUT3 #(
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
+    al_f9a494f5 (
+    .a(al_50fbc01b[7]),
+    .b(al_ae5d831a[1]),
+    .c(al_3519ff8d[7]),
+    .o(al_c24772ff[7]));
+  AL_MAP_LUT3 #(
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
+    al_a067229d (
+    .a(al_50fbc01b[8]),
+    .b(al_ae5d831a[1]),
+    .c(al_3519ff8d[8]),
+    .o(al_c24772ff[8]));
+  AL_MAP_LUT3 #(
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
+    al_f30ee9ea (
+    .a(al_50fbc01b[9]),
+    .b(al_ae5d831a[1]),
+    .c(al_3519ff8d[9]),
+    .o(al_c24772ff[9]));
   AL_DFF_X al_f6de6753 (
     .ar(1'b0),
     .as(1'b0),

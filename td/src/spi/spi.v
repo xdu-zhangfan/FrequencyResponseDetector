@@ -127,6 +127,7 @@ module spi #(
       addr_buf         <= 8'h0;
       data_buf         <= 32'h0;
       spi_s_ready      <= 1'b0;
+      spi_s_tx_data    <= 8'h0;
 
       param_wen        <= 1'b0;
 
@@ -139,6 +140,7 @@ module spi #(
         addr_buf                        <= 8'h0;
         data_buf                        <= 32'h0;
         spi_s_ready                     <= 1'b0;
+        spi_s_tx_data                   <= 8'h0;
 
         param_wen                       <= 1'b0;
 
@@ -288,6 +290,7 @@ module spi #(
             config_state  <= CONFIG_STATE_RESET;
           end
         endcase
+
       end
     end
   end

@@ -17,8 +17,8 @@ module adc_core #(
     input [ADC_WIDTH - 1 : 0] adc_data_1,
     input [ADC_WIDTH - 1 : 0] adc_data_2,
 
-    input               dds_clk,
-    output reg [31 : 0] adc_core_output
+    input           dds_clk,
+    output [31 : 0] adc_core_output
 );
 
   reg [31 : 0] adc_center_buf;
@@ -67,23 +67,11 @@ module adc_core #(
     if (!rstn) begin
       adc_core_output_i <= 32'h0;
     end else begin
-      if (adc_en) begin
-        if (adc_data < adc_zero_cal_buf) begin
-          adc_core_output_i <= adc_center_buf - adc_mul_temp_0;
-        end else begin
-          adc_core_output_i <= adc_center_buf + adc_mul_temp_0;
-        end
+      if (adc_data < adc_zero_cal_buf) begin
+        adc_core_output_i <= adc_center_buf - adc_mul_temp_0;
       end else begin
-        adc_core_output_i <= adc_core_output_i;
+        adc_core_output_i <= adc_center_buf + adc_mul_temp_0;
       end
-    end
-  end
-
-  always @(posedge dds_clk) begin
-    if (!rstn) begin
-      adc_core_output <= 32'h0;
-    end else begin
-      adc_core_output <= adc_core_output_i;
     end
   end
 
@@ -94,6 +82,26 @@ module adc_core #(
       .a(adc_kf_buf),
       .y(adc_data < adc_zero_cal_buf ? adc_zero_cal_buf - adc_data : adc_data - adc_zero_cal_buf),
       .p(adc_mul_temp_0)
+  );
+
+  adc_core_fifo_0 adc_core_fifo_0_inst (
+      .rst(~rstn),
+
+      .clkw(adc_clk),
+      .we  (adc_en),
+      .di  (adc_core_output_i),
+
+      .clkr(dds_clk),
+      .re  (adc_en),
+      .dout(adc_core_output),
+
+      .valid     (),
+      .full_flag (),
+      .empty_flag(),
+      .afull     (),
+      .aempty    (),
+      .wrusedw   (),
+      .rdusedw   ()
   );
 
 endmodule

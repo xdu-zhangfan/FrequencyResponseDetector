@@ -1,6 +1,6 @@
-`define SYS_CLK 280000000
-`define ADC_CLK 70000000
-`define DAC_CLK 140000000
+`define SYS_CLK 260000000
+`define ADC_CLK 65000000
+`define DAC_CLK 130000000
 
 `define DAC_WIDTH 14
 `define ADC_WIDTH 12
@@ -37,10 +37,10 @@ module top (
              input                       adc_otr_2
 );
 
-  wire sys_clk;
-  wire sys_rstn;
-  wire adc_clk;
-  wire dac_clk;
+  (*keep*)wire sys_clk;
+  (*keep*)wire sys_rstn;
+  (*keep*)wire adc_clk;
+  (*keep*)wire dac_clk;
   sys_pll sys_pll_inst (
       .refclk(clk_100m),
       .reset (~keys[1]),
@@ -59,37 +59,37 @@ module top (
   assign dac_wrt_1 = dac_clk;
   assign dac_wrt_2 = dac_clk;
 
-  wire          param_wen;
-  wire [31 : 0] dds_fword_source;
-  wire [31 : 0] dds_pword_source;
-  wire [31 : 0] dds_amp_source;
-  wire [31 : 0] direct_fword;
-  wire [31 : 0] direct_pword;
-  wire [31 : 0] direct_amp;
-  wire [31 : 0] drg_freq_start;
-  wire [31 : 0] drg_freq_end;
-  wire [31 : 0] drg_freq_step;
-  wire [31 : 0] drg_freq_pulse;
-  wire [31 : 0] drg_phase_start;
-  wire [31 : 0] drg_phase_end;
-  wire [31 : 0] drg_phase_step;
-  wire [31 : 0] drg_phase_pulse;
-  wire [31 : 0] drg_amp_start;
-  wire [31 : 0] drg_amp_end;
-  wire [31 : 0] drg_amp_step;
-  wire [31 : 0] drg_amp_pulse;
-  wire [31 : 0] adc_freq_center;
-  wire [31 : 0] adc_freq_kf;
-  wire [31 : 0] adc_freq_ch_sel;
-  wire [31 : 0] adc_freq_zero_cal;
-  wire [31 : 0] adc_phase_center;
-  wire [31 : 0] adc_phase_kf;
-  wire [31 : 0] adc_phase_ch_sel;
-  wire [31 : 0] adc_phase_zero_cal;
-  wire [31 : 0] adc_amp_center;
-  wire [31 : 0] adc_amp_kf;
-  wire [31 : 0] adc_amp_ch_sel;
-  wire [31 : 0] adc_amp_zero_cal;
+  (*keep*)wire          param_wen;
+  (*keep*)wire [31 : 0] dds_fword_source;
+  (*keep*)wire [31 : 0] dds_pword_source;
+  (*keep*)wire [31 : 0] dds_amp_source;
+  (*keep*)wire [31 : 0] direct_fword;
+  (*keep*)wire [31 : 0] direct_pword;
+  (*keep*)wire [31 : 0] direct_amp;
+  (*keep*)wire [31 : 0] drg_freq_start;
+  (*keep*)wire [31 : 0] drg_freq_end;
+  (*keep*)wire [31 : 0] drg_freq_step;
+  (*keep*)wire [31 : 0] drg_freq_pulse;
+  (*keep*)wire [31 : 0] drg_phase_start;
+  (*keep*)wire [31 : 0] drg_phase_end;
+  (*keep*)wire [31 : 0] drg_phase_step;
+  (*keep*)wire [31 : 0] drg_phase_pulse;
+  (*keep*)wire [31 : 0] drg_amp_start;
+  (*keep*)wire [31 : 0] drg_amp_end;
+  (*keep*)wire [31 : 0] drg_amp_step;
+  (*keep*)wire [31 : 0] drg_amp_pulse;
+  (*keep*)wire [31 : 0] adc_freq_center;
+  (*keep*)wire [31 : 0] adc_freq_kf;
+  (*keep*)wire [31 : 0] adc_freq_ch_sel;
+  (*keep*)wire [31 : 0] adc_freq_zero_cal;
+  (*keep*)wire [31 : 0] adc_phase_center;
+  (*keep*)wire [31 : 0] adc_phase_kf;
+  (*keep*)wire [31 : 0] adc_phase_ch_sel;
+  (*keep*)wire [31 : 0] adc_phase_zero_cal;
+  (*keep*)wire [31 : 0] adc_amp_center;
+  (*keep*)wire [31 : 0] adc_amp_kf;
+  (*keep*)wire [31 : 0] adc_amp_ch_sel;
+  (*keep*)wire [31 : 0] adc_amp_zero_cal;
   spi #(
       .SYSCLK_FREQ(`SYS_CLK),
       .SPICLK_FREQ(1000000),

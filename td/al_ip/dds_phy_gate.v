@@ -1,5 +1,5 @@
 // Verilog netlist created by Tang Dynasty v5.6.71036
-// Wed Jul 12 23:01:51 2023
+// Thu Jul 13 10:07:09 2023
 
 `timescale 1ns / 1ps
 module dds_phy
@@ -24,21 +24,17 @@ module dds_phy
   output [31:0] wave_sin;
 
   parameter FREC_OUT = 1000000;
-  parameter FREC_SYS = 140000000;
+  parameter FREC_SYS = 130000000;
   parameter LENTH_ROM = 16384;
   parameter W_DOUT = 32;
   parameter W_PHASE = 32;
   parameter W_PHASE_ANGLE = 16;
-  // localparam PHA_INC = 30678338;
+  // localparam PHA_INC = 33038210;
   // localparam W_JITTER = 2;
   wire [31:0] al_4c12045b;
   wire [31:0] al_7521c31;
   wire [28:0] al_80d2564a;
-  wire [28:0] al_35c5bf4a;
-  wire [28:0] al_b33e7450;
   wire [28:0] al_8aaaf100;
-  wire [28:0] al_6790cfef;
-  wire [28:0] al_8378b540;
   wire [30:0] al_7cb3139;
   wire [30:0] al_defcae67;
   wire [30:0] al_582c7f1a;
@@ -50,27 +46,21 @@ module dds_phy
   wire [31:0] al_5e800bf9;
   wire [31:0] al_2adbf503;
   wire [31:0] al_ac33d53a;
+  wire [31:0] al_2b6fc17c;
   wire [31:0] al_1ca72219;
   wire [31:0] al_8fc74dd1;
-  wire [13:0] al_50d27df2;
-  wire [15:0] al_3bc6703c;
   wire [31:0] al_45f60c58;
   wire [13:0] al_a07945e6;
   wire [13:0] al_ef10e9eb;
+  wire [15:0] al_ece03478;
   wire [31:0] al_bf05573;
   wire [13:0] al_bf62f43;
   wire [13:0] al_1db9833e;
   wire [13:0] al_aeba03f9;
   wire [31:0] al_b84f9223;
   wire [13:0] al_2c65e87;
-  wire [13:0] al_9644e37b;
   wire [31:0] al_8fd1686;
-  wire [13:0] al_ff8d588f;
-  wire [13:0] al_b0376e91;
   wire [31:0] al_4fdd6779;
-  wire [13:0] al_e765e4ce;
-  wire [31:0] al_411d7869;
-  wire [31:0] al_347def8c;
   wire [31:0] al_2fc0f064;
   wire [31:0] al_6b994b8c;
   wire [31:0] al_cc82cb7d;
@@ -90,84 +80,84 @@ module dds_phy
   wire al_84c218b6;
   wire al_d3e71145;
   wire al_c2236945;
-  wire al_646ebcc2;
-  wire al_85a14d9;
-  wire al_3062c0e5;
-  wire al_4cd31cc3;
-  wire al_7ac21880;
-  wire al_f522446b;
-  wire al_90e0f7f4;
-  wire al_794cef0c;
-  wire al_8b35208e;
-  wire al_7fb0038c;
-  wire al_e3688d46;
-  wire al_ac0ba0da;
-  wire al_48f8b31c;
-  wire al_85c6bbf1;
-  wire al_df2b9fd;
-  wire al_8b37f3ea;
-  wire al_681a20da;
-  wire al_7ee6fbef;
-  wire al_bc7eb654;
-  wire al_2c954a69;
-  wire al_b898adc0;
-  wire al_48222c42;
-  wire al_ac0e8578;
-  wire al_71a81d55;
-  wire al_eb089a18;
-  wire al_d12b8278;
-  wire al_2abb4e54;
-  wire al_1d87f1e2;
-  wire al_6b7ab472;
-  wire al_a5d9ceb0;
-  wire al_39b072a6;
-  wire al_6d449e6d;
-  wire al_50010de7;
-  wire al_3d64a0b5;
-  wire al_e497746;
-  wire al_dafddd54;
-  wire al_f05b4ab1;
-  wire al_9bc5cb15;
-  wire al_9ab90884;
-  wire al_8778d13f;
-  wire al_5368d974;
-  wire al_d0bdc644;
-  wire al_da60a0d7;
-  wire al_da32568a;
-  wire al_1ae4b98c;
-  wire al_d0600c1e;
-  wire al_b52f0f62;
-  wire al_211ae938;
-  wire al_395d66fa;
-  wire al_a5a39f01;
-  wire al_29a49a6c;
-  wire al_92bb71b8;
-  wire al_71e1cc55;
-  wire al_31c20af0;
-  wire al_dc38bdb4;
-  wire al_76e04b4c;
-  wire al_cb080167;
-  wire al_b00ea7b0;
-  wire al_dac79980;
-  wire al_cffcd924;
-  wire al_51ee9de4;
-  wire al_17cd6e3d;
-  wire al_7f59913d;
-  wire al_7b778bed;
-  wire al_3863a70c;
-  wire al_5d0f242;
-  wire al_fdfe386c;
-  wire al_a206a928;
-  wire al_2e229782;
-  wire al_6096bb6;
-  wire al_8dec1170;
-  wire al_31cdbd57;
-  wire al_c667bd4e;
-  wire al_4252b029;
-  wire al_b3cdd3bf;
-  wire al_e5086b32;
-  wire al_85b84194;
-  wire al_697e49b8;
+  wire al_c6668b9c;
+  wire al_c3642632;
+  wire al_d24fe460;
+  wire al_55b143bb;
+  wire al_912fafbc;
+  wire al_22496c82;
+  wire al_3a1eb73e;
+  wire al_361ffa37;
+  wire al_fec0aa88;
+  wire al_f812f45f;
+  wire al_496656c5;
+  wire al_bb448860;
+  wire al_49470e5f;
+  wire al_df7cc008;
+  wire al_ff75d74c;
+  wire al_b3a20a55;
+  wire al_8925b482;
+  wire al_38a498de;
+  wire al_9270cc1;
+  wire al_22c5b9fc;
+  wire al_547faa8;
+  wire al_e64dce0b;
+  wire al_68b35854;
+  wire al_b402143e;
+  wire al_50d3a040;
+  wire al_afd845a2;
+  wire al_f9beb590;
+  wire al_e06812aa;
+  wire al_20760786;
+  wire al_67d3a643;
+  wire al_b7cdbe33;
+  wire al_415b08b6;
+  wire al_335dce21;
+  wire al_3e9c55c9;
+  wire al_b1b1fd25;
+  wire al_c0541eeb;
+  wire al_8fa663c7;
+  wire al_aea9f159;
+  wire al_b5999e8a;
+  wire al_4e02a214;
+  wire al_e4bb6517;
+  wire al_c7d5f7d9;
+  wire al_aa0a4406;
+  wire al_2936d63e;
+  wire al_c33532a1;
+  wire al_a1d7e557;
+  wire al_535bcb2a;
+  wire al_8e96be84;
+  wire al_7f24ef3b;
+  wire al_9f0050fd;
+  wire al_cc6b7a52;
+  wire al_3a7453f7;
+  wire al_59c74ee0;
+  wire al_29ab9e7c;
+  wire al_6f40300a;
+  wire al_5c51d242;
+  wire al_78a1126d;
+  wire al_17154c22;
+  wire al_5147f728;
+  wire al_38addb2a;
+  wire al_d78d911a;
+  wire al_ce9240fa;
+  wire al_8af049a0;
+  wire al_7a07cb67;
+  wire al_59973085;
+  wire al_df4daaea;
+  wire al_b9f64cf4;
+  wire al_3b720106;
+  wire al_66309daa;
+  wire al_209e0bae;
+  wire al_48d8248b;
+  wire al_fa7df2fa;
+  wire al_400c3c73;
+  wire al_fa7b41c7;
+  wire al_373c2d03;
+  wire al_d27530aa;
+  wire al_61d52140;
+  wire al_1b9fff8c;
   wire al_ae82e036;
   wire al_e688edc;
   wire al_10a095c2;
@@ -496,100 +486,100 @@ module dds_phy
     .ALUTYPE("SUB"))
     al_86c7f9bb (
     .a(1'b0),
-    .b(al_8fc74dd1[16]),
+    .b(al_45f60c58[16]),
     .c(al_1fb9f750),
     .o({al_3ba2cf17,open_n10}));
   AL_MAP_ADDER #(
     .ALUTYPE("SUB"))
     al_2cac50aa (
     .a(1'b0),
-    .b(al_8fc74dd1[17]),
+    .b(al_45f60c58[17]),
     .c(al_3ba2cf17),
-    .o({al_be038bda,al_3bc6703c[1]}));
+    .o({al_be038bda,al_ece03478[1]}));
   AL_MAP_ADDER #(
     .ALUTYPE("SUB"))
     al_d7355da0 (
     .a(1'b0),
-    .b(al_8fc74dd1[18]),
+    .b(al_45f60c58[18]),
     .c(al_be038bda),
-    .o({al_73863703,al_3bc6703c[2]}));
+    .o({al_73863703,al_ece03478[2]}));
   AL_MAP_ADDER #(
     .ALUTYPE("SUB"))
     al_1cf8f001 (
     .a(1'b0),
-    .b(al_8fc74dd1[19]),
+    .b(al_45f60c58[19]),
     .c(al_73863703),
-    .o({al_605a9566,al_3bc6703c[3]}));
+    .o({al_605a9566,al_ece03478[3]}));
   AL_MAP_ADDER #(
     .ALUTYPE("SUB"))
     al_79371713 (
     .a(1'b0),
-    .b(al_8fc74dd1[20]),
+    .b(al_45f60c58[20]),
     .c(al_605a9566),
-    .o({al_d8a814fe,al_3bc6703c[4]}));
+    .o({al_d8a814fe,al_ece03478[4]}));
   AL_MAP_ADDER #(
     .ALUTYPE("SUB"))
     al_18f6e297 (
     .a(1'b0),
-    .b(al_8fc74dd1[21]),
+    .b(al_45f60c58[21]),
     .c(al_d8a814fe),
-    .o({al_8f1d46d,al_3bc6703c[5]}));
+    .o({al_8f1d46d,al_ece03478[5]}));
   AL_MAP_ADDER #(
     .ALUTYPE("SUB"))
     al_404c7f2 (
     .a(1'b0),
-    .b(al_8fc74dd1[22]),
+    .b(al_45f60c58[22]),
     .c(al_8f1d46d),
-    .o({al_66bb641e,al_3bc6703c[6]}));
+    .o({al_66bb641e,al_ece03478[6]}));
   AL_MAP_ADDER #(
     .ALUTYPE("SUB"))
     al_4dcdc636 (
     .a(1'b0),
-    .b(al_8fc74dd1[23]),
+    .b(al_45f60c58[23]),
     .c(al_66bb641e),
-    .o({al_c7616116,al_3bc6703c[7]}));
+    .o({al_c7616116,al_ece03478[7]}));
   AL_MAP_ADDER #(
     .ALUTYPE("SUB"))
     al_a05f37f4 (
     .a(1'b0),
-    .b(al_8fc74dd1[24]),
+    .b(al_45f60c58[24]),
     .c(al_c7616116),
-    .o({al_ab345056,al_3bc6703c[8]}));
+    .o({al_ab345056,al_ece03478[8]}));
   AL_MAP_ADDER #(
     .ALUTYPE("SUB"))
     al_1d39cbba (
     .a(1'b0),
-    .b(al_8fc74dd1[25]),
+    .b(al_45f60c58[25]),
     .c(al_ab345056),
-    .o({al_27b48239,al_3bc6703c[9]}));
+    .o({al_27b48239,al_ece03478[9]}));
   AL_MAP_ADDER #(
     .ALUTYPE("SUB"))
     al_926fe627 (
     .a(1'b0),
-    .b(al_8fc74dd1[26]),
+    .b(al_45f60c58[26]),
     .c(al_27b48239),
-    .o({al_72b8dd79,al_3bc6703c[10]}));
+    .o({al_72b8dd79,al_ece03478[10]}));
   AL_MAP_ADDER #(
     .ALUTYPE("SUB"))
     al_468d7afd (
     .a(1'b0),
-    .b(al_8fc74dd1[27]),
+    .b(al_45f60c58[27]),
     .c(al_72b8dd79),
-    .o({al_e1f38c58,al_3bc6703c[11]}));
+    .o({al_e1f38c58,al_ece03478[11]}));
   AL_MAP_ADDER #(
     .ALUTYPE("SUB"))
     al_df52e131 (
     .a(1'b0),
-    .b(al_8fc74dd1[28]),
+    .b(al_45f60c58[28]),
     .c(al_e1f38c58),
-    .o({al_b15f44e,al_3bc6703c[12]}));
+    .o({al_b15f44e,al_ece03478[12]}));
   AL_MAP_ADDER #(
     .ALUTYPE("SUB"))
     al_2a99f9b (
     .a(1'b0),
-    .b(al_8fc74dd1[29]),
+    .b(al_45f60c58[29]),
     .c(al_b15f44e),
-    .o({open_n11,al_3bc6703c[13]}));
+    .o({open_n11,al_ece03478[13]}));
   AL_MAP_ADDER #(
     .ALUTYPE("SUB_CARRY"))
     al_db3947f4 (
@@ -820,52 +810,52 @@ module dds_phy
   AL_MAP_ADDER #(
     .ALUTYPE("ADD"))
     al_b22ad72b (
-    .a(al_8378b540[24]),
-    .b(al_e765e4ce[7]),
+    .a(al_80d2564a[24]),
+    .b(al_aeba03f9[7]),
     .c(al_369414e),
-    .o({al_b80bb4e1,al_d0d95c2b[7]}));
+    .o({al_b80bb4e1,al_fcd55aa0[7]}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD"))
     al_37642c3c (
-    .a(al_8378b540[25]),
-    .b(al_e765e4ce[8]),
+    .a(al_80d2564a[25]),
+    .b(al_aeba03f9[8]),
     .c(al_b80bb4e1),
-    .o({al_1df9385e,al_d0d95c2b[8]}));
+    .o({al_1df9385e,al_fcd55aa0[8]}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD"))
     al_a06a895b (
-    .a(al_8378b540[26]),
-    .b(al_e765e4ce[9]),
+    .a(al_80d2564a[26]),
+    .b(al_aeba03f9[9]),
     .c(al_1df9385e),
-    .o({al_59d26a1d,al_d0d95c2b[9]}));
+    .o({al_59d26a1d,al_fcd55aa0[9]}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD"))
     al_877fa7f9 (
-    .a(al_8378b540[27]),
-    .b(al_e765e4ce[10]),
+    .a(al_80d2564a[27]),
+    .b(al_aeba03f9[10]),
     .c(al_59d26a1d),
-    .o({al_84c218b6,al_d0d95c2b[10]}));
+    .o({al_84c218b6,al_fcd55aa0[10]}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD"))
     al_2d21f01f (
-    .a(al_8378b540[28]),
-    .b(al_e765e4ce[11]),
+    .a(al_80d2564a[28]),
+    .b(al_aeba03f9[11]),
     .c(al_84c218b6),
-    .o({al_d3e71145,al_d0d95c2b[11]}));
+    .o({al_d3e71145,al_fcd55aa0[11]}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD"))
     al_8fdb2b60 (
     .a(1'b0),
-    .b(al_e765e4ce[12]),
+    .b(al_aeba03f9[12]),
     .c(al_d3e71145),
-    .o({al_c2236945,al_d0d95c2b[12]}));
+    .o({al_c2236945,al_fcd55aa0[12]}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD"))
     al_24d032cc (
     .a(1'b0),
-    .b(al_e765e4ce[13]),
+    .b(al_aeba03f9[13]),
     .c(al_c2236945),
-    .o({open_n19,al_d0d95c2b[13]}));
+    .o({open_n19,al_fcd55aa0[13]}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD_CARRY"))
     al_41335dfd (
@@ -874,613 +864,613 @@ module dds_phy
   AL_MAP_ADDER #(
     .ALUTYPE("ADD"))
     al_513090b3 (
-    .a(al_8378b540[17]),
-    .b(al_b0376e91[0]),
+    .a(al_80d2564a[17]),
+    .b(al_aeba03f9[0]),
     .c(al_956f61e8),
-    .o({al_9683e9e9,al_d0d95c2b[0]}));
+    .o({al_9683e9e9,al_fcd55aa0[0]}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD"))
     al_a6708c65 (
-    .a(al_8378b540[18]),
-    .b(al_e765e4ce[1]),
+    .a(al_80d2564a[18]),
+    .b(al_aeba03f9[1]),
     .c(al_9683e9e9),
-    .o({al_de15ce6c,al_d0d95c2b[1]}));
+    .o({al_de15ce6c,al_fcd55aa0[1]}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD"))
     al_8a72a648 (
-    .a(al_8378b540[19]),
-    .b(al_e765e4ce[2]),
+    .a(al_80d2564a[19]),
+    .b(al_aeba03f9[2]),
     .c(al_de15ce6c),
-    .o({al_bc99628c,al_d0d95c2b[2]}));
+    .o({al_bc99628c,al_fcd55aa0[2]}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD"))
     al_a4d828f2 (
-    .a(al_8378b540[20]),
-    .b(al_e765e4ce[3]),
+    .a(al_80d2564a[20]),
+    .b(al_aeba03f9[3]),
     .c(al_bc99628c),
-    .o({al_ec2ec91,al_d0d95c2b[3]}));
+    .o({al_ec2ec91,al_fcd55aa0[3]}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD"))
     al_8b186716 (
-    .a(al_8378b540[21]),
-    .b(al_e765e4ce[4]),
+    .a(al_80d2564a[21]),
+    .b(al_aeba03f9[4]),
     .c(al_ec2ec91),
-    .o({al_c3ca455b,al_d0d95c2b[4]}));
+    .o({al_c3ca455b,al_fcd55aa0[4]}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD"))
     al_3d917c9c (
-    .a(al_8378b540[22]),
-    .b(al_e765e4ce[5]),
+    .a(al_80d2564a[22]),
+    .b(al_aeba03f9[5]),
     .c(al_c3ca455b),
-    .o({al_b1147a0e,al_d0d95c2b[5]}));
+    .o({al_b1147a0e,al_fcd55aa0[5]}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD"))
     al_e7664728 (
-    .a(al_8378b540[23]),
-    .b(al_e765e4ce[6]),
+    .a(al_80d2564a[23]),
+    .b(al_aeba03f9[6]),
     .c(al_b1147a0e),
-    .o({al_369414e,al_d0d95c2b[6]}));
+    .o({al_369414e,al_fcd55aa0[6]}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD_CARRY"))
-    al_447e8c98 (
+    al_2165f23d (
     .a(1'b0),
-    .o({al_646ebcc2,open_n25}));
+    .o({al_c6668b9c,open_n25}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD"))
-    al_dfe88b8b (
+    al_5a77c71d (
     .a(al_4c12045b[8]),
     .b(al_5e800bf9[8]),
-    .c(al_8b35208e),
-    .o({al_7fb0038c,al_7521c31[8]}));
+    .c(al_fec0aa88),
+    .o({al_f812f45f,al_7521c31[8]}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD"))
-    al_25ea18a5 (
+    al_6113318c (
     .a(al_4c12045b[9]),
     .b(al_5e800bf9[9]),
-    .c(al_7fb0038c),
-    .o({al_e3688d46,al_7521c31[9]}));
+    .c(al_f812f45f),
+    .o({al_496656c5,al_7521c31[9]}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD"))
-    al_102c5891 (
+    al_1ba0daa2 (
     .a(al_4c12045b[10]),
     .b(al_5e800bf9[10]),
-    .c(al_e3688d46),
-    .o({al_ac0ba0da,al_7521c31[10]}));
+    .c(al_496656c5),
+    .o({al_bb448860,al_7521c31[10]}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD"))
-    al_cfaa08b6 (
+    al_4ff26d7e (
     .a(al_4c12045b[11]),
     .b(al_5e800bf9[11]),
-    .c(al_ac0ba0da),
-    .o({al_48f8b31c,al_7521c31[11]}));
+    .c(al_bb448860),
+    .o({al_49470e5f,al_7521c31[11]}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD"))
-    al_33d1b43 (
+    al_b257243f (
     .a(al_4c12045b[12]),
     .b(al_5e800bf9[12]),
-    .c(al_48f8b31c),
-    .o({al_85c6bbf1,al_7521c31[12]}));
+    .c(al_49470e5f),
+    .o({al_df7cc008,al_7521c31[12]}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD"))
-    al_d9268e1f (
+    al_ce1cc971 (
     .a(al_4c12045b[13]),
     .b(al_5e800bf9[13]),
-    .c(al_85c6bbf1),
-    .o({al_df2b9fd,al_7521c31[13]}));
+    .c(al_df7cc008),
+    .o({al_ff75d74c,al_7521c31[13]}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD"))
-    al_8d2d7bf1 (
+    al_e3dc02b8 (
     .a(al_4c12045b[14]),
     .b(al_5e800bf9[14]),
-    .c(al_df2b9fd),
-    .o({al_8b37f3ea,al_7521c31[14]}));
+    .c(al_ff75d74c),
+    .o({al_b3a20a55,al_7521c31[14]}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD"))
-    al_37795e33 (
+    al_9fa2507d (
     .a(al_4c12045b[15]),
     .b(al_5e800bf9[15]),
-    .c(al_8b37f3ea),
-    .o({al_681a20da,al_7521c31[15]}));
+    .c(al_b3a20a55),
+    .o({al_8925b482,al_7521c31[15]}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD"))
-    al_819cb1a2 (
+    al_f7236576 (
     .a(al_4c12045b[16]),
     .b(al_5e800bf9[16]),
-    .c(al_681a20da),
-    .o({al_7ee6fbef,al_7521c31[16]}));
+    .c(al_8925b482),
+    .o({al_38a498de,al_7521c31[16]}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD"))
-    al_6df20a54 (
+    al_d5b75486 (
     .a(al_4c12045b[17]),
     .b(al_5e800bf9[17]),
-    .c(al_7ee6fbef),
-    .o({al_bc7eb654,al_7521c31[17]}));
+    .c(al_38a498de),
+    .o({al_9270cc1,al_7521c31[17]}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD"))
-    al_4cc92009 (
+    al_61c46b5d (
     .a(al_4c12045b[0]),
     .b(al_5e800bf9[0]),
-    .c(al_646ebcc2),
-    .o({al_85a14d9,al_7521c31[0]}));
+    .c(al_c6668b9c),
+    .o({al_c3642632,al_7521c31[0]}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD"))
-    al_8d80c396 (
+    al_2785c3f1 (
     .a(al_4c12045b[18]),
     .b(al_5e800bf9[18]),
-    .c(al_bc7eb654),
-    .o({al_2c954a69,al_7521c31[18]}));
+    .c(al_9270cc1),
+    .o({al_22c5b9fc,al_7521c31[18]}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD"))
-    al_22dfbf6 (
+    al_cb06c7bc (
     .a(al_4c12045b[19]),
     .b(al_5e800bf9[19]),
-    .c(al_2c954a69),
-    .o({al_b898adc0,al_7521c31[19]}));
+    .c(al_22c5b9fc),
+    .o({al_547faa8,al_7521c31[19]}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD"))
-    al_b6ce109b (
+    al_ec350d83 (
     .a(al_4c12045b[20]),
     .b(al_5e800bf9[20]),
-    .c(al_b898adc0),
-    .o({al_48222c42,al_7521c31[20]}));
+    .c(al_547faa8),
+    .o({al_e64dce0b,al_7521c31[20]}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD"))
-    al_3be7cdd2 (
+    al_c2dfa21e (
     .a(al_4c12045b[21]),
     .b(al_5e800bf9[21]),
-    .c(al_48222c42),
-    .o({al_ac0e8578,al_7521c31[21]}));
+    .c(al_e64dce0b),
+    .o({al_68b35854,al_7521c31[21]}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD"))
-    al_abc5c8fc (
+    al_19307c7a (
     .a(al_4c12045b[22]),
     .b(al_5e800bf9[22]),
-    .c(al_ac0e8578),
-    .o({al_71a81d55,al_7521c31[22]}));
+    .c(al_68b35854),
+    .o({al_b402143e,al_7521c31[22]}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD"))
-    al_35dee330 (
+    al_cae2bf94 (
     .a(al_4c12045b[23]),
     .b(al_5e800bf9[23]),
-    .c(al_71a81d55),
-    .o({al_eb089a18,al_7521c31[23]}));
+    .c(al_b402143e),
+    .o({al_50d3a040,al_7521c31[23]}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD"))
-    al_a6a3e0a0 (
+    al_3219eb39 (
     .a(al_4c12045b[24]),
     .b(al_5e800bf9[24]),
-    .c(al_eb089a18),
-    .o({al_d12b8278,al_7521c31[24]}));
+    .c(al_50d3a040),
+    .o({al_afd845a2,al_7521c31[24]}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD"))
-    al_cea749b0 (
+    al_8bf3df27 (
     .a(al_4c12045b[25]),
     .b(al_5e800bf9[25]),
-    .c(al_d12b8278),
-    .o({al_2abb4e54,al_7521c31[25]}));
+    .c(al_afd845a2),
+    .o({al_f9beb590,al_7521c31[25]}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD"))
-    al_6d66ee19 (
+    al_30d7b295 (
     .a(al_4c12045b[26]),
     .b(al_5e800bf9[26]),
-    .c(al_2abb4e54),
-    .o({al_1d87f1e2,al_7521c31[26]}));
+    .c(al_f9beb590),
+    .o({al_e06812aa,al_7521c31[26]}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD"))
-    al_3bbe2c91 (
+    al_81e7673e (
     .a(al_4c12045b[27]),
     .b(al_5e800bf9[27]),
-    .c(al_1d87f1e2),
-    .o({al_6b7ab472,al_7521c31[27]}));
+    .c(al_e06812aa),
+    .o({al_20760786,al_7521c31[27]}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD"))
-    al_b3abc203 (
+    al_9c5c9996 (
     .a(al_4c12045b[1]),
     .b(al_5e800bf9[1]),
-    .c(al_85a14d9),
-    .o({al_3062c0e5,al_7521c31[1]}));
+    .c(al_c3642632),
+    .o({al_d24fe460,al_7521c31[1]}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD"))
-    al_41d36f2b (
+    al_ff855358 (
     .a(al_4c12045b[28]),
     .b(al_5e800bf9[28]),
-    .c(al_6b7ab472),
-    .o({al_a5d9ceb0,al_7521c31[28]}));
+    .c(al_20760786),
+    .o({al_67d3a643,al_7521c31[28]}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD"))
-    al_8b54afaf (
+    al_a509e218 (
     .a(al_4c12045b[29]),
     .b(al_5e800bf9[29]),
-    .c(al_a5d9ceb0),
-    .o({al_39b072a6,al_7521c31[29]}));
+    .c(al_67d3a643),
+    .o({al_b7cdbe33,al_7521c31[29]}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD"))
-    al_90b1a19d (
+    al_b4fc8d3a (
     .a(al_4c12045b[30]),
     .b(al_5e800bf9[30]),
-    .c(al_39b072a6),
-    .o({al_6d449e6d,al_7521c31[30]}));
+    .c(al_b7cdbe33),
+    .o({al_415b08b6,al_7521c31[30]}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD"))
-    al_e56607bb (
+    al_8082d7fe (
     .a(al_4c12045b[31]),
     .b(al_5e800bf9[31]),
-    .c(al_6d449e6d),
+    .c(al_415b08b6),
     .o({open_n26,al_7521c31[31]}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD"))
-    al_9a29b387 (
+    al_c04cf982 (
     .a(al_4c12045b[2]),
     .b(al_5e800bf9[2]),
-    .c(al_3062c0e5),
-    .o({al_4cd31cc3,al_7521c31[2]}));
+    .c(al_d24fe460),
+    .o({al_55b143bb,al_7521c31[2]}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD"))
-    al_f8409470 (
+    al_f1d55d58 (
     .a(al_4c12045b[3]),
     .b(al_5e800bf9[3]),
-    .c(al_4cd31cc3),
-    .o({al_7ac21880,al_7521c31[3]}));
+    .c(al_55b143bb),
+    .o({al_912fafbc,al_7521c31[3]}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD"))
-    al_68cc8618 (
+    al_212b0a99 (
     .a(al_4c12045b[4]),
     .b(al_5e800bf9[4]),
-    .c(al_7ac21880),
-    .o({al_f522446b,al_7521c31[4]}));
+    .c(al_912fafbc),
+    .o({al_22496c82,al_7521c31[4]}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD"))
-    al_7669cd7d (
+    al_4a0be642 (
     .a(al_4c12045b[5]),
     .b(al_5e800bf9[5]),
-    .c(al_f522446b),
-    .o({al_90e0f7f4,al_7521c31[5]}));
+    .c(al_22496c82),
+    .o({al_3a1eb73e,al_7521c31[5]}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD"))
-    al_7b766b13 (
+    al_9d22fee2 (
     .a(al_4c12045b[6]),
     .b(al_5e800bf9[6]),
-    .c(al_90e0f7f4),
-    .o({al_794cef0c,al_7521c31[6]}));
+    .c(al_3a1eb73e),
+    .o({al_361ffa37,al_7521c31[6]}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD"))
-    al_dac99e8a (
+    al_a9fc3313 (
     .a(al_4c12045b[7]),
     .b(al_5e800bf9[7]),
-    .c(al_794cef0c),
-    .o({al_8b35208e,al_7521c31[7]}));
-  AL_MAP_ADDER #(
-    .ALUTYPE("ADD"))
-    al_c22ee456 (
-    .a(al_b33e7450[24]),
-    .b(al_b0376e91[7]),
-    .c(al_8778d13f),
-    .o({al_5368d974,al_fcd55aa0[7]}));
-  AL_MAP_ADDER #(
-    .ALUTYPE("ADD"))
-    al_d4f8c6b2 (
-    .a(al_b33e7450[25]),
-    .b(al_b0376e91[8]),
-    .c(al_5368d974),
-    .o({al_d0bdc644,al_fcd55aa0[8]}));
-  AL_MAP_ADDER #(
-    .ALUTYPE("ADD"))
-    al_251c9501 (
-    .a(al_b33e7450[26]),
-    .b(al_b0376e91[9]),
-    .c(al_d0bdc644),
-    .o({al_da60a0d7,al_fcd55aa0[9]}));
-  AL_MAP_ADDER #(
-    .ALUTYPE("ADD"))
-    al_b10f851 (
-    .a(al_b33e7450[27]),
-    .b(al_b0376e91[10]),
-    .c(al_da60a0d7),
-    .o({al_da32568a,al_fcd55aa0[10]}));
-  AL_MAP_ADDER #(
-    .ALUTYPE("ADD"))
-    al_f6074d25 (
-    .a(al_b33e7450[28]),
-    .b(al_b0376e91[11]),
-    .c(al_da32568a),
-    .o({al_1ae4b98c,al_fcd55aa0[11]}));
-  AL_MAP_ADDER #(
-    .ALUTYPE("ADD"))
-    al_fa8db078 (
-    .a(1'b0),
-    .b(al_b0376e91[12]),
-    .c(al_1ae4b98c),
-    .o({al_d0600c1e,al_fcd55aa0[12]}));
-  AL_MAP_ADDER #(
-    .ALUTYPE("ADD"))
-    al_77855a53 (
-    .a(1'b0),
-    .b(al_b0376e91[13]),
-    .c(al_d0600c1e),
-    .o({open_n27,al_fcd55aa0[13]}));
+    .c(al_361ffa37),
+    .o({al_fec0aa88,al_7521c31[7]}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD_CARRY"))
-    al_542d5c78 (
+    al_6c65e6ec (
     .a(1'b0),
-    .o({al_50010de7,open_n30}));
+    .o({al_335dce21,open_n29}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD"))
-    al_a685a1be (
-    .a(al_b33e7450[17]),
-    .b(al_b0376e91[0]),
-    .c(al_50010de7),
-    .o({al_3d64a0b5,al_fcd55aa0[0]}));
+    al_7a814cc1 (
+    .a(al_4c12045b[8]),
+    .b(al_2fc0f064[8]),
+    .c(al_e4bb6517),
+    .o({al_c7d5f7d9,al_ac33d53a[8]}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD"))
-    al_cda14380 (
-    .a(al_b33e7450[18]),
-    .b(al_b0376e91[1]),
-    .c(al_3d64a0b5),
-    .o({al_e497746,al_fcd55aa0[1]}));
+    al_3f0f1414 (
+    .a(al_4c12045b[9]),
+    .b(al_2fc0f064[9]),
+    .c(al_c7d5f7d9),
+    .o({al_aa0a4406,al_ac33d53a[9]}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD"))
-    al_f54c3dbb (
-    .a(al_b33e7450[19]),
-    .b(al_b0376e91[2]),
-    .c(al_e497746),
-    .o({al_dafddd54,al_fcd55aa0[2]}));
+    al_bd625e74 (
+    .a(al_4c12045b[10]),
+    .b(al_2fc0f064[10]),
+    .c(al_aa0a4406),
+    .o({al_2936d63e,al_ac33d53a[10]}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD"))
-    al_c9b145c3 (
-    .a(al_b33e7450[20]),
-    .b(al_b0376e91[3]),
-    .c(al_dafddd54),
-    .o({al_f05b4ab1,al_fcd55aa0[3]}));
+    al_f66cc420 (
+    .a(al_4c12045b[11]),
+    .b(al_2fc0f064[11]),
+    .c(al_2936d63e),
+    .o({al_c33532a1,al_ac33d53a[11]}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD"))
-    al_85743617 (
-    .a(al_b33e7450[21]),
-    .b(al_b0376e91[4]),
-    .c(al_f05b4ab1),
-    .o({al_9bc5cb15,al_fcd55aa0[4]}));
+    al_be113f82 (
+    .a(al_4c12045b[12]),
+    .b(al_2fc0f064[12]),
+    .c(al_c33532a1),
+    .o({al_a1d7e557,al_ac33d53a[12]}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD"))
-    al_ad670f93 (
-    .a(al_b33e7450[22]),
-    .b(al_b0376e91[5]),
-    .c(al_9bc5cb15),
-    .o({al_9ab90884,al_fcd55aa0[5]}));
+    al_197ca113 (
+    .a(al_4c12045b[13]),
+    .b(al_2fc0f064[13]),
+    .c(al_a1d7e557),
+    .o({al_535bcb2a,al_ac33d53a[13]}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD"))
-    al_ec16458c (
-    .a(al_b33e7450[23]),
-    .b(al_b0376e91[6]),
-    .c(al_9ab90884),
-    .o({al_8778d13f,al_fcd55aa0[6]}));
+    al_16c07b12 (
+    .a(al_4c12045b[14]),
+    .b(al_2fc0f064[14]),
+    .c(al_535bcb2a),
+    .o({al_8e96be84,al_ac33d53a[14]}));
   AL_MAP_ADDER #(
-    .ALUTYPE("ADD_CARRY"))
-    al_1e2e84c8 (
-    .a(1'b0),
-    .o({al_b52f0f62,open_n33}));
+    .ALUTYPE("ADD"))
+    al_e77d29a3 (
+    .a(al_4c12045b[15]),
+    .b(al_2fc0f064[15]),
+    .c(al_8e96be84),
+    .o({al_7f24ef3b,al_ac33d53a[15]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("ADD"))
+    al_a710bda1 (
+    .a(al_4c12045b[16]),
+    .b(al_2fc0f064[16]),
+    .c(al_7f24ef3b),
+    .o({al_9f0050fd,al_ac33d53a[16]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("ADD"))
+    al_21783b3a (
+    .a(al_4c12045b[17]),
+    .b(al_2fc0f064[17]),
+    .c(al_9f0050fd),
+    .o({al_cc6b7a52,al_ac33d53a[17]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("ADD"))
+    al_c2cd2d4e (
+    .a(al_4c12045b[0]),
+    .b(al_2fc0f064[0]),
+    .c(al_335dce21),
+    .o({al_3e9c55c9,al_ac33d53a[0]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("ADD"))
+    al_7bffdcb2 (
+    .a(al_4c12045b[18]),
+    .b(al_2fc0f064[18]),
+    .c(al_cc6b7a52),
+    .o({al_3a7453f7,al_ac33d53a[18]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("ADD"))
+    al_11f7f27b (
+    .a(al_4c12045b[19]),
+    .b(al_2fc0f064[19]),
+    .c(al_3a7453f7),
+    .o({al_59c74ee0,al_ac33d53a[19]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("ADD"))
+    al_791e3201 (
+    .a(al_4c12045b[20]),
+    .b(al_2fc0f064[20]),
+    .c(al_59c74ee0),
+    .o({al_29ab9e7c,al_ac33d53a[20]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("ADD"))
+    al_c98cb61e (
+    .a(al_4c12045b[21]),
+    .b(al_2fc0f064[21]),
+    .c(al_29ab9e7c),
+    .o({al_6f40300a,al_ac33d53a[21]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("ADD"))
+    al_e40ddbb4 (
+    .a(al_4c12045b[22]),
+    .b(al_2fc0f064[22]),
+    .c(al_6f40300a),
+    .o({al_5c51d242,al_ac33d53a[22]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("ADD"))
+    al_a6dbf441 (
+    .a(al_4c12045b[23]),
+    .b(al_2fc0f064[23]),
+    .c(al_5c51d242),
+    .o({al_78a1126d,al_ac33d53a[23]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("ADD"))
+    al_2fa277d8 (
+    .a(al_4c12045b[24]),
+    .b(al_2fc0f064[24]),
+    .c(al_78a1126d),
+    .o({al_17154c22,al_ac33d53a[24]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("ADD"))
+    al_5b9299c0 (
+    .a(al_4c12045b[25]),
+    .b(al_2fc0f064[25]),
+    .c(al_17154c22),
+    .o({al_5147f728,al_ac33d53a[25]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("ADD"))
+    al_6a0b44d (
+    .a(al_4c12045b[26]),
+    .b(al_2fc0f064[26]),
+    .c(al_5147f728),
+    .o({al_38addb2a,al_ac33d53a[26]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("ADD"))
+    al_6a1f217 (
+    .a(al_4c12045b[27]),
+    .b(al_2fc0f064[27]),
+    .c(al_38addb2a),
+    .o({al_d78d911a,al_ac33d53a[27]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("ADD"))
+    al_39375266 (
+    .a(al_4c12045b[1]),
+    .b(al_2fc0f064[1]),
+    .c(al_3e9c55c9),
+    .o({al_b1b1fd25,al_ac33d53a[1]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("ADD"))
+    al_57fd69b4 (
+    .a(al_4c12045b[28]),
+    .b(al_2fc0f064[28]),
+    .c(al_d78d911a),
+    .o({al_ce9240fa,al_ac33d53a[28]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("ADD"))
+    al_abd516bf (
+    .a(al_4c12045b[29]),
+    .b(al_2fc0f064[29]),
+    .c(al_ce9240fa),
+    .o({al_8af049a0,al_ac33d53a[29]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("ADD"))
+    al_c4d2fc99 (
+    .a(al_4c12045b[30]),
+    .b(al_2fc0f064[30]),
+    .c(al_8af049a0),
+    .o({al_7a07cb67,al_ac33d53a[30]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("ADD"))
+    al_30f90ff5 (
+    .a(al_4c12045b[31]),
+    .b(al_2fc0f064[31]),
+    .c(al_7a07cb67),
+    .o({open_n30,al_ac33d53a[31]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("ADD"))
+    al_1be482f2 (
+    .a(al_4c12045b[2]),
+    .b(al_2fc0f064[2]),
+    .c(al_b1b1fd25),
+    .o({al_c0541eeb,al_ac33d53a[2]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("ADD"))
+    al_63d33a4b (
+    .a(al_4c12045b[3]),
+    .b(al_2fc0f064[3]),
+    .c(al_c0541eeb),
+    .o({al_8fa663c7,al_ac33d53a[3]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("ADD"))
+    al_c797f8a4 (
+    .a(al_4c12045b[4]),
+    .b(al_2fc0f064[4]),
+    .c(al_8fa663c7),
+    .o({al_aea9f159,al_ac33d53a[4]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("ADD"))
+    al_7f656e5 (
+    .a(al_4c12045b[5]),
+    .b(al_2fc0f064[5]),
+    .c(al_aea9f159),
+    .o({al_b5999e8a,al_ac33d53a[5]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("ADD"))
+    al_b11b3677 (
+    .a(al_4c12045b[6]),
+    .b(al_2fc0f064[6]),
+    .c(al_b5999e8a),
+    .o({al_4e02a214,al_ac33d53a[6]}));
+  AL_MAP_ADDER #(
+    .ALUTYPE("ADD"))
+    al_f1a11535 (
+    .a(al_4c12045b[7]),
+    .b(al_2fc0f064[7]),
+    .c(al_4e02a214),
+    .o({al_e4bb6517,al_ac33d53a[7]}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD"))
     al_9741ddb6 (
-    .a(al_4c12045b[8]),
-    .b(al_2fc0f064[8]),
-    .c(al_dc38bdb4),
-    .o({al_76e04b4c,al_ac33d53a[8]}));
+    .a(al_8aaaf100[24]),
+    .b(al_2c65e87[7]),
+    .c(al_fa7df2fa),
+    .o({al_400c3c73,al_d0d95c2b[7]}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD"))
     al_cb2d7da6 (
-    .a(al_4c12045b[9]),
-    .b(al_2fc0f064[9]),
-    .c(al_76e04b4c),
-    .o({al_cb080167,al_ac33d53a[9]}));
+    .a(al_8aaaf100[25]),
+    .b(al_2c65e87[8]),
+    .c(al_400c3c73),
+    .o({al_fa7b41c7,al_d0d95c2b[8]}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD"))
     al_a5d95d17 (
-    .a(al_4c12045b[10]),
-    .b(al_2fc0f064[10]),
-    .c(al_cb080167),
-    .o({al_b00ea7b0,al_ac33d53a[10]}));
+    .a(al_8aaaf100[26]),
+    .b(al_2c65e87[9]),
+    .c(al_fa7b41c7),
+    .o({al_373c2d03,al_d0d95c2b[9]}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD"))
     al_c7cc56f4 (
-    .a(al_4c12045b[11]),
-    .b(al_2fc0f064[11]),
-    .c(al_b00ea7b0),
-    .o({al_dac79980,al_ac33d53a[11]}));
+    .a(al_8aaaf100[27]),
+    .b(al_2c65e87[10]),
+    .c(al_373c2d03),
+    .o({al_d27530aa,al_d0d95c2b[10]}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD"))
     al_65bf2a28 (
-    .a(al_4c12045b[12]),
-    .b(al_2fc0f064[12]),
-    .c(al_dac79980),
-    .o({al_cffcd924,al_ac33d53a[12]}));
+    .a(al_8aaaf100[28]),
+    .b(al_2c65e87[11]),
+    .c(al_d27530aa),
+    .o({al_61d52140,al_d0d95c2b[11]}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD"))
     al_c4008c1d (
-    .a(al_4c12045b[13]),
-    .b(al_2fc0f064[13]),
-    .c(al_cffcd924),
-    .o({al_51ee9de4,al_ac33d53a[13]}));
+    .a(1'b0),
+    .b(al_2c65e87[12]),
+    .c(al_61d52140),
+    .o({al_1b9fff8c,al_d0d95c2b[12]}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD"))
     al_66a06386 (
-    .a(al_4c12045b[14]),
-    .b(al_2fc0f064[14]),
-    .c(al_51ee9de4),
-    .o({al_17cd6e3d,al_ac33d53a[14]}));
+    .a(1'b0),
+    .b(al_2c65e87[13]),
+    .c(al_1b9fff8c),
+    .o({open_n31,al_d0d95c2b[13]}));
   AL_MAP_ADDER #(
-    .ALUTYPE("ADD"))
-    al_6e1f94b1 (
-    .a(al_4c12045b[15]),
-    .b(al_2fc0f064[15]),
-    .c(al_17cd6e3d),
-    .o({al_7f59913d,al_ac33d53a[15]}));
-  AL_MAP_ADDER #(
-    .ALUTYPE("ADD"))
-    al_e6d64658 (
-    .a(al_4c12045b[16]),
-    .b(al_2fc0f064[16]),
-    .c(al_7f59913d),
-    .o({al_7b778bed,al_ac33d53a[16]}));
-  AL_MAP_ADDER #(
-    .ALUTYPE("ADD"))
-    al_9266bf3 (
-    .a(al_4c12045b[17]),
-    .b(al_2fc0f064[17]),
-    .c(al_7b778bed),
-    .o({al_3863a70c,al_ac33d53a[17]}));
-  AL_MAP_ADDER #(
-    .ALUTYPE("ADD"))
+    .ALUTYPE("ADD_CARRY"))
     al_c0083060 (
-    .a(al_4c12045b[0]),
-    .b(al_2fc0f064[0]),
-    .c(al_b52f0f62),
-    .o({al_211ae938,al_ac33d53a[0]}));
-  AL_MAP_ADDER #(
-    .ALUTYPE("ADD"))
-    al_3ee46d9 (
-    .a(al_4c12045b[18]),
-    .b(al_2fc0f064[18]),
-    .c(al_3863a70c),
-    .o({al_5d0f242,al_ac33d53a[18]}));
-  AL_MAP_ADDER #(
-    .ALUTYPE("ADD"))
-    al_9cba80ba (
-    .a(al_4c12045b[19]),
-    .b(al_2fc0f064[19]),
-    .c(al_5d0f242),
-    .o({al_fdfe386c,al_ac33d53a[19]}));
-  AL_MAP_ADDER #(
-    .ALUTYPE("ADD"))
-    al_77660ab8 (
-    .a(al_4c12045b[20]),
-    .b(al_2fc0f064[20]),
-    .c(al_fdfe386c),
-    .o({al_a206a928,al_ac33d53a[20]}));
-  AL_MAP_ADDER #(
-    .ALUTYPE("ADD"))
-    al_1783073b (
-    .a(al_4c12045b[21]),
-    .b(al_2fc0f064[21]),
-    .c(al_a206a928),
-    .o({al_2e229782,al_ac33d53a[21]}));
-  AL_MAP_ADDER #(
-    .ALUTYPE("ADD"))
-    al_2b31b946 (
-    .a(al_4c12045b[22]),
-    .b(al_2fc0f064[22]),
-    .c(al_2e229782),
-    .o({al_6096bb6,al_ac33d53a[22]}));
-  AL_MAP_ADDER #(
-    .ALUTYPE("ADD"))
-    al_caf49207 (
-    .a(al_4c12045b[23]),
-    .b(al_2fc0f064[23]),
-    .c(al_6096bb6),
-    .o({al_8dec1170,al_ac33d53a[23]}));
-  AL_MAP_ADDER #(
-    .ALUTYPE("ADD"))
-    al_b654913e (
-    .a(al_4c12045b[24]),
-    .b(al_2fc0f064[24]),
-    .c(al_8dec1170),
-    .o({al_31cdbd57,al_ac33d53a[24]}));
-  AL_MAP_ADDER #(
-    .ALUTYPE("ADD"))
-    al_995b24e9 (
-    .a(al_4c12045b[25]),
-    .b(al_2fc0f064[25]),
-    .c(al_31cdbd57),
-    .o({al_c667bd4e,al_ac33d53a[25]}));
-  AL_MAP_ADDER #(
-    .ALUTYPE("ADD"))
-    al_32cbfc52 (
-    .a(al_4c12045b[26]),
-    .b(al_2fc0f064[26]),
-    .c(al_c667bd4e),
-    .o({al_4252b029,al_ac33d53a[26]}));
-  AL_MAP_ADDER #(
-    .ALUTYPE("ADD"))
-    al_b0617d4d (
-    .a(al_4c12045b[27]),
-    .b(al_2fc0f064[27]),
-    .c(al_4252b029),
-    .o({al_b3cdd3bf,al_ac33d53a[27]}));
+    .a(1'b0),
+    .o({al_59973085,open_n34}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD"))
     al_f174f118 (
-    .a(al_4c12045b[1]),
-    .b(al_2fc0f064[1]),
-    .c(al_211ae938),
-    .o({al_395d66fa,al_ac33d53a[1]}));
-  AL_MAP_ADDER #(
-    .ALUTYPE("ADD"))
-    al_ac9f8517 (
-    .a(al_4c12045b[28]),
-    .b(al_2fc0f064[28]),
-    .c(al_b3cdd3bf),
-    .o({al_e5086b32,al_ac33d53a[28]}));
-  AL_MAP_ADDER #(
-    .ALUTYPE("ADD"))
-    al_9a75dbc (
-    .a(al_4c12045b[29]),
-    .b(al_2fc0f064[29]),
-    .c(al_e5086b32),
-    .o({al_85b84194,al_ac33d53a[29]}));
-  AL_MAP_ADDER #(
-    .ALUTYPE("ADD"))
-    al_bd641f50 (
-    .a(al_4c12045b[30]),
-    .b(al_2fc0f064[30]),
-    .c(al_85b84194),
-    .o({al_697e49b8,al_ac33d53a[30]}));
-  AL_MAP_ADDER #(
-    .ALUTYPE("ADD"))
-    al_69967d4f (
-    .a(al_4c12045b[31]),
-    .b(al_2fc0f064[31]),
-    .c(al_697e49b8),
-    .o({open_n34,al_ac33d53a[31]}));
+    .a(al_8aaaf100[17]),
+    .b(al_aeba03f9[0]),
+    .c(al_59973085),
+    .o({al_df4daaea,al_d0d95c2b[0]}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD"))
     al_65a345c7 (
-    .a(al_4c12045b[2]),
-    .b(al_2fc0f064[2]),
-    .c(al_395d66fa),
-    .o({al_a5a39f01,al_ac33d53a[2]}));
+    .a(al_8aaaf100[18]),
+    .b(al_2c65e87[1]),
+    .c(al_df4daaea),
+    .o({al_b9f64cf4,al_d0d95c2b[1]}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD"))
     al_9fdf7958 (
-    .a(al_4c12045b[3]),
-    .b(al_2fc0f064[3]),
-    .c(al_a5a39f01),
-    .o({al_29a49a6c,al_ac33d53a[3]}));
+    .a(al_8aaaf100[19]),
+    .b(al_2c65e87[2]),
+    .c(al_b9f64cf4),
+    .o({al_3b720106,al_d0d95c2b[2]}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD"))
     al_cfa89020 (
-    .a(al_4c12045b[4]),
-    .b(al_2fc0f064[4]),
-    .c(al_29a49a6c),
-    .o({al_92bb71b8,al_ac33d53a[4]}));
+    .a(al_8aaaf100[20]),
+    .b(al_2c65e87[3]),
+    .c(al_3b720106),
+    .o({al_66309daa,al_d0d95c2b[3]}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD"))
     al_d93f603c (
-    .a(al_4c12045b[5]),
-    .b(al_2fc0f064[5]),
-    .c(al_92bb71b8),
-    .o({al_71e1cc55,al_ac33d53a[5]}));
+    .a(al_8aaaf100[21]),
+    .b(al_2c65e87[4]),
+    .c(al_66309daa),
+    .o({al_209e0bae,al_d0d95c2b[4]}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD"))
     al_407e6c0 (
-    .a(al_4c12045b[6]),
-    .b(al_2fc0f064[6]),
-    .c(al_71e1cc55),
-    .o({al_31c20af0,al_ac33d53a[6]}));
+    .a(al_8aaaf100[22]),
+    .b(al_2c65e87[5]),
+    .c(al_209e0bae),
+    .o({al_48d8248b,al_d0d95c2b[5]}));
   AL_MAP_ADDER #(
     .ALUTYPE("ADD"))
     al_8c5662f0 (
-    .a(al_4c12045b[7]),
-    .b(al_2fc0f064[7]),
-    .c(al_31c20af0),
-    .o({al_dc38bdb4,al_ac33d53a[7]}));
+    .a(al_8aaaf100[23]),
+    .b(al_2c65e87[6]),
+    .c(al_48d8248b),
+    .o({al_fa7df2fa,al_d0d95c2b[6]}));
   AL_MAP_LUT2 #(
     .EQN("~(~B*~A)"),
     .INIT(4'he))
@@ -1916,239 +1906,239 @@ module dds_phy
     .b(al_7c6da17f[9]),
     .o(al_e1c1520b[9]));
   AL_MAP_LUT3 #(
-    .EQN("(A*~(B)*~(C)+A*B*~(C)+~(A)*B*C+A*B*C)"),
-    .INIT(8'hca))
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
     al_d525a5fc (
-    .a(al_50d27df2[10]),
-    .b(al_45f60c58[26]),
-    .c(al_45f60c58[30]),
+    .a(al_45f60c58[26]),
+    .b(al_45f60c58[30]),
+    .c(al_ece03478[10]),
     .o(al_ef10e9eb[10]));
   AL_MAP_LUT3 #(
-    .EQN("(A*~(B)*~(C)+A*B*~(C)+~(A)*B*C+A*B*C)"),
-    .INIT(8'hca))
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
     al_cc31806d (
-    .a(al_50d27df2[11]),
-    .b(al_45f60c58[27]),
-    .c(al_45f60c58[30]),
+    .a(al_45f60c58[27]),
+    .b(al_45f60c58[30]),
+    .c(al_ece03478[11]),
     .o(al_ef10e9eb[11]));
   AL_MAP_LUT3 #(
-    .EQN("(A*~(B)*~(C)+A*B*~(C)+~(A)*B*C+A*B*C)"),
-    .INIT(8'hca))
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
     al_7caf2c6f (
-    .a(al_50d27df2[12]),
-    .b(al_45f60c58[28]),
-    .c(al_45f60c58[30]),
+    .a(al_45f60c58[28]),
+    .b(al_45f60c58[30]),
+    .c(al_ece03478[12]),
     .o(al_ef10e9eb[12]));
   AL_MAP_LUT3 #(
-    .EQN("(A*~(B)*~(C)+A*B*~(C)+~(A)*B*C+A*B*C)"),
-    .INIT(8'hca))
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
     al_10637221 (
-    .a(al_50d27df2[13]),
-    .b(al_45f60c58[29]),
-    .c(al_45f60c58[30]),
+    .a(al_45f60c58[29]),
+    .b(al_45f60c58[30]),
+    .c(al_ece03478[13]),
     .o(al_ef10e9eb[13]));
   AL_MAP_LUT3 #(
-    .EQN("(A*~(B)*~(C)+A*B*~(C)+~(A)*B*C+A*B*C)"),
-    .INIT(8'hca))
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
     al_3ca92187 (
-    .a(al_50d27df2[1]),
-    .b(al_45f60c58[17]),
-    .c(al_45f60c58[30]),
+    .a(al_45f60c58[17]),
+    .b(al_45f60c58[30]),
+    .c(al_ece03478[1]),
     .o(al_ef10e9eb[1]));
   AL_MAP_LUT3 #(
-    .EQN("(A*~(B)*~(C)+A*B*~(C)+~(A)*B*C+A*B*C)"),
-    .INIT(8'hca))
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
     al_6c1f08da (
-    .a(al_50d27df2[2]),
-    .b(al_45f60c58[18]),
-    .c(al_45f60c58[30]),
+    .a(al_45f60c58[18]),
+    .b(al_45f60c58[30]),
+    .c(al_ece03478[2]),
     .o(al_ef10e9eb[2]));
   AL_MAP_LUT3 #(
-    .EQN("(A*~(B)*~(C)+A*B*~(C)+~(A)*B*C+A*B*C)"),
-    .INIT(8'hca))
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
     al_97b9fe7d (
-    .a(al_50d27df2[3]),
-    .b(al_45f60c58[19]),
-    .c(al_45f60c58[30]),
+    .a(al_45f60c58[19]),
+    .b(al_45f60c58[30]),
+    .c(al_ece03478[3]),
     .o(al_ef10e9eb[3]));
   AL_MAP_LUT3 #(
-    .EQN("(A*~(B)*~(C)+A*B*~(C)+~(A)*B*C+A*B*C)"),
-    .INIT(8'hca))
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
     al_2076ca4d (
-    .a(al_50d27df2[4]),
-    .b(al_45f60c58[20]),
-    .c(al_45f60c58[30]),
+    .a(al_45f60c58[20]),
+    .b(al_45f60c58[30]),
+    .c(al_ece03478[4]),
     .o(al_ef10e9eb[4]));
   AL_MAP_LUT3 #(
-    .EQN("(A*~(B)*~(C)+A*B*~(C)+~(A)*B*C+A*B*C)"),
-    .INIT(8'hca))
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
     al_922d1e28 (
-    .a(al_50d27df2[5]),
-    .b(al_45f60c58[21]),
-    .c(al_45f60c58[30]),
+    .a(al_45f60c58[21]),
+    .b(al_45f60c58[30]),
+    .c(al_ece03478[5]),
     .o(al_ef10e9eb[5]));
   AL_MAP_LUT3 #(
-    .EQN("(A*~(B)*~(C)+A*B*~(C)+~(A)*B*C+A*B*C)"),
-    .INIT(8'hca))
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
     al_d94f09f6 (
-    .a(al_50d27df2[6]),
-    .b(al_45f60c58[22]),
-    .c(al_45f60c58[30]),
+    .a(al_45f60c58[22]),
+    .b(al_45f60c58[30]),
+    .c(al_ece03478[6]),
     .o(al_ef10e9eb[6]));
   AL_MAP_LUT3 #(
-    .EQN("(A*~(B)*~(C)+A*B*~(C)+~(A)*B*C+A*B*C)"),
-    .INIT(8'hca))
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
     al_5004aa34 (
-    .a(al_50d27df2[7]),
-    .b(al_45f60c58[23]),
-    .c(al_45f60c58[30]),
+    .a(al_45f60c58[23]),
+    .b(al_45f60c58[30]),
+    .c(al_ece03478[7]),
     .o(al_ef10e9eb[7]));
   AL_MAP_LUT3 #(
-    .EQN("(A*~(B)*~(C)+A*B*~(C)+~(A)*B*C+A*B*C)"),
-    .INIT(8'hca))
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
     al_e444e8da (
-    .a(al_50d27df2[8]),
-    .b(al_45f60c58[24]),
-    .c(al_45f60c58[30]),
+    .a(al_45f60c58[24]),
+    .b(al_45f60c58[30]),
+    .c(al_ece03478[8]),
     .o(al_ef10e9eb[8]));
   AL_MAP_LUT3 #(
-    .EQN("(A*~(B)*~(C)+A*B*~(C)+~(A)*B*C+A*B*C)"),
-    .INIT(8'hca))
+    .EQN("(C*~(A)*~(B)+C*A*~(B)+~(C)*A*B+C*A*B)"),
+    .INIT(8'hb8))
     al_910a532e (
-    .a(al_50d27df2[9]),
-    .b(al_45f60c58[25]),
-    .c(al_45f60c58[30]),
+    .a(al_45f60c58[25]),
+    .b(al_45f60c58[30]),
+    .c(al_ece03478[9]),
     .o(al_ef10e9eb[9]));
   AL_MAP_LUT3 #(
-    .EQN("(B*~(A)*~(C)+B*A*~(C)+~(B)*A*C+B*A*C)"),
-    .INIT(8'hac))
+    .EQN("(A*~(C)*~(B)+A*C*~(B)+~(A)*C*B+A*C*B)"),
+    .INIT(8'he2))
     al_641ca39f (
-    .a(al_50d27df2[10]),
-    .b(al_45f60c58[26]),
-    .c(al_45f60c58[30]),
+    .a(al_45f60c58[26]),
+    .b(al_45f60c58[30]),
+    .c(al_ece03478[10]),
     .o(al_1db9833e[10]));
   AL_MAP_LUT3 #(
-    .EQN("(B*~(A)*~(C)+B*A*~(C)+~(B)*A*C+B*A*C)"),
-    .INIT(8'hac))
+    .EQN("(A*~(C)*~(B)+A*C*~(B)+~(A)*C*B+A*C*B)"),
+    .INIT(8'he2))
     al_b93ff035 (
-    .a(al_50d27df2[11]),
-    .b(al_45f60c58[27]),
-    .c(al_45f60c58[30]),
+    .a(al_45f60c58[27]),
+    .b(al_45f60c58[30]),
+    .c(al_ece03478[11]),
     .o(al_1db9833e[11]));
   AL_MAP_LUT3 #(
-    .EQN("(B*~(A)*~(C)+B*A*~(C)+~(B)*A*C+B*A*C)"),
-    .INIT(8'hac))
+    .EQN("(A*~(C)*~(B)+A*C*~(B)+~(A)*C*B+A*C*B)"),
+    .INIT(8'he2))
     al_2de07fcc (
-    .a(al_50d27df2[12]),
-    .b(al_45f60c58[28]),
-    .c(al_45f60c58[30]),
+    .a(al_45f60c58[28]),
+    .b(al_45f60c58[30]),
+    .c(al_ece03478[12]),
     .o(al_1db9833e[12]));
   AL_MAP_LUT3 #(
-    .EQN("(B*~(A)*~(C)+B*A*~(C)+~(B)*A*C+B*A*C)"),
-    .INIT(8'hac))
+    .EQN("(A*~(C)*~(B)+A*C*~(B)+~(A)*C*B+A*C*B)"),
+    .INIT(8'he2))
     al_3320e595 (
-    .a(al_50d27df2[13]),
-    .b(al_45f60c58[29]),
-    .c(al_45f60c58[30]),
+    .a(al_45f60c58[29]),
+    .b(al_45f60c58[30]),
+    .c(al_ece03478[13]),
     .o(al_1db9833e[13]));
   AL_MAP_LUT3 #(
-    .EQN("(B*~(A)*~(C)+B*A*~(C)+~(B)*A*C+B*A*C)"),
-    .INIT(8'hac))
+    .EQN("(A*~(C)*~(B)+A*C*~(B)+~(A)*C*B+A*C*B)"),
+    .INIT(8'he2))
     al_408a3a (
-    .a(al_50d27df2[1]),
-    .b(al_45f60c58[17]),
-    .c(al_45f60c58[30]),
+    .a(al_45f60c58[17]),
+    .b(al_45f60c58[30]),
+    .c(al_ece03478[1]),
     .o(al_1db9833e[1]));
   AL_MAP_LUT3 #(
-    .EQN("(B*~(A)*~(C)+B*A*~(C)+~(B)*A*C+B*A*C)"),
-    .INIT(8'hac))
+    .EQN("(A*~(C)*~(B)+A*C*~(B)+~(A)*C*B+A*C*B)"),
+    .INIT(8'he2))
     al_5d459b87 (
-    .a(al_50d27df2[2]),
-    .b(al_45f60c58[18]),
-    .c(al_45f60c58[30]),
+    .a(al_45f60c58[18]),
+    .b(al_45f60c58[30]),
+    .c(al_ece03478[2]),
     .o(al_1db9833e[2]));
   AL_MAP_LUT3 #(
-    .EQN("(B*~(A)*~(C)+B*A*~(C)+~(B)*A*C+B*A*C)"),
-    .INIT(8'hac))
+    .EQN("(A*~(C)*~(B)+A*C*~(B)+~(A)*C*B+A*C*B)"),
+    .INIT(8'he2))
     al_ffa9fd0d (
-    .a(al_50d27df2[3]),
-    .b(al_45f60c58[19]),
-    .c(al_45f60c58[30]),
+    .a(al_45f60c58[19]),
+    .b(al_45f60c58[30]),
+    .c(al_ece03478[3]),
     .o(al_1db9833e[3]));
   AL_MAP_LUT3 #(
-    .EQN("(B*~(A)*~(C)+B*A*~(C)+~(B)*A*C+B*A*C)"),
-    .INIT(8'hac))
+    .EQN("(A*~(C)*~(B)+A*C*~(B)+~(A)*C*B+A*C*B)"),
+    .INIT(8'he2))
     al_1323da91 (
-    .a(al_50d27df2[4]),
-    .b(al_45f60c58[20]),
-    .c(al_45f60c58[30]),
+    .a(al_45f60c58[20]),
+    .b(al_45f60c58[30]),
+    .c(al_ece03478[4]),
     .o(al_1db9833e[4]));
   AL_MAP_LUT3 #(
-    .EQN("(B*~(A)*~(C)+B*A*~(C)+~(B)*A*C+B*A*C)"),
-    .INIT(8'hac))
+    .EQN("(A*~(C)*~(B)+A*C*~(B)+~(A)*C*B+A*C*B)"),
+    .INIT(8'he2))
     al_ee689b0c (
-    .a(al_50d27df2[5]),
-    .b(al_45f60c58[21]),
-    .c(al_45f60c58[30]),
+    .a(al_45f60c58[21]),
+    .b(al_45f60c58[30]),
+    .c(al_ece03478[5]),
     .o(al_1db9833e[5]));
   AL_MAP_LUT3 #(
-    .EQN("(B*~(A)*~(C)+B*A*~(C)+~(B)*A*C+B*A*C)"),
-    .INIT(8'hac))
+    .EQN("(A*~(C)*~(B)+A*C*~(B)+~(A)*C*B+A*C*B)"),
+    .INIT(8'he2))
     al_46644e49 (
-    .a(al_50d27df2[6]),
-    .b(al_45f60c58[22]),
-    .c(al_45f60c58[30]),
+    .a(al_45f60c58[22]),
+    .b(al_45f60c58[30]),
+    .c(al_ece03478[6]),
     .o(al_1db9833e[6]));
   AL_MAP_LUT3 #(
-    .EQN("(B*~(A)*~(C)+B*A*~(C)+~(B)*A*C+B*A*C)"),
-    .INIT(8'hac))
+    .EQN("(A*~(C)*~(B)+A*C*~(B)+~(A)*C*B+A*C*B)"),
+    .INIT(8'he2))
     al_4a6cd7e0 (
-    .a(al_50d27df2[7]),
-    .b(al_45f60c58[23]),
-    .c(al_45f60c58[30]),
+    .a(al_45f60c58[23]),
+    .b(al_45f60c58[30]),
+    .c(al_ece03478[7]),
     .o(al_1db9833e[7]));
   AL_MAP_LUT3 #(
-    .EQN("(B*~(A)*~(C)+B*A*~(C)+~(B)*A*C+B*A*C)"),
-    .INIT(8'hac))
+    .EQN("(A*~(C)*~(B)+A*C*~(B)+~(A)*C*B+A*C*B)"),
+    .INIT(8'he2))
     al_e18c3a84 (
-    .a(al_50d27df2[8]),
-    .b(al_45f60c58[24]),
-    .c(al_45f60c58[30]),
+    .a(al_45f60c58[24]),
+    .b(al_45f60c58[30]),
+    .c(al_ece03478[8]),
     .o(al_1db9833e[8]));
   AL_MAP_LUT3 #(
-    .EQN("(B*~(A)*~(C)+B*A*~(C)+~(B)*A*C+B*A*C)"),
-    .INIT(8'hac))
+    .EQN("(A*~(C)*~(B)+A*C*~(B)+~(A)*C*B+A*C*B)"),
+    .INIT(8'he2))
     al_4a0f6d3d (
-    .a(al_50d27df2[9]),
-    .b(al_45f60c58[25]),
-    .c(al_45f60c58[30]),
+    .a(al_45f60c58[25]),
+    .b(al_45f60c58[30]),
+    .c(al_ece03478[9]),
     .o(al_1db9833e[9]));
   AL_MAP_LUT4 #(
     .EQN("(~D*~C*~B*~A)"),
     .INIT(16'h0001))
     al_e4e62d3e (
-    .a(al_b0376e91[4]),
-    .b(al_b0376e91[5]),
-    .c(al_b0376e91[6]),
-    .d(al_b0376e91[7]),
+    .a(al_aeba03f9[4]),
+    .b(al_aeba03f9[5]),
+    .c(al_aeba03f9[6]),
+    .d(al_aeba03f9[7]),
     .o(al_2866f959));
   AL_MAP_LUT4 #(
     .EQN("(~D*~C*~B*~A)"),
     .INIT(16'h0001))
     al_1a563ec2 (
-    .a(al_b0376e91[0]),
-    .b(al_b0376e91[1]),
-    .c(al_b0376e91[2]),
-    .d(al_b0376e91[3]),
+    .a(al_aeba03f9[0]),
+    .b(al_aeba03f9[1]),
+    .c(al_aeba03f9[2]),
+    .d(al_aeba03f9[3]),
     .o(al_6d9cf46e));
   AL_MAP_LUT4 #(
     .EQN("(~D*~C*~B*~A)"),
     .INIT(16'h0001))
     al_7dd8fcfc (
-    .a(al_b0376e91[8]),
-    .b(al_b0376e91[9]),
-    .c(al_b0376e91[10]),
-    .d(al_b0376e91[11]),
+    .a(al_aeba03f9[8]),
+    .b(al_aeba03f9[9]),
+    .c(al_aeba03f9[10]),
+    .d(al_aeba03f9[11]),
     .o(al_e910dab));
   AL_MAP_LUT6 #(
     .EQN("(~F*~E*~D*C*B*A)"),
@@ -2157,9 +2147,9 @@ module dds_phy
     .a(al_2866f959),
     .b(al_6d9cf46e),
     .c(al_e910dab),
-    .d(al_b0376e91[12]),
-    .e(al_b0376e91[13]),
-    .f(al_4fdd6779[30]),
+    .d(al_aeba03f9[12]),
+    .e(al_aeba03f9[13]),
+    .f(al_b84f9223[30]),
     .o(al_c8187df2));
   AL_DFF_X al_470a2ab8 (
     .ar(~rst_n),
@@ -2174,28 +2164,28 @@ module dds_phy
     .EQN("(~D*~C*~B*~A)"),
     .INIT(16'h0001))
     al_da3205d2 (
-    .a(al_e765e4ce[3]),
-    .b(al_e765e4ce[4]),
-    .c(al_e765e4ce[5]),
-    .d(al_e765e4ce[6]),
+    .a(al_2c65e87[3]),
+    .b(al_2c65e87[4]),
+    .c(al_2c65e87[5]),
+    .d(al_2c65e87[6]),
     .o(al_1aefe382));
   AL_MAP_LUT4 #(
     .EQN("(~D*~C*B*~A)"),
     .INIT(16'h0004))
     al_32865808 (
-    .a(al_b0376e91[0]),
-    .b(al_4fdd6779[30]),
-    .c(al_e765e4ce[1]),
-    .d(al_e765e4ce[2]),
+    .a(al_aeba03f9[0]),
+    .b(al_b84f9223[30]),
+    .c(al_2c65e87[1]),
+    .d(al_2c65e87[2]),
     .o(al_63190405));
   AL_MAP_LUT4 #(
     .EQN("(~D*~C*~B*~A)"),
     .INIT(16'h0001))
     al_c718c02a (
-    .a(al_e765e4ce[7]),
-    .b(al_e765e4ce[8]),
-    .c(al_e765e4ce[9]),
-    .d(al_e765e4ce[10]),
+    .a(al_2c65e87[7]),
+    .b(al_2c65e87[8]),
+    .c(al_2c65e87[9]),
+    .d(al_2c65e87[10]),
     .o(al_5d24e11b));
   AL_MAP_LUT6 #(
     .EQN("(~F*~E*~D*C*B*A)"),
@@ -2204,9 +2194,9 @@ module dds_phy
     .a(al_1aefe382),
     .b(al_63190405),
     .c(al_5d24e11b),
-    .d(al_e765e4ce[11]),
-    .e(al_e765e4ce[12]),
-    .f(al_e765e4ce[13]),
+    .d(al_2c65e87[11]),
+    .e(al_2c65e87[12]),
+    .f(al_2c65e87[13]),
     .o(al_124cb870));
   AL_DFF_X al_14fec9f5 (
     .ar(~rst_n),
@@ -2572,867 +2562,12 @@ module dds_phy
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
-    .d(al_e1c1520b[8]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_75776e99[8]));
-  AL_DFF_X al_e8b27f0a (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_e1c1520b[9]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_75776e99[9]));
-  AL_DFF_X al_34c43e91 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_e1c1520b[10]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_75776e99[10]));
-  AL_DFF_X al_4034d121 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_e1c1520b[11]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_75776e99[11]));
-  AL_DFF_X al_7260e525 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_e1c1520b[12]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_75776e99[12]));
-  AL_DFF_X al_c152e5cf (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_e1c1520b[13]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_75776e99[13]));
-  AL_DFF_X al_6e95db6e (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_e1c1520b[14]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_75776e99[14]));
-  AL_DFF_X al_58944ff2 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_e1c1520b[15]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_75776e99[15]));
-  AL_DFF_X al_22fef235 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_e1c1520b[16]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_75776e99[16]));
-  AL_DFF_X al_7d508833 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_e1c1520b[17]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_75776e99[17]));
-  AL_DFF_X al_6eb318e4 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_e1c1520b[0]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_75776e99[0]));
-  AL_DFF_X al_3c4df35a (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_e1c1520b[18]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_75776e99[18]));
-  AL_DFF_X al_fa6e2423 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_e1c1520b[19]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_75776e99[19]));
-  AL_DFF_X al_8230d390 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_e1c1520b[20]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_75776e99[20]));
-  AL_DFF_X al_9075ae09 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_e1c1520b[21]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_75776e99[21]));
-  AL_DFF_X al_a5774487 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_e1c1520b[22]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_75776e99[22]));
-  AL_DFF_X al_2ed6142 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_e1c1520b[23]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_75776e99[23]));
-  AL_DFF_X al_a29a8f4f (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_e1c1520b[24]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_75776e99[24]));
-  AL_DFF_X al_be034567 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_e1c1520b[25]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_75776e99[25]));
-  AL_DFF_X al_4ea260f5 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_e1c1520b[26]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_75776e99[26]));
-  AL_DFF_X al_2ae380ed (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_e1c1520b[27]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_75776e99[27]));
-  AL_DFF_X al_10074c95 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_e1c1520b[1]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_75776e99[1]));
-  AL_DFF_X al_c1649c03 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_e1c1520b[28]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_75776e99[28]));
-  AL_DFF_X al_f93a6113 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_e1c1520b[29]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_75776e99[29]));
-  AL_DFF_X al_b57f152a (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_e1c1520b[30]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_75776e99[30]));
-  AL_DFF_X al_5fb1cf51 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_e1c1520b[2]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_75776e99[2]));
-  AL_DFF_X al_dc5daab3 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_e1c1520b[3]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_75776e99[3]));
-  AL_DFF_X al_5394044a (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_e1c1520b[4]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_75776e99[4]));
-  AL_DFF_X al_b89d9b42 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_e1c1520b[5]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_75776e99[5]));
-  AL_DFF_X al_81c5ed9a (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_e1c1520b[6]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_75776e99[6]));
-  AL_DFF_X al_9e15c642 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_e1c1520b[7]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_75776e99[7]));
-  AL_DFF_X al_c26c9bb1 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(fword[8]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_5e800bf9[8]));
-  AL_DFF_X al_7256805c (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(fword[9]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_5e800bf9[9]));
-  AL_DFF_X al_3579341e (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(fword[10]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_5e800bf9[10]));
-  AL_DFF_X al_b7079f11 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(fword[11]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_5e800bf9[11]));
-  AL_DFF_X al_89cb7fac (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(fword[12]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_5e800bf9[12]));
-  AL_DFF_X al_7f48cb2c (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(fword[13]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_5e800bf9[13]));
-  AL_DFF_X al_8c60f702 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(fword[14]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_5e800bf9[14]));
-  AL_DFF_X al_2e772330 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(fword[15]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_5e800bf9[15]));
-  AL_DFF_X al_835d154d (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(fword[16]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_5e800bf9[16]));
-  AL_DFF_X al_d32f36bb (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(fword[17]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_5e800bf9[17]));
-  AL_DFF_X al_de040350 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(fword[0]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_5e800bf9[0]));
-  AL_DFF_X al_46b4672d (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(fword[18]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_5e800bf9[18]));
-  AL_DFF_X al_e10b0f3c (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(fword[19]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_5e800bf9[19]));
-  AL_DFF_X al_53e9dc14 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(fword[20]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_5e800bf9[20]));
-  AL_DFF_X al_d79ebee3 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(fword[21]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_5e800bf9[21]));
-  AL_DFF_X al_f0bb2d9b (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(fword[22]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_5e800bf9[22]));
-  AL_DFF_X al_1faffb9a (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(fword[23]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_5e800bf9[23]));
-  AL_DFF_X al_ed14148e (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(fword[24]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_5e800bf9[24]));
-  AL_DFF_X al_88b7b6db (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(fword[25]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_5e800bf9[25]));
-  AL_DFF_X al_527d2456 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(fword[26]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_5e800bf9[26]));
-  AL_DFF_X al_7e32d61 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(fword[27]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_5e800bf9[27]));
-  AL_DFF_X al_25378cfc (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(fword[1]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_5e800bf9[1]));
-  AL_DFF_X al_77d3213b (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(fword[28]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_5e800bf9[28]));
-  AL_DFF_X al_a94d40f9 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(fword[29]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_5e800bf9[29]));
-  AL_DFF_X al_8ee8ac50 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(fword[30]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_5e800bf9[30]));
-  AL_DFF_X al_5fba7a49 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(fword[31]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_5e800bf9[31]));
-  AL_DFF_X al_dc93576e (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(fword[2]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_5e800bf9[2]));
-  AL_DFF_X al_76b20766 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(fword[3]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_5e800bf9[3]));
-  AL_DFF_X al_a8ce422 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(fword[4]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_5e800bf9[4]));
-  AL_DFF_X al_e3895fe2 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(fword[5]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_5e800bf9[5]));
-  AL_DFF_X al_2160ccea (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(fword[6]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_5e800bf9[6]));
-  AL_DFF_X al_df8e007c (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(fword[7]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_5e800bf9[7]));
-  AL_DFF_X al_b40a42c0 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_ac33d53a[8]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_2adbf503[8]));
-  AL_DFF_X al_56fbb473 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_ac33d53a[9]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_2adbf503[9]));
-  AL_DFF_X al_f912cfa7 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_ac33d53a[10]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_2adbf503[10]));
-  AL_DFF_X al_790357b6 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_ac33d53a[11]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_2adbf503[11]));
-  AL_DFF_X al_1f745e25 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_ac33d53a[12]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_2adbf503[12]));
-  AL_DFF_X al_fdf3d1b5 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_ac33d53a[13]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_2adbf503[13]));
-  AL_DFF_X al_28c56aa6 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_ac33d53a[14]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_2adbf503[14]));
-  AL_DFF_X al_fa1f6a4e (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_ac33d53a[15]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_2adbf503[15]));
-  AL_DFF_X al_7852efc4 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_ac33d53a[16]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_2adbf503[16]));
-  AL_DFF_X al_9a72719d (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_ac33d53a[17]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_2adbf503[17]));
-  AL_DFF_X al_31c2c18 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_ac33d53a[0]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_2adbf503[0]));
-  AL_DFF_X al_7eeaf50d (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_ac33d53a[18]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_2adbf503[18]));
-  AL_DFF_X al_3b36aef9 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_ac33d53a[19]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_2adbf503[19]));
-  AL_DFF_X al_26b87d2b (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_ac33d53a[20]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_2adbf503[20]));
-  AL_DFF_X al_8a5c27f2 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_ac33d53a[21]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_2adbf503[21]));
-  AL_DFF_X al_45e64a4e (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_ac33d53a[22]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_2adbf503[22]));
-  AL_DFF_X al_33b37756 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_ac33d53a[23]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_2adbf503[23]));
-  AL_DFF_X al_de0a6607 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_ac33d53a[24]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_2adbf503[24]));
-  AL_DFF_X al_e5e3578e (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_ac33d53a[25]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_2adbf503[25]));
-  AL_DFF_X al_a8a8dd4b (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_ac33d53a[26]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_2adbf503[26]));
-  AL_DFF_X al_d9ae9d4c (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_ac33d53a[27]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_2adbf503[27]));
-  AL_DFF_X al_bed75354 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_ac33d53a[1]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_2adbf503[1]));
-  AL_DFF_X al_9fa6fc7e (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_ac33d53a[28]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_2adbf503[28]));
-  AL_DFF_X al_c3aeda92 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_ac33d53a[29]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_2adbf503[29]));
-  AL_DFF_X al_d8454c67 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_ac33d53a[30]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_2adbf503[30]));
-  AL_DFF_X al_7e8984c3 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_ac33d53a[31]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_2adbf503[31]));
-  AL_DFF_X al_b2c2a4b7 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_ac33d53a[2]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_2adbf503[2]));
-  AL_DFF_X al_99383aba (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_ac33d53a[3]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_2adbf503[3]));
-  AL_DFF_X al_f8178b2c (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_ac33d53a[4]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_2adbf503[4]));
-  AL_DFF_X al_be1fc3e5 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_ac33d53a[5]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_2adbf503[5]));
-  AL_DFF_X al_c9f8b2f (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_ac33d53a[6]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_2adbf503[6]));
-  AL_DFF_X al_5979435b (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_ac33d53a[7]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_2adbf503[7]));
-  AL_DFF_X al_efc104d9 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
     .d(al_2adbf503[8]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
     .q(al_1ca72219[8]));
-  AL_DFF_X al_94d694ac (
+  AL_DFF_X al_e8b27f0a (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -3441,7 +2576,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_1ca72219[9]));
-  AL_DFF_X al_35f4ffbe (
+  AL_DFF_X al_34c43e91 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -3450,7 +2585,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_1ca72219[10]));
-  AL_DFF_X al_38c08d06 (
+  AL_DFF_X al_4034d121 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -3459,7 +2594,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_1ca72219[11]));
-  AL_DFF_X al_b4006c49 (
+  AL_DFF_X al_7260e525 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -3468,7 +2603,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_1ca72219[12]));
-  AL_DFF_X al_88983c15 (
+  AL_DFF_X al_c152e5cf (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -3477,7 +2612,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_1ca72219[13]));
-  AL_DFF_X al_322c5a5a (
+  AL_DFF_X al_6e95db6e (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -3486,7 +2621,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_1ca72219[14]));
-  AL_DFF_X al_f7f9a105 (
+  AL_DFF_X al_58944ff2 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -3495,7 +2630,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_1ca72219[15]));
-  AL_DFF_X al_b6c3af5b (
+  AL_DFF_X al_22fef235 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -3503,8 +2638,8 @@ module dds_phy
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(al_1ca72219[16]));
-  AL_DFF_X al_516abd0 (
+    .q(al_2b6fc17c[16]));
+  AL_DFF_X al_7d508833 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -3512,8 +2647,8 @@ module dds_phy
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(al_1ca72219[17]));
-  AL_DFF_X al_22aeac4e (
+    .q(al_2b6fc17c[17]));
+  AL_DFF_X al_6eb318e4 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -3522,7 +2657,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_1ca72219[0]));
-  AL_DFF_X al_2cfb0659 (
+  AL_DFF_X al_3c4df35a (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -3530,8 +2665,8 @@ module dds_phy
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(al_1ca72219[18]));
-  AL_DFF_X al_7018cf5a (
+    .q(al_2b6fc17c[18]));
+  AL_DFF_X al_fa6e2423 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -3539,8 +2674,8 @@ module dds_phy
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(al_1ca72219[19]));
-  AL_DFF_X al_665b406a (
+    .q(al_2b6fc17c[19]));
+  AL_DFF_X al_8230d390 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -3548,8 +2683,8 @@ module dds_phy
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(al_1ca72219[20]));
-  AL_DFF_X al_dd3c6cbd (
+    .q(al_2b6fc17c[20]));
+  AL_DFF_X al_9075ae09 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -3557,8 +2692,8 @@ module dds_phy
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(al_1ca72219[21]));
-  AL_DFF_X al_88ad635d (
+    .q(al_2b6fc17c[21]));
+  AL_DFF_X al_a5774487 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -3566,8 +2701,8 @@ module dds_phy
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(al_1ca72219[22]));
-  AL_DFF_X al_cc28c7fc (
+    .q(al_2b6fc17c[22]));
+  AL_DFF_X al_2ed6142 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -3575,8 +2710,8 @@ module dds_phy
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(al_1ca72219[23]));
-  AL_DFF_X al_3a1809be (
+    .q(al_2b6fc17c[23]));
+  AL_DFF_X al_a29a8f4f (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -3584,8 +2719,8 @@ module dds_phy
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(al_1ca72219[24]));
-  AL_DFF_X al_f6441446 (
+    .q(al_2b6fc17c[24]));
+  AL_DFF_X al_be034567 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -3593,8 +2728,8 @@ module dds_phy
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(al_1ca72219[25]));
-  AL_DFF_X al_8863e9a (
+    .q(al_2b6fc17c[25]));
+  AL_DFF_X al_4ea260f5 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -3602,8 +2737,8 @@ module dds_phy
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(al_1ca72219[26]));
-  AL_DFF_X al_5e7497d4 (
+    .q(al_2b6fc17c[26]));
+  AL_DFF_X al_2ae380ed (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -3611,8 +2746,8 @@ module dds_phy
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(al_1ca72219[27]));
-  AL_DFF_X al_6d6ea447 (
+    .q(al_2b6fc17c[27]));
+  AL_DFF_X al_10074c95 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -3621,7 +2756,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_1ca72219[1]));
-  AL_DFF_X al_5209be15 (
+  AL_DFF_X al_c1649c03 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -3629,8 +2764,8 @@ module dds_phy
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(al_1ca72219[28]));
-  AL_DFF_X al_442ae8f6 (
+    .q(al_2b6fc17c[28]));
+  AL_DFF_X al_f93a6113 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -3638,8 +2773,8 @@ module dds_phy
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(al_1ca72219[29]));
-  AL_DFF_X al_147a8585 (
+    .q(al_2b6fc17c[29]));
+  AL_DFF_X al_b57f152a (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -3647,8 +2782,8 @@ module dds_phy
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(al_1ca72219[30]));
-  AL_DFF_X al_718633aa (
+    .q(al_2b6fc17c[30]));
+  AL_DFF_X al_1afd3713 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -3656,8 +2791,8 @@ module dds_phy
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(al_1ca72219[31]));
-  AL_DFF_X al_1164b4aa (
+    .q(al_2b6fc17c[31]));
+  AL_DFF_X al_5fb1cf51 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -3666,7 +2801,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_1ca72219[2]));
-  AL_DFF_X al_ddd1c04b (
+  AL_DFF_X al_dc5daab3 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -3675,7 +2810,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_1ca72219[3]));
-  AL_DFF_X al_bf982701 (
+  AL_DFF_X al_5394044a (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -3684,7 +2819,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_1ca72219[4]));
-  AL_DFF_X al_34da7a0f (
+  AL_DFF_X al_b89d9b42 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -3693,7 +2828,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_1ca72219[5]));
-  AL_DFF_X al_b67c3979 (
+  AL_DFF_X al_81c5ed9a (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -3702,7 +2837,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_1ca72219[6]));
-  AL_DFF_X al_7d3b3b7c (
+  AL_DFF_X al_9e15c642 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -3711,7 +2846,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_1ca72219[7]));
-  AL_DFF_X al_67237772 (
+  AL_DFF_X al_c26c9bb1 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -3720,7 +2855,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_8fc74dd1[8]));
-  AL_DFF_X al_5943f200 (
+  AL_DFF_X al_7256805c (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -3729,7 +2864,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_8fc74dd1[9]));
-  AL_DFF_X al_bd8fdd97 (
+  AL_DFF_X al_3579341e (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -3738,7 +2873,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_8fc74dd1[10]));
-  AL_DFF_X al_b9e3c79f (
+  AL_DFF_X al_b7079f11 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -3747,7 +2882,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_8fc74dd1[11]));
-  AL_DFF_X al_ac0bcbeb (
+  AL_DFF_X al_89cb7fac (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -3756,7 +2891,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_8fc74dd1[12]));
-  AL_DFF_X al_13b0591a (
+  AL_DFF_X al_7f48cb2c (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -3765,7 +2900,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_8fc74dd1[13]));
-  AL_DFF_X al_8f28d3a (
+  AL_DFF_X al_8c60f702 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -3774,7 +2909,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_8fc74dd1[14]));
-  AL_DFF_X al_7b5d1323 (
+  AL_DFF_X al_2e772330 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -3783,25 +2918,25 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_8fc74dd1[15]));
-  AL_DFF_X al_5ce47d62 (
+  AL_DFF_X al_835d154d (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
-    .d(al_1ca72219[16]),
+    .d(al_2b6fc17c[16]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
     .q(al_8fc74dd1[16]));
-  AL_DFF_X al_db7ed5ae (
+  AL_DFF_X al_d32f36bb (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
-    .d(al_1ca72219[17]),
+    .d(al_2b6fc17c[17]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
     .q(al_8fc74dd1[17]));
-  AL_DFF_X al_252ea06e (
+  AL_DFF_X al_de040350 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -3810,97 +2945,97 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_8fc74dd1[0]));
-  AL_DFF_X al_b7ce14ac (
+  AL_DFF_X al_46b4672d (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
-    .d(al_1ca72219[18]),
+    .d(al_2b6fc17c[18]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
     .q(al_8fc74dd1[18]));
-  AL_DFF_X al_24230e71 (
+  AL_DFF_X al_e10b0f3c (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
-    .d(al_1ca72219[19]),
+    .d(al_2b6fc17c[19]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
     .q(al_8fc74dd1[19]));
-  AL_DFF_X al_957d5748 (
+  AL_DFF_X al_53e9dc14 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
-    .d(al_1ca72219[20]),
+    .d(al_2b6fc17c[20]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
     .q(al_8fc74dd1[20]));
-  AL_DFF_X al_d5572c6e (
+  AL_DFF_X al_d79ebee3 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
-    .d(al_1ca72219[21]),
+    .d(al_2b6fc17c[21]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
     .q(al_8fc74dd1[21]));
-  AL_DFF_X al_157cd271 (
+  AL_DFF_X al_f0bb2d9b (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
-    .d(al_1ca72219[22]),
+    .d(al_2b6fc17c[22]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
     .q(al_8fc74dd1[22]));
-  AL_DFF_X al_95d30c7f (
+  AL_DFF_X al_1faffb9a (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
-    .d(al_1ca72219[23]),
+    .d(al_2b6fc17c[23]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
     .q(al_8fc74dd1[23]));
-  AL_DFF_X al_fc015cba (
+  AL_DFF_X al_ed14148e (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
-    .d(al_1ca72219[24]),
+    .d(al_2b6fc17c[24]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
     .q(al_8fc74dd1[24]));
-  AL_DFF_X al_5f2f12df (
+  AL_DFF_X al_88b7b6db (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
-    .d(al_1ca72219[25]),
+    .d(al_2b6fc17c[25]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
     .q(al_8fc74dd1[25]));
-  AL_DFF_X al_578df8e9 (
+  AL_DFF_X al_527d2456 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
-    .d(al_1ca72219[26]),
+    .d(al_2b6fc17c[26]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
     .q(al_8fc74dd1[26]));
-  AL_DFF_X al_605d9003 (
+  AL_DFF_X al_7e32d61 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
-    .d(al_1ca72219[27]),
+    .d(al_2b6fc17c[27]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
     .q(al_8fc74dd1[27]));
-  AL_DFF_X al_8e33936e (
+  AL_DFF_X al_25378cfc (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -3909,43 +3044,43 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_8fc74dd1[1]));
-  AL_DFF_X al_fe620a1d (
+  AL_DFF_X al_77d3213b (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
-    .d(al_1ca72219[28]),
+    .d(al_2b6fc17c[28]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
     .q(al_8fc74dd1[28]));
-  AL_DFF_X al_1cc64d73 (
+  AL_DFF_X al_a94d40f9 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
-    .d(al_1ca72219[29]),
+    .d(al_2b6fc17c[29]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
     .q(al_8fc74dd1[29]));
-  AL_DFF_X al_fd757df4 (
+  AL_DFF_X al_8ee8ac50 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
-    .d(al_1ca72219[30]),
+    .d(al_2b6fc17c[30]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
     .q(al_8fc74dd1[30]));
-  AL_DFF_X al_17f55510 (
+  AL_DFF_X al_5fba7a49 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
-    .d(al_1ca72219[31]),
+    .d(al_2b6fc17c[31]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
     .q(al_8fc74dd1[31]));
-  AL_DFF_X al_2c9f1ebd (
+  AL_DFF_X al_dc93576e (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -3954,7 +3089,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_8fc74dd1[2]));
-  AL_DFF_X al_c05bd12f (
+  AL_DFF_X al_76b20766 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -3963,7 +3098,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_8fc74dd1[3]));
-  AL_DFF_X al_7d49ed41 (
+  AL_DFF_X al_a8ce422 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -3972,7 +3107,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_8fc74dd1[4]));
-  AL_DFF_X al_6beff56 (
+  AL_DFF_X al_e3895fe2 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -3981,7 +3116,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_8fc74dd1[5]));
-  AL_DFF_X al_c4f13542 (
+  AL_DFF_X al_2160ccea (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -3990,7 +3125,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_8fc74dd1[6]));
-  AL_DFF_X al_86c33c3f (
+  AL_DFF_X al_df8e007c (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -3999,133 +3134,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_8fc74dd1[7]));
-  AL_DFF_X al_6f91b8e8 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_3bc6703c[8]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_50d27df2[8]));
-  AL_DFF_X al_10ad84aa (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_3bc6703c[9]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_50d27df2[9]));
-  AL_DFF_X al_46410d76 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_3bc6703c[10]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_50d27df2[10]));
-  AL_DFF_X al_93743f2f (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_3bc6703c[11]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_50d27df2[11]));
-  AL_DFF_X al_676ff7b7 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_3bc6703c[12]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_50d27df2[12]));
-  AL_DFF_X al_2ca136a7 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_3bc6703c[13]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_50d27df2[13]));
-  AL_DFF_X al_f1db63d4 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_8fc74dd1[16]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_50d27df2[0]));
-  AL_DFF_X al_fdf401f2 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_3bc6703c[1]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_50d27df2[1]));
-  AL_DFF_X al_123f376 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_3bc6703c[2]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_50d27df2[2]));
-  AL_DFF_X al_c051e0c9 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_3bc6703c[3]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_50d27df2[3]));
-  AL_DFF_X al_fb384ab2 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_3bc6703c[4]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_50d27df2[4]));
-  AL_DFF_X al_141203dd (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_3bc6703c[5]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_50d27df2[5]));
-  AL_DFF_X al_51f4caf (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_3bc6703c[6]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_50d27df2[6]));
-  AL_DFF_X al_3e10bc68 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_3bc6703c[7]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_50d27df2[7]));
-  AL_DFF_X al_6aaae735 (
+  AL_DFF_X al_efc104d9 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -4134,7 +3143,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_45f60c58[8]));
-  AL_DFF_X al_99a4dbf1 (
+  AL_DFF_X al_94d694ac (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -4143,7 +3152,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_45f60c58[9]));
-  AL_DFF_X al_d82a3ae1 (
+  AL_DFF_X al_35f4ffbe (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -4152,7 +3161,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_45f60c58[10]));
-  AL_DFF_X al_8254204c (
+  AL_DFF_X al_38c08d06 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -4161,7 +3170,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_45f60c58[11]));
-  AL_DFF_X al_a2077ece (
+  AL_DFF_X al_b4006c49 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -4170,7 +3179,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_45f60c58[12]));
-  AL_DFF_X al_1a7734a8 (
+  AL_DFF_X al_88983c15 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -4179,7 +3188,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_45f60c58[13]));
-  AL_DFF_X al_233a96c (
+  AL_DFF_X al_322c5a5a (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -4188,7 +3197,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_45f60c58[14]));
-  AL_DFF_X al_7d0868c5 (
+  AL_DFF_X al_f7f9a105 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -4197,7 +3206,16 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_45f60c58[15]));
-  AL_DFF_X al_6c10bd3c (
+  AL_DFF_X al_b6c3af5b (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_8fc74dd1[16]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_45f60c58[16]));
+  AL_DFF_X al_516abd0 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -4206,7 +3224,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_45f60c58[17]));
-  AL_DFF_X al_b9877cbc (
+  AL_DFF_X al_22aeac4e (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -4215,7 +3233,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_45f60c58[0]));
-  AL_DFF_X al_77a32949 (
+  AL_DFF_X al_2cfb0659 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -4224,7 +3242,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_45f60c58[18]));
-  AL_DFF_X al_197f714d (
+  AL_DFF_X al_7018cf5a (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -4233,7 +3251,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_45f60c58[19]));
-  AL_DFF_X al_a908572e (
+  AL_DFF_X al_665b406a (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -4242,7 +3260,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_45f60c58[20]));
-  AL_DFF_X al_89a8492 (
+  AL_DFF_X al_dd3c6cbd (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -4251,7 +3269,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_45f60c58[21]));
-  AL_DFF_X al_85390814 (
+  AL_DFF_X al_88ad635d (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -4260,7 +3278,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_45f60c58[22]));
-  AL_DFF_X al_e41b1a3a (
+  AL_DFF_X al_cc28c7fc (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -4269,7 +3287,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_45f60c58[23]));
-  AL_DFF_X al_31d3fe88 (
+  AL_DFF_X al_3a1809be (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -4278,7 +3296,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_45f60c58[24]));
-  AL_DFF_X al_e172090b (
+  AL_DFF_X al_f6441446 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -4287,7 +3305,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_45f60c58[25]));
-  AL_DFF_X al_d724aa3d (
+  AL_DFF_X al_8863e9a (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -4296,7 +3314,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_45f60c58[26]));
-  AL_DFF_X al_84c9934c (
+  AL_DFF_X al_5e7497d4 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -4305,7 +3323,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_45f60c58[27]));
-  AL_DFF_X al_d38326ed (
+  AL_DFF_X al_6d6ea447 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -4314,7 +3332,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_45f60c58[1]));
-  AL_DFF_X al_83e055a4 (
+  AL_DFF_X al_5209be15 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -4323,7 +3341,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_45f60c58[28]));
-  AL_DFF_X al_3ba0882a (
+  AL_DFF_X al_442ae8f6 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -4332,7 +3350,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_45f60c58[29]));
-  AL_DFF_X al_6e263ab4 (
+  AL_DFF_X al_147a8585 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -4341,7 +3359,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_45f60c58[30]));
-  AL_DFF_X al_6d3b1c (
+  AL_DFF_X al_718633aa (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -4350,7 +3368,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_45f60c58[31]));
-  AL_DFF_X al_c75b9434 (
+  AL_DFF_X al_1164b4aa (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -4359,7 +3377,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_45f60c58[2]));
-  AL_DFF_X al_23f710d6 (
+  AL_DFF_X al_ddd1c04b (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -4368,7 +3386,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_45f60c58[3]));
-  AL_DFF_X al_1774ae79 (
+  AL_DFF_X al_bf982701 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -4377,7 +3395,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_45f60c58[4]));
-  AL_DFF_X al_8086a947 (
+  AL_DFF_X al_34da7a0f (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -4386,7 +3404,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_45f60c58[5]));
-  AL_DFF_X al_50d71bcf (
+  AL_DFF_X al_b67c3979 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -4395,7 +3413,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_45f60c58[6]));
-  AL_DFF_X al_2965d8d3 (
+  AL_DFF_X al_7d3b3b7c (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -4404,268 +3422,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_45f60c58[7]));
-  AL_DFF_X al_b40e8e05 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_80d2564a[8]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_35c5bf4a[8]));
-  AL_DFF_X al_2259e8d1 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_80d2564a[9]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_35c5bf4a[9]));
-  AL_DFF_X al_5f624aaf (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_80d2564a[10]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_35c5bf4a[10]));
-  AL_DFF_X al_d532b054 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_80d2564a[11]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_35c5bf4a[11]));
-  AL_DFF_X al_9d987fc8 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_80d2564a[12]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_35c5bf4a[12]));
-  AL_DFF_X al_220744cc (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_80d2564a[13]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_35c5bf4a[13]));
-  AL_DFF_X al_e241f44a (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_80d2564a[14]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_35c5bf4a[14]));
-  AL_DFF_X al_897da5eb (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_80d2564a[15]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_35c5bf4a[15]));
-  AL_DFF_X al_9e863954 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_80d2564a[16]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_35c5bf4a[16]));
-  AL_DFF_X al_a186fcad (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_80d2564a[17]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_35c5bf4a[17]));
-  AL_DFF_X al_fd544ba8 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_80d2564a[0]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_35c5bf4a[0]));
-  AL_DFF_X al_21ba363c (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_80d2564a[18]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_35c5bf4a[18]));
-  AL_DFF_X al_c602bc36 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_80d2564a[19]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_35c5bf4a[19]));
-  AL_DFF_X al_be443a52 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_80d2564a[20]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_35c5bf4a[20]));
-  AL_DFF_X al_961a8bb7 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_80d2564a[21]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_35c5bf4a[21]));
-  AL_DFF_X al_6d594c9b (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_80d2564a[22]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_35c5bf4a[22]));
-  AL_DFF_X al_5e95843a (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_80d2564a[23]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_35c5bf4a[23]));
-  AL_DFF_X al_d701a9b8 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_80d2564a[24]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_35c5bf4a[24]));
-  AL_DFF_X al_420d26fb (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_80d2564a[25]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_35c5bf4a[25]));
-  AL_DFF_X al_eb274ec (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_80d2564a[26]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_35c5bf4a[26]));
-  AL_DFF_X al_59566ddd (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_80d2564a[27]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_35c5bf4a[27]));
-  AL_DFF_X al_40ebe0d4 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_80d2564a[1]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_35c5bf4a[1]));
-  AL_DFF_X al_88ac72e3 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_80d2564a[28]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_35c5bf4a[28]));
-  AL_DFF_X al_b4cd3408 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_80d2564a[2]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_35c5bf4a[2]));
-  AL_DFF_X al_16607eff (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_80d2564a[3]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_35c5bf4a[3]));
-  AL_DFF_X al_2e1082f (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_80d2564a[4]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_35c5bf4a[4]));
-  AL_DFF_X al_806f02ed (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_80d2564a[5]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_35c5bf4a[5]));
-  AL_DFF_X al_e97bb64b (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_80d2564a[6]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_35c5bf4a[6]));
-  AL_DFF_X al_f7f2da08 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_80d2564a[7]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_35c5bf4a[7]));
-  AL_DFF_X al_e913a317 (
+  AL_DFF_X al_67237772 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -4674,7 +3431,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_a07945e6[8]));
-  AL_DFF_X al_b03a90ff (
+  AL_DFF_X al_5943f200 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -4683,7 +3440,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_a07945e6[9]));
-  AL_DFF_X al_6affaeca (
+  AL_DFF_X al_bd8fdd97 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -4692,7 +3449,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_a07945e6[10]));
-  AL_DFF_X al_60890717 (
+  AL_DFF_X al_b9e3c79f (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -4701,7 +3458,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_a07945e6[11]));
-  AL_DFF_X al_1168a6d1 (
+  AL_DFF_X al_ac0bcbeb (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -4710,7 +3467,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_a07945e6[12]));
-  AL_DFF_X al_48bc415d (
+  AL_DFF_X al_13b0591a (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -4719,16 +3476,16 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_a07945e6[13]));
-  AL_DFF_X al_bc18c7fd (
+  AL_DFF_X al_252ea06e (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
-    .d(al_50d27df2[0]),
+    .d(al_45f60c58[16]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
     .q(al_a07945e6[0]));
-  AL_DFF_X al_96f1f8a7 (
+  AL_DFF_X al_8e33936e (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -4737,7 +3494,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_a07945e6[1]));
-  AL_DFF_X al_fca51337 (
+  AL_DFF_X al_2c9f1ebd (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -4746,7 +3503,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_a07945e6[2]));
-  AL_DFF_X al_3957d799 (
+  AL_DFF_X al_c05bd12f (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -4755,7 +3512,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_a07945e6[3]));
-  AL_DFF_X al_755dd614 (
+  AL_DFF_X al_7d49ed41 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -4764,7 +3521,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_a07945e6[4]));
-  AL_DFF_X al_b2433da2 (
+  AL_DFF_X al_6beff56 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -4773,7 +3530,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_a07945e6[5]));
-  AL_DFF_X al_a11536f6 (
+  AL_DFF_X al_c4f13542 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -4782,7 +3539,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_a07945e6[6]));
-  AL_DFF_X al_91797866 (
+  AL_DFF_X al_86c33c3f (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -4791,7 +3548,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_a07945e6[7]));
-  AL_DFF_X al_62640248 (
+  AL_DFF_X al_388ada4d (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -4800,7 +3557,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_bf05573[8]));
-  AL_DFF_X al_3ac46452 (
+  AL_DFF_X al_2638a172 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -4809,7 +3566,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_bf05573[9]));
-  AL_DFF_X al_43288d86 (
+  AL_DFF_X al_af123a71 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -4818,7 +3575,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_bf05573[10]));
-  AL_DFF_X al_11932a20 (
+  AL_DFF_X al_86632043 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -4827,7 +3584,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_bf05573[11]));
-  AL_DFF_X al_5d88f5b2 (
+  AL_DFF_X al_6857e4e5 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -4836,7 +3593,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_bf05573[12]));
-  AL_DFF_X al_7bc6d8aa (
+  AL_DFF_X al_e21e164 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -4845,7 +3602,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_bf05573[13]));
-  AL_DFF_X al_e235ba43 (
+  AL_DFF_X al_80a26f44 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -4854,7 +3611,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_bf05573[14]));
-  AL_DFF_X al_ffa9d9a4 (
+  AL_DFF_X al_22a43bbd (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -4863,7 +3620,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_bf05573[15]));
-  AL_DFF_X al_5068432d (
+  AL_DFF_X al_a55e3b43 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -4872,7 +3629,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_bf05573[17]));
-  AL_DFF_X al_e95fcb14 (
+  AL_DFF_X al_3918e059 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -4881,7 +3638,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_bf05573[0]));
-  AL_DFF_X al_917fb5d3 (
+  AL_DFF_X al_fa9d7a96 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -4890,7 +3647,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_bf05573[18]));
-  AL_DFF_X al_79c45c1a (
+  AL_DFF_X al_45ced4f6 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -4899,7 +3656,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_bf05573[19]));
-  AL_DFF_X al_4d6db486 (
+  AL_DFF_X al_ff534278 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -4908,7 +3665,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_bf05573[20]));
-  AL_DFF_X al_18688e16 (
+  AL_DFF_X al_abd0f165 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -4917,7 +3674,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_bf05573[21]));
-  AL_DFF_X al_484fae1a (
+  AL_DFF_X al_a1b70169 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -4926,7 +3683,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_bf05573[22]));
-  AL_DFF_X al_fa83a62b (
+  AL_DFF_X al_afb270c8 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -4935,7 +3692,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_bf05573[23]));
-  AL_DFF_X al_fbaceb55 (
+  AL_DFF_X al_6462854a (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -4944,7 +3701,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_bf05573[24]));
-  AL_DFF_X al_569d22f7 (
+  AL_DFF_X al_41ddab77 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -4953,7 +3710,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_bf05573[25]));
-  AL_DFF_X al_ee584424 (
+  AL_DFF_X al_c31879a5 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -4962,7 +3719,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_bf05573[26]));
-  AL_DFF_X al_cd1dc485 (
+  AL_DFF_X al_6fe724f3 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -4971,7 +3728,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_bf05573[27]));
-  AL_DFF_X al_f488aa32 (
+  AL_DFF_X al_96c6b78 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -4980,7 +3737,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_bf05573[1]));
-  AL_DFF_X al_6995a8ac (
+  AL_DFF_X al_2b12bc22 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -4989,7 +3746,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_bf05573[28]));
-  AL_DFF_X al_412de6e (
+  AL_DFF_X al_4aa9a5f0 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -4998,7 +3755,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_bf05573[29]));
-  AL_DFF_X al_552e8945 (
+  AL_DFF_X al_55917653 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5007,7 +3764,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_bf05573[30]));
-  AL_DFF_X al_3678cb57 (
+  AL_DFF_X al_85520a01 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5016,7 +3773,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_bf05573[31]));
-  AL_DFF_X al_a079e3e9 (
+  AL_DFF_X al_13f0dd19 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5025,7 +3782,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_bf05573[2]));
-  AL_DFF_X al_7d0ad31 (
+  AL_DFF_X al_a5114110 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5034,7 +3791,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_bf05573[3]));
-  AL_DFF_X al_430c2c91 (
+  AL_DFF_X al_9f36d2e7 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5043,7 +3800,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_bf05573[4]));
-  AL_DFF_X al_7d86140d (
+  AL_DFF_X al_636fd51e (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5052,7 +3809,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_bf05573[5]));
-  AL_DFF_X al_74e57733 (
+  AL_DFF_X al_dd6f87c4 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5061,7 +3818,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_bf05573[6]));
-  AL_DFF_X al_bb220e36 (
+  AL_DFF_X al_9149e6c1 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5070,7 +3827,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_bf05573[7]));
-  AL_DFF_X al_a5f6491e (
+  AL_DFF_X al_6f91b8e8 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5079,7 +3836,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_bf62f43[8]));
-  AL_DFF_X al_4402b56f (
+  AL_DFF_X al_10ad84aa (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5088,7 +3845,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_bf62f43[9]));
-  AL_DFF_X al_95c0e8ec (
+  AL_DFF_X al_46410d76 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5097,7 +3854,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_bf62f43[10]));
-  AL_DFF_X al_8a88eb8c (
+  AL_DFF_X al_93743f2f (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5106,7 +3863,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_bf62f43[11]));
-  AL_DFF_X al_9e7fec1e (
+  AL_DFF_X al_676ff7b7 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5115,7 +3872,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_bf62f43[12]));
-  AL_DFF_X al_91f8774d (
+  AL_DFF_X al_2ca136a7 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5124,7 +3881,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_bf62f43[13]));
-  AL_DFF_X al_25e9fff5 (
+  AL_DFF_X al_fdf401f2 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5133,7 +3890,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_bf62f43[1]));
-  AL_DFF_X al_4376c392 (
+  AL_DFF_X al_123f376 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5142,7 +3899,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_bf62f43[2]));
-  AL_DFF_X al_549078f7 (
+  AL_DFF_X al_c051e0c9 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5151,7 +3908,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_bf62f43[3]));
-  AL_DFF_X al_aa29b77f (
+  AL_DFF_X al_fb384ab2 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5160,7 +3917,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_bf62f43[4]));
-  AL_DFF_X al_f61e0c79 (
+  AL_DFF_X al_141203dd (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5169,7 +3926,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_bf62f43[5]));
-  AL_DFF_X al_cd459a96 (
+  AL_DFF_X al_51f4caf (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5178,7 +3935,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_bf62f43[6]));
-  AL_DFF_X al_9f40c8 (
+  AL_DFF_X al_3e10bc68 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5187,7 +3944,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_bf62f43[7]));
-  AL_DFF_X al_f463089f (
+  AL_DFF_X al_6aaae735 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5196,7 +3953,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_aeba03f9[8]));
-  AL_DFF_X al_6e0c2818 (
+  AL_DFF_X al_99a4dbf1 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5205,7 +3962,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_aeba03f9[9]));
-  AL_DFF_X al_7b397e76 (
+  AL_DFF_X al_d82a3ae1 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5214,7 +3971,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_aeba03f9[10]));
-  AL_DFF_X al_895e278b (
+  AL_DFF_X al_8254204c (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5223,7 +3980,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_aeba03f9[11]));
-  AL_DFF_X al_4e0e8de5 (
+  AL_DFF_X al_a2077ece (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5232,7 +3989,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_aeba03f9[12]));
-  AL_DFF_X al_ebc71e58 (
+  AL_DFF_X al_1a7734a8 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5241,7 +3998,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_aeba03f9[13]));
-  AL_DFF_X al_84ce4441 (
+  AL_DFF_X al_b9877cbc (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5250,7 +4007,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_aeba03f9[0]));
-  AL_DFF_X al_754f7138 (
+  AL_DFF_X al_d38326ed (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5259,7 +4016,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_aeba03f9[1]));
-  AL_DFF_X al_81333aeb (
+  AL_DFF_X al_c75b9434 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5268,7 +4025,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_aeba03f9[2]));
-  AL_DFF_X al_9da07d15 (
+  AL_DFF_X al_23f710d6 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5277,7 +4034,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_aeba03f9[3]));
-  AL_DFF_X al_e8bee181 (
+  AL_DFF_X al_1774ae79 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5286,7 +4043,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_aeba03f9[4]));
-  AL_DFF_X al_32045acf (
+  AL_DFF_X al_8086a947 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5295,7 +4052,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_aeba03f9[5]));
-  AL_DFF_X al_2d1a68c (
+  AL_DFF_X al_50d71bcf (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5304,7 +4061,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_aeba03f9[6]));
-  AL_DFF_X al_1f408e76 (
+  AL_DFF_X al_2965d8d3 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5313,7 +4070,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_aeba03f9[7]));
-  AL_DFF_X al_b9f263b (
+  AL_DFF_X al_5792854b (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5322,7 +4079,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_b84f9223[8]));
-  AL_DFF_X al_ef247d1d (
+  AL_DFF_X al_694f8772 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5331,7 +4088,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_b84f9223[9]));
-  AL_DFF_X al_88cef0c5 (
+  AL_DFF_X al_3e106dd0 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5340,7 +4097,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_b84f9223[10]));
-  AL_DFF_X al_38d68827 (
+  AL_DFF_X al_13a88b71 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5349,7 +4106,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_b84f9223[11]));
-  AL_DFF_X al_cb3d60b7 (
+  AL_DFF_X al_4950e144 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5358,7 +4115,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_b84f9223[12]));
-  AL_DFF_X al_5a147783 (
+  AL_DFF_X al_2481a5c3 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5367,7 +4124,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_b84f9223[13]));
-  AL_DFF_X al_823353cb (
+  AL_DFF_X al_f1221c82 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5376,7 +4133,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_b84f9223[14]));
-  AL_DFF_X al_ce19b6f8 (
+  AL_DFF_X al_aba17372 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5385,7 +4142,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_b84f9223[15]));
-  AL_DFF_X al_ec0bf094 (
+  AL_DFF_X al_7dbe0c97 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5394,7 +4151,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_b84f9223[17]));
-  AL_DFF_X al_87c44ef5 (
+  AL_DFF_X al_39ebc759 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5403,7 +4160,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_b84f9223[0]));
-  AL_DFF_X al_d97704ef (
+  AL_DFF_X al_97c0c91b (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5412,7 +4169,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_b84f9223[18]));
-  AL_DFF_X al_74272628 (
+  AL_DFF_X al_b8fdb884 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5421,7 +4178,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_b84f9223[19]));
-  AL_DFF_X al_54dd845a (
+  AL_DFF_X al_6a83f9a (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5430,7 +4187,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_b84f9223[20]));
-  AL_DFF_X al_6157745c (
+  AL_DFF_X al_202929db (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5439,7 +4196,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_b84f9223[21]));
-  AL_DFF_X al_1f7bf6af (
+  AL_DFF_X al_5a417dc1 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5448,7 +4205,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_b84f9223[22]));
-  AL_DFF_X al_72678665 (
+  AL_DFF_X al_3eb974b3 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5457,7 +4214,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_b84f9223[23]));
-  AL_DFF_X al_25fc5773 (
+  AL_DFF_X al_fb4e993f (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5466,7 +4223,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_b84f9223[24]));
-  AL_DFF_X al_216dcd8b (
+  AL_DFF_X al_d634f2d0 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5475,7 +4232,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_b84f9223[25]));
-  AL_DFF_X al_a9581d71 (
+  AL_DFF_X al_8856c8f6 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5484,7 +4241,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_b84f9223[26]));
-  AL_DFF_X al_4fd21f4c (
+  AL_DFF_X al_a86c2a89 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5493,7 +4250,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_b84f9223[27]));
-  AL_DFF_X al_67fe22ba (
+  AL_DFF_X al_58535df1 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5502,7 +4259,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_b84f9223[1]));
-  AL_DFF_X al_b3fe40f4 (
+  AL_DFF_X al_b389beb1 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5511,7 +4268,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_b84f9223[28]));
-  AL_DFF_X al_22d1016d (
+  AL_DFF_X al_e662eda3 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5520,7 +4277,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_b84f9223[29]));
-  AL_DFF_X al_12edf336 (
+  AL_DFF_X al_51e00e16 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5529,7 +4286,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_b84f9223[30]));
-  AL_DFF_X al_b329657a (
+  AL_DFF_X al_4b28be10 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5538,7 +4295,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_b84f9223[31]));
-  AL_DFF_X al_e625d767 (
+  AL_DFF_X al_42809dfe (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5547,7 +4304,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_b84f9223[2]));
-  AL_DFF_X al_6d1e9f4b (
+  AL_DFF_X al_35e0ba07 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5556,7 +4313,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_b84f9223[3]));
-  AL_DFF_X al_67d9a12d (
+  AL_DFF_X al_24e44b66 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5565,7 +4322,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_b84f9223[4]));
-  AL_DFF_X al_f0e27fb (
+  AL_DFF_X al_7b1046d7 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5574,7 +4331,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_b84f9223[5]));
-  AL_DFF_X al_5bb451a6 (
+  AL_DFF_X al_d2921239 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5583,7 +4340,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_b84f9223[6]));
-  AL_DFF_X al_4b1214b2 (
+  AL_DFF_X al_b07a7590 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5592,7 +4349,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_b84f9223[7]));
-  AL_DFF_X al_172e702a (
+  AL_DFF_X al_e913a317 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5601,7 +4358,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_2c65e87[8]));
-  AL_DFF_X al_222268e1 (
+  AL_DFF_X al_b03a90ff (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5610,7 +4367,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_2c65e87[9]));
-  AL_DFF_X al_d547d22d (
+  AL_DFF_X al_6affaeca (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5619,7 +4376,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_2c65e87[10]));
-  AL_DFF_X al_a3bae4a6 (
+  AL_DFF_X al_60890717 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5628,7 +4385,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_2c65e87[11]));
-  AL_DFF_X al_bfc77121 (
+  AL_DFF_X al_1168a6d1 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5637,7 +4394,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_2c65e87[12]));
-  AL_DFF_X al_66cea2ad (
+  AL_DFF_X al_48bc415d (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5646,7 +4403,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_2c65e87[13]));
-  AL_DFF_X al_44a87bd3 (
+  AL_DFF_X al_96f1f8a7 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5655,7 +4412,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_2c65e87[1]));
-  AL_DFF_X al_5db6e7a6 (
+  AL_DFF_X al_fca51337 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5664,7 +4421,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_2c65e87[2]));
-  AL_DFF_X al_ce317ef3 (
+  AL_DFF_X al_3957d799 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5673,7 +4430,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_2c65e87[3]));
-  AL_DFF_X al_abba78ac (
+  AL_DFF_X al_755dd614 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5682,7 +4439,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_2c65e87[4]));
-  AL_DFF_X al_c6d88610 (
+  AL_DFF_X al_b2433da2 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5691,7 +4448,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_2c65e87[5]));
-  AL_DFF_X al_d0603f29 (
+  AL_DFF_X al_a11536f6 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5700,7 +4457,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_2c65e87[6]));
-  AL_DFF_X al_f8828ab4 (
+  AL_DFF_X al_91797866 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5709,133 +4466,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_2c65e87[7]));
-  AL_DFF_X al_4fc9cae5 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_aeba03f9[8]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_9644e37b[8]));
-  AL_DFF_X al_7a12e980 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_aeba03f9[9]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_9644e37b[9]));
-  AL_DFF_X al_7669782b (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_aeba03f9[10]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_9644e37b[10]));
-  AL_DFF_X al_4ff3c2ce (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_aeba03f9[11]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_9644e37b[11]));
-  AL_DFF_X al_7600662d (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_aeba03f9[12]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_9644e37b[12]));
-  AL_DFF_X al_ea7a87fe (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_aeba03f9[13]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_9644e37b[13]));
-  AL_DFF_X al_ac4d7424 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_aeba03f9[0]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_9644e37b[0]));
-  AL_DFF_X al_55c36923 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_aeba03f9[1]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_9644e37b[1]));
-  AL_DFF_X al_193fbe53 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_aeba03f9[2]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_9644e37b[2]));
-  AL_DFF_X al_690bf002 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_aeba03f9[3]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_9644e37b[3]));
-  AL_DFF_X al_85cb4108 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_aeba03f9[4]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_9644e37b[4]));
-  AL_DFF_X al_7146fac (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_aeba03f9[5]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_9644e37b[5]));
-  AL_DFF_X al_20c9901f (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_aeba03f9[6]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_9644e37b[6]));
-  AL_DFF_X al_43bfe00a (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_aeba03f9[7]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_9644e37b[7]));
-  AL_DFF_X al_ed1b7004 (
+  AL_DFF_X al_62640248 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5844,7 +4475,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_8fd1686[8]));
-  AL_DFF_X al_63c28c0e (
+  AL_DFF_X al_3ac46452 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5853,7 +4484,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_8fd1686[9]));
-  AL_DFF_X al_8534e5ed (
+  AL_DFF_X al_43288d86 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5862,7 +4493,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_8fd1686[10]));
-  AL_DFF_X al_e6f668b9 (
+  AL_DFF_X al_11932a20 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5871,7 +4502,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_8fd1686[11]));
-  AL_DFF_X al_7fddc7e8 (
+  AL_DFF_X al_5d88f5b2 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5880,7 +4511,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_8fd1686[12]));
-  AL_DFF_X al_3e6c67ae (
+  AL_DFF_X al_7bc6d8aa (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5889,7 +4520,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_8fd1686[13]));
-  AL_DFF_X al_e5975af6 (
+  AL_DFF_X al_e235ba43 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5898,7 +4529,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_8fd1686[14]));
-  AL_DFF_X al_634bfbd2 (
+  AL_DFF_X al_ffa9d9a4 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5907,7 +4538,16 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_8fd1686[15]));
-  AL_DFF_X al_a0fa41ba (
+  AL_DFF_X al_b5960a71 (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_aeba03f9[0]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_8fd1686[16]));
+  AL_DFF_X al_5068432d (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5916,7 +4556,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_8fd1686[17]));
-  AL_DFF_X al_66c9a2d5 (
+  AL_DFF_X al_e95fcb14 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5925,7 +4565,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_8fd1686[0]));
-  AL_DFF_X al_4879ba2c (
+  AL_DFF_X al_917fb5d3 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5934,7 +4574,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_8fd1686[18]));
-  AL_DFF_X al_b8e08420 (
+  AL_DFF_X al_79c45c1a (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5943,7 +4583,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_8fd1686[19]));
-  AL_DFF_X al_7beded76 (
+  AL_DFF_X al_4d6db486 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5952,7 +4592,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_8fd1686[20]));
-  AL_DFF_X al_999d182f (
+  AL_DFF_X al_18688e16 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5961,7 +4601,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_8fd1686[21]));
-  AL_DFF_X al_91f18bd5 (
+  AL_DFF_X al_484fae1a (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5970,7 +4610,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_8fd1686[22]));
-  AL_DFF_X al_43e8b10f (
+  AL_DFF_X al_fa83a62b (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5979,7 +4619,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_8fd1686[23]));
-  AL_DFF_X al_b870df5c (
+  AL_DFF_X al_fbaceb55 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5988,7 +4628,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_8fd1686[24]));
-  AL_DFF_X al_28492c (
+  AL_DFF_X al_569d22f7 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -5997,7 +4637,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_8fd1686[25]));
-  AL_DFF_X al_d5d357e2 (
+  AL_DFF_X al_ee584424 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -6006,7 +4646,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_8fd1686[26]));
-  AL_DFF_X al_f6c31888 (
+  AL_DFF_X al_cd1dc485 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -6015,7 +4655,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_8fd1686[27]));
-  AL_DFF_X al_6e1958fc (
+  AL_DFF_X al_f488aa32 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -6024,7 +4664,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_8fd1686[1]));
-  AL_DFF_X al_949bcee3 (
+  AL_DFF_X al_6995a8ac (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -6033,7 +4673,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_8fd1686[28]));
-  AL_DFF_X al_1e3f5585 (
+  AL_DFF_X al_412de6e (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -6042,7 +4682,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_8fd1686[29]));
-  AL_DFF_X al_8f292899 (
+  AL_DFF_X al_552e8945 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -6051,7 +4691,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_8fd1686[30]));
-  AL_DFF_X al_559468df (
+  AL_DFF_X al_3678cb57 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -6060,7 +4700,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_8fd1686[31]));
-  AL_DFF_X al_effe3088 (
+  AL_DFF_X al_a079e3e9 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -6069,7 +4709,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_8fd1686[2]));
-  AL_DFF_X al_3a5ab10a (
+  AL_DFF_X al_7d0ad31 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -6078,7 +4718,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_8fd1686[3]));
-  AL_DFF_X al_d3492ef6 (
+  AL_DFF_X al_430c2c91 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -6087,7 +4727,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_8fd1686[4]));
-  AL_DFF_X al_622d1db4 (
+  AL_DFF_X al_7d86140d (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -6096,7 +4736,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_8fd1686[5]));
-  AL_DFF_X al_819c9fac (
+  AL_DFF_X al_74e57733 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -6105,7 +4745,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_8fd1686[6]));
-  AL_DFF_X al_e9484e4c (
+  AL_DFF_X al_bb220e36 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -6114,511 +4754,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_8fd1686[7]));
-  AL_DFF_X al_d753fd8a (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_2c65e87[8]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_ff8d588f[8]));
-  AL_DFF_X al_5838e2a (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_2c65e87[9]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_ff8d588f[9]));
-  AL_DFF_X al_65e6ae15 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_2c65e87[10]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_ff8d588f[10]));
-  AL_DFF_X al_37cf9796 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_2c65e87[11]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_ff8d588f[11]));
-  AL_DFF_X al_a88e634 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_2c65e87[12]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_ff8d588f[12]));
-  AL_DFF_X al_477a665c (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_2c65e87[13]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_ff8d588f[13]));
-  AL_DFF_X al_fef96879 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_2c65e87[1]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_ff8d588f[1]));
-  AL_DFF_X al_6ed237a5 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_2c65e87[2]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_ff8d588f[2]));
-  AL_DFF_X al_19c523b2 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_2c65e87[3]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_ff8d588f[3]));
-  AL_DFF_X al_6d931c57 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_2c65e87[4]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_ff8d588f[4]));
-  AL_DFF_X al_7874f440 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_2c65e87[5]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_ff8d588f[5]));
-  AL_DFF_X al_e20d8638 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_2c65e87[6]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_ff8d588f[6]));
-  AL_DFF_X al_90c645d6 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_2c65e87[7]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_ff8d588f[7]));
-  AL_DFF_X al_4bd759f7 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_9644e37b[8]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_b0376e91[8]));
-  AL_DFF_X al_e796952d (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_9644e37b[9]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_b0376e91[9]));
-  AL_DFF_X al_f1b26430 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_9644e37b[10]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_b0376e91[10]));
-  AL_DFF_X al_f9d83a34 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_9644e37b[11]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_b0376e91[11]));
-  AL_DFF_X al_fb23e70f (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_9644e37b[12]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_b0376e91[12]));
-  AL_DFF_X al_601eca1b (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_9644e37b[13]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_b0376e91[13]));
-  AL_DFF_X al_114d8c6b (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_9644e37b[0]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_b0376e91[0]));
-  AL_DFF_X al_3be727b6 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_9644e37b[1]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_b0376e91[1]));
-  AL_DFF_X al_d1f4536b (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_9644e37b[2]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_b0376e91[2]));
-  AL_DFF_X al_e9a3754d (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_9644e37b[3]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_b0376e91[3]));
-  AL_DFF_X al_d4d3d7b4 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_9644e37b[4]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_b0376e91[4]));
-  AL_DFF_X al_941a71ae (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_9644e37b[5]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_b0376e91[5]));
-  AL_DFF_X al_af6015e2 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_9644e37b[6]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_b0376e91[6]));
-  AL_DFF_X al_9da12de8 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_9644e37b[7]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_b0376e91[7]));
-  AL_DFF_X al_596b0fc4 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_35c5bf4a[8]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_b33e7450[8]));
-  AL_DFF_X al_5cfa2c1e (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_35c5bf4a[9]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_b33e7450[9]));
-  AL_DFF_X al_c56c02f8 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_35c5bf4a[10]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_b33e7450[10]));
-  AL_DFF_X al_60ec2662 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_35c5bf4a[11]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_b33e7450[11]));
-  AL_DFF_X al_ea3f598e (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_35c5bf4a[12]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_b33e7450[12]));
-  AL_DFF_X al_dd4ae85d (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_35c5bf4a[13]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_b33e7450[13]));
-  AL_DFF_X al_e2aa8055 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_35c5bf4a[14]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_b33e7450[14]));
-  AL_DFF_X al_82aa8ce (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_35c5bf4a[15]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_b33e7450[15]));
-  AL_DFF_X al_7f911c70 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_35c5bf4a[16]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_b33e7450[16]));
-  AL_DFF_X al_8908ba38 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_35c5bf4a[17]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_b33e7450[17]));
-  AL_DFF_X al_16ad90bc (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_35c5bf4a[0]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_b33e7450[0]));
-  AL_DFF_X al_2149b062 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_35c5bf4a[18]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_b33e7450[18]));
-  AL_DFF_X al_56d82898 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_35c5bf4a[19]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_b33e7450[19]));
-  AL_DFF_X al_c8bec57f (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_35c5bf4a[20]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_b33e7450[20]));
-  AL_DFF_X al_1f071837 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_35c5bf4a[21]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_b33e7450[21]));
-  AL_DFF_X al_9acbb644 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_35c5bf4a[22]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_b33e7450[22]));
-  AL_DFF_X al_286bd0de (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_35c5bf4a[23]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_b33e7450[23]));
-  AL_DFF_X al_7e8bb9f7 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_35c5bf4a[24]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_b33e7450[24]));
-  AL_DFF_X al_d4e324dc (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_35c5bf4a[25]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_b33e7450[25]));
-  AL_DFF_X al_bcaf406d (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_35c5bf4a[26]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_b33e7450[26]));
-  AL_DFF_X al_20d194ca (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_35c5bf4a[27]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_b33e7450[27]));
-  AL_DFF_X al_e1044ec0 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_35c5bf4a[1]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_b33e7450[1]));
-  AL_DFF_X al_6402198 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_35c5bf4a[28]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_b33e7450[28]));
-  AL_DFF_X al_16da6de4 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_35c5bf4a[2]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_b33e7450[2]));
-  AL_DFF_X al_e819e904 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_35c5bf4a[3]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_b33e7450[3]));
-  AL_DFF_X al_4990808d (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_35c5bf4a[4]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_b33e7450[4]));
-  AL_DFF_X al_d51e17ed (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_35c5bf4a[5]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_b33e7450[5]));
-  AL_DFF_X al_b67f884b (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_35c5bf4a[6]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_b33e7450[6]));
-  AL_DFF_X al_ff3308ea (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_35c5bf4a[7]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_b33e7450[7]));
-  AL_DFF_X al_6f646297 (
+  AL_DFF_X al_a5f6491e (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -6627,7 +4763,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_4fdd6779[8]));
-  AL_DFF_X al_e9f5eab5 (
+  AL_DFF_X al_4402b56f (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -6636,7 +4772,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_4fdd6779[9]));
-  AL_DFF_X al_73eb83df (
+  AL_DFF_X al_95c0e8ec (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -6645,7 +4781,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_4fdd6779[10]));
-  AL_DFF_X al_2f1827e9 (
+  AL_DFF_X al_8a88eb8c (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -6654,7 +4790,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_4fdd6779[11]));
-  AL_DFF_X al_1f4569df (
+  AL_DFF_X al_9e7fec1e (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -6663,7 +4799,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_4fdd6779[12]));
-  AL_DFF_X al_663c9601 (
+  AL_DFF_X al_91f8774d (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -6672,7 +4808,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_4fdd6779[13]));
-  AL_DFF_X al_6d500715 (
+  AL_DFF_X al_a90de083 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -6681,7 +4817,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_4fdd6779[14]));
-  AL_DFF_X al_a1505949 (
+  AL_DFF_X al_bd471551 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -6690,7 +4826,16 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_4fdd6779[15]));
-  AL_DFF_X al_268928b1 (
+  AL_DFF_X al_f36c5ab (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_8fd1686[16]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_4fdd6779[16]));
+  AL_DFF_X al_cf48e707 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -6699,7 +4844,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_4fdd6779[17]));
-  AL_DFF_X al_bb8e61f6 (
+  AL_DFF_X al_286967dc (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -6708,7 +4853,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_4fdd6779[0]));
-  AL_DFF_X al_47641678 (
+  AL_DFF_X al_76c5d59d (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -6717,7 +4862,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_4fdd6779[18]));
-  AL_DFF_X al_73683ddd (
+  AL_DFF_X al_9b6c0b88 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -6726,7 +4871,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_4fdd6779[19]));
-  AL_DFF_X al_dbfe227c (
+  AL_DFF_X al_8ea86ea7 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -6735,7 +4880,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_4fdd6779[20]));
-  AL_DFF_X al_5542e6f4 (
+  AL_DFF_X al_6628918e (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -6744,7 +4889,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_4fdd6779[21]));
-  AL_DFF_X al_a7e1139b (
+  AL_DFF_X al_25e91ebf (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -6753,7 +4898,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_4fdd6779[22]));
-  AL_DFF_X al_1409141a (
+  AL_DFF_X al_3b742b7e (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -6762,7 +4907,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_4fdd6779[23]));
-  AL_DFF_X al_66ab83d (
+  AL_DFF_X al_c45266d1 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -6771,7 +4916,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_4fdd6779[24]));
-  AL_DFF_X al_53e7291c (
+  AL_DFF_X al_1adf20db (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -6780,7 +4925,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_4fdd6779[25]));
-  AL_DFF_X al_cdcc863a (
+  AL_DFF_X al_e5daea18 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -6789,7 +4934,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_4fdd6779[26]));
-  AL_DFF_X al_ded83a89 (
+  AL_DFF_X al_ef3c39af (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -6798,7 +4943,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_4fdd6779[27]));
-  AL_DFF_X al_cac62b2f (
+  AL_DFF_X al_25e9fff5 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -6807,7 +4952,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_4fdd6779[1]));
-  AL_DFF_X al_4f4242dc (
+  AL_DFF_X al_ed087b0c (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -6816,7 +4961,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_4fdd6779[28]));
-  AL_DFF_X al_e918d966 (
+  AL_DFF_X al_4e3436d3 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -6825,7 +4970,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_4fdd6779[29]));
-  AL_DFF_X al_a50abdd1 (
+  AL_DFF_X al_d9c54351 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -6834,7 +4979,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_4fdd6779[30]));
-  AL_DFF_X al_ca73761c (
+  AL_DFF_X al_ad261f71 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -6843,7 +4988,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_4fdd6779[31]));
-  AL_DFF_X al_640d9f02 (
+  AL_DFF_X al_4376c392 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -6852,7 +4997,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_4fdd6779[2]));
-  AL_DFF_X al_57fa46a5 (
+  AL_DFF_X al_549078f7 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -6861,7 +5006,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_4fdd6779[3]));
-  AL_DFF_X al_3e8f5316 (
+  AL_DFF_X al_aa29b77f (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -6870,7 +5015,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_4fdd6779[4]));
-  AL_DFF_X al_7fa0bf (
+  AL_DFF_X al_f61e0c79 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -6879,7 +5024,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_4fdd6779[5]));
-  AL_DFF_X al_62a03df9 (
+  AL_DFF_X al_cd459a96 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -6888,7 +5033,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_4fdd6779[6]));
-  AL_DFF_X al_617dc28a (
+  AL_DFF_X al_9f40c8 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -6897,124 +5042,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_4fdd6779[7]));
-  AL_DFF_X al_e94e1ee5 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_ff8d588f[8]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_e765e4ce[8]));
-  AL_DFF_X al_41d42908 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_ff8d588f[9]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_e765e4ce[9]));
-  AL_DFF_X al_2482afa0 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_ff8d588f[10]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_e765e4ce[10]));
-  AL_DFF_X al_c191b8f5 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_ff8d588f[11]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_e765e4ce[11]));
-  AL_DFF_X al_3a4fc7c6 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_ff8d588f[12]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_e765e4ce[12]));
-  AL_DFF_X al_b11e790b (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_ff8d588f[13]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_e765e4ce[13]));
-  AL_DFF_X al_dd12912b (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_ff8d588f[1]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_e765e4ce[1]));
-  AL_DFF_X al_52a21520 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_ff8d588f[2]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_e765e4ce[2]));
-  AL_DFF_X al_484fdc03 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_ff8d588f[3]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_e765e4ce[3]));
-  AL_DFF_X al_8cc9e864 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_ff8d588f[4]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_e765e4ce[4]));
-  AL_DFF_X al_2f7c5fd5 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_ff8d588f[5]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_e765e4ce[5]));
-  AL_DFF_X al_e6bf6678 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_ff8d588f[6]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_e765e4ce[6]));
-  AL_DFF_X al_4f91ad1f (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_ff8d588f[7]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_e765e4ce[7]));
-  AL_DFF_X al_25497697 (
+  AL_DFF_X al_f463089f (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -7022,8 +5050,8 @@ module dds_phy
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(al_411d7869[8]));
-  AL_DFF_X al_a6031452 (
+    .q(phase_out[8]));
+  AL_DFF_X al_6e0c2818 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -7031,8 +5059,8 @@ module dds_phy
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(al_411d7869[9]));
-  AL_DFF_X al_a28ca941 (
+    .q(phase_out[9]));
+  AL_DFF_X al_7b397e76 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -7040,8 +5068,8 @@ module dds_phy
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(al_411d7869[10]));
-  AL_DFF_X al_f33fc8f6 (
+    .q(phase_out[10]));
+  AL_DFF_X al_895e278b (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -7049,8 +5077,8 @@ module dds_phy
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(al_411d7869[11]));
-  AL_DFF_X al_c07f6b33 (
+    .q(phase_out[11]));
+  AL_DFF_X al_4e0e8de5 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -7058,8 +5086,8 @@ module dds_phy
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(al_411d7869[12]));
-  AL_DFF_X al_c520b2e8 (
+    .q(phase_out[12]));
+  AL_DFF_X al_ebc71e58 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -7067,8 +5095,8 @@ module dds_phy
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(al_411d7869[13]));
-  AL_DFF_X al_97360cc1 (
+    .q(phase_out[13]));
+  AL_DFF_X al_162d59ea (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -7076,8 +5104,8 @@ module dds_phy
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(al_411d7869[14]));
-  AL_DFF_X al_687ba53e (
+    .q(phase_out[14]));
+  AL_DFF_X al_58141d6e (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -7085,17 +5113,17 @@ module dds_phy
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(al_411d7869[15]));
-  AL_DFF_X al_259027fb (
+    .q(phase_out[15]));
+  AL_DFF_X al_7f0e94c0 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
-    .d(al_b0376e91[0]),
+    .d(al_4fdd6779[16]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(al_411d7869[16]));
-  AL_DFF_X al_33faba75 (
+    .q(phase_out[16]));
+  AL_DFF_X al_92f8710d (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -7103,8 +5131,8 @@ module dds_phy
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(al_411d7869[17]));
-  AL_DFF_X al_bf6fc322 (
+    .q(phase_out[17]));
+  AL_DFF_X al_84ce4441 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -7112,8 +5140,8 @@ module dds_phy
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(al_411d7869[0]));
-  AL_DFF_X al_c4008a (
+    .q(phase_out[0]));
+  AL_DFF_X al_a8140c87 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -7121,8 +5149,8 @@ module dds_phy
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(al_411d7869[18]));
-  AL_DFF_X al_e84489ed (
+    .q(phase_out[18]));
+  AL_DFF_X al_c4e065ab (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -7130,8 +5158,8 @@ module dds_phy
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(al_411d7869[19]));
-  AL_DFF_X al_136e443c (
+    .q(phase_out[19]));
+  AL_DFF_X al_f6cba06 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -7139,8 +5167,8 @@ module dds_phy
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(al_411d7869[20]));
-  AL_DFF_X al_e8ec7a28 (
+    .q(phase_out[20]));
+  AL_DFF_X al_789bc542 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -7148,8 +5176,8 @@ module dds_phy
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(al_411d7869[21]));
-  AL_DFF_X al_21e3964 (
+    .q(phase_out[21]));
+  AL_DFF_X al_c5802154 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -7157,8 +5185,8 @@ module dds_phy
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(al_411d7869[22]));
-  AL_DFF_X al_a137efc6 (
+    .q(phase_out[22]));
+  AL_DFF_X al_588db1b6 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -7166,8 +5194,8 @@ module dds_phy
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(al_411d7869[23]));
-  AL_DFF_X al_43a6a0c7 (
+    .q(phase_out[23]));
+  AL_DFF_X al_a379637c (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -7175,8 +5203,8 @@ module dds_phy
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(al_411d7869[24]));
-  AL_DFF_X al_1fa43b18 (
+    .q(phase_out[24]));
+  AL_DFF_X al_f7903fec (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -7184,8 +5212,8 @@ module dds_phy
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(al_411d7869[25]));
-  AL_DFF_X al_3062ba06 (
+    .q(phase_out[25]));
+  AL_DFF_X al_ee01384 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -7193,8 +5221,8 @@ module dds_phy
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(al_411d7869[26]));
-  AL_DFF_X al_67dcc451 (
+    .q(phase_out[26]));
+  AL_DFF_X al_a8de1480 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -7202,8 +5230,8 @@ module dds_phy
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(al_411d7869[27]));
-  AL_DFF_X al_58ee35ea (
+    .q(phase_out[27]));
+  AL_DFF_X al_754f7138 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -7211,8 +5239,8 @@ module dds_phy
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(al_411d7869[1]));
-  AL_DFF_X al_f82aec5c (
+    .q(phase_out[1]));
+  AL_DFF_X al_d7ddd80d (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -7220,8 +5248,8 @@ module dds_phy
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(al_411d7869[28]));
-  AL_DFF_X al_ec3557a6 (
+    .q(phase_out[28]));
+  AL_DFF_X al_938ca44b (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -7229,8 +5257,8 @@ module dds_phy
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(al_411d7869[29]));
-  AL_DFF_X al_12328588 (
+    .q(phase_out[29]));
+  AL_DFF_X al_1df20026 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -7238,8 +5266,8 @@ module dds_phy
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(al_411d7869[30]));
-  AL_DFF_X al_3fdac79f (
+    .q(phase_out[30]));
+  AL_DFF_X al_456f948b (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -7247,8 +5275,8 @@ module dds_phy
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(al_411d7869[31]));
-  AL_DFF_X al_9f89269f (
+    .q(phase_out[31]));
+  AL_DFF_X al_81333aeb (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -7256,8 +5284,8 @@ module dds_phy
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(al_411d7869[2]));
-  AL_DFF_X al_fd7fb13b (
+    .q(phase_out[2]));
+  AL_DFF_X al_9da07d15 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -7265,8 +5293,8 @@ module dds_phy
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(al_411d7869[3]));
-  AL_DFF_X al_64d1e8bd (
+    .q(phase_out[3]));
+  AL_DFF_X al_e8bee181 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -7274,8 +5302,8 @@ module dds_phy
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(al_411d7869[4]));
-  AL_DFF_X al_7f86ac5b (
+    .q(phase_out[4]));
+  AL_DFF_X al_32045acf (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -7283,8 +5311,8 @@ module dds_phy
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(al_411d7869[5]));
-  AL_DFF_X al_82dfed12 (
+    .q(phase_out[5]));
+  AL_DFF_X al_2d1a68c (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -7292,8 +5320,8 @@ module dds_phy
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(al_411d7869[6]));
-  AL_DFF_X al_3fcdd17c (
+    .q(phase_out[6]));
+  AL_DFF_X al_1f408e76 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -7301,584 +5329,8 @@ module dds_phy
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
-    .q(al_411d7869[7]));
-  AL_DFF_X al_af1970ee (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_411d7869[8]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_347def8c[8]));
-  AL_DFF_X al_4386b1d1 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_411d7869[9]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_347def8c[9]));
-  AL_DFF_X al_39f1326b (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_411d7869[10]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_347def8c[10]));
-  AL_DFF_X al_bf5ea2e6 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_411d7869[11]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_347def8c[11]));
-  AL_DFF_X al_8474ec3e (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_411d7869[12]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_347def8c[12]));
-  AL_DFF_X al_f654e053 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_411d7869[13]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_347def8c[13]));
-  AL_DFF_X al_64a1a276 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_411d7869[14]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_347def8c[14]));
-  AL_DFF_X al_7470868b (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_411d7869[15]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_347def8c[15]));
-  AL_DFF_X al_e2f72ab5 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_411d7869[16]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_347def8c[16]));
-  AL_DFF_X al_719f4b1c (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_411d7869[17]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_347def8c[17]));
-  AL_DFF_X al_ec25c2ce (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_411d7869[0]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_347def8c[0]));
-  AL_DFF_X al_267beac6 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_411d7869[18]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_347def8c[18]));
-  AL_DFF_X al_add1732c (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_411d7869[19]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_347def8c[19]));
-  AL_DFF_X al_9ff12ce3 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_411d7869[20]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_347def8c[20]));
-  AL_DFF_X al_df0357f5 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_411d7869[21]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_347def8c[21]));
-  AL_DFF_X al_3dfa252f (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_411d7869[22]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_347def8c[22]));
-  AL_DFF_X al_61789b78 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_411d7869[23]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_347def8c[23]));
-  AL_DFF_X al_e6debad6 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_411d7869[24]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_347def8c[24]));
-  AL_DFF_X al_824448d9 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_411d7869[25]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_347def8c[25]));
-  AL_DFF_X al_72bef55c (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_411d7869[26]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_347def8c[26]));
-  AL_DFF_X al_1a00d0bb (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_411d7869[27]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_347def8c[27]));
-  AL_DFF_X al_92bcc675 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_411d7869[1]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_347def8c[1]));
-  AL_DFF_X al_c3bafeaf (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_411d7869[28]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_347def8c[28]));
-  AL_DFF_X al_80fe0c2a (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_411d7869[29]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_347def8c[29]));
-  AL_DFF_X al_1e4e26da (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_411d7869[30]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_347def8c[30]));
-  AL_DFF_X al_ac9f6945 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_411d7869[31]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_347def8c[31]));
-  AL_DFF_X al_eb76298 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_411d7869[2]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_347def8c[2]));
-  AL_DFF_X al_f1e3be7a (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_411d7869[3]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_347def8c[3]));
-  AL_DFF_X al_33031e60 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_411d7869[4]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_347def8c[4]));
-  AL_DFF_X al_b4c4dee5 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_411d7869[5]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_347def8c[5]));
-  AL_DFF_X al_4b8f3f49 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_411d7869[6]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_347def8c[6]));
-  AL_DFF_X al_d8d633b1 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_411d7869[7]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_347def8c[7]));
-  AL_DFF_X al_962d1cf7 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_347def8c[8]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(phase_out[8]));
-  AL_DFF_X al_fd50410f (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_347def8c[9]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(phase_out[9]));
-  AL_DFF_X al_42e0f270 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_347def8c[10]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(phase_out[10]));
-  AL_DFF_X al_3f1902d2 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_347def8c[11]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(phase_out[11]));
-  AL_DFF_X al_b1622de2 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_347def8c[12]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(phase_out[12]));
-  AL_DFF_X al_5a5133a3 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_347def8c[13]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(phase_out[13]));
-  AL_DFF_X al_b9125c23 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_347def8c[14]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(phase_out[14]));
-  AL_DFF_X al_1c9f534c (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_347def8c[15]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(phase_out[15]));
-  AL_DFF_X al_4564e9f9 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_347def8c[16]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(phase_out[16]));
-  AL_DFF_X al_1295078 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_347def8c[17]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(phase_out[17]));
-  AL_DFF_X al_209580d8 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_347def8c[0]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(phase_out[0]));
-  AL_DFF_X al_3781e35b (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_347def8c[18]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(phase_out[18]));
-  AL_DFF_X al_4d62fe79 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_347def8c[19]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(phase_out[19]));
-  AL_DFF_X al_1526c6c7 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_347def8c[20]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(phase_out[20]));
-  AL_DFF_X al_49e99c9b (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_347def8c[21]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(phase_out[21]));
-  AL_DFF_X al_e18c1919 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_347def8c[22]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(phase_out[22]));
-  AL_DFF_X al_6948eb91 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_347def8c[23]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(phase_out[23]));
-  AL_DFF_X al_95405f63 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_347def8c[24]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(phase_out[24]));
-  AL_DFF_X al_661c41c3 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_347def8c[25]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(phase_out[25]));
-  AL_DFF_X al_bc8be88 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_347def8c[26]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(phase_out[26]));
-  AL_DFF_X al_9f722b75 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_347def8c[27]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(phase_out[27]));
-  AL_DFF_X al_6c1e3f36 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_347def8c[1]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(phase_out[1]));
-  AL_DFF_X al_7f6681ac (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_347def8c[28]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(phase_out[28]));
-  AL_DFF_X al_cf5c189e (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_347def8c[29]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(phase_out[29]));
-  AL_DFF_X al_312cdcce (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_347def8c[30]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(phase_out[30]));
-  AL_DFF_X al_510b6197 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_347def8c[31]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(phase_out[31]));
-  AL_DFF_X al_6890c3a3 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_347def8c[2]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(phase_out[2]));
-  AL_DFF_X al_82fa996c (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_347def8c[3]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(phase_out[3]));
-  AL_DFF_X al_17fc00eb (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_347def8c[4]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(phase_out[4]));
-  AL_DFF_X al_61d44e82 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_347def8c[5]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(phase_out[5]));
-  AL_DFF_X al_dabba857 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_347def8c[6]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(phase_out[6]));
-  AL_DFF_X al_1806a236 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_347def8c[7]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
     .q(phase_out[7]));
-  AL_DFF_X al_bbf2313f (
+  AL_DFF_X al_b9f263b (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -7887,7 +5339,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_2fc0f064[8]));
-  AL_DFF_X al_f26ffcf (
+  AL_DFF_X al_ef247d1d (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -7896,7 +5348,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_2fc0f064[9]));
-  AL_DFF_X al_540e2433 (
+  AL_DFF_X al_88cef0c5 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -7905,7 +5357,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_2fc0f064[10]));
-  AL_DFF_X al_31000d5e (
+  AL_DFF_X al_38d68827 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -7914,7 +5366,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_2fc0f064[11]));
-  AL_DFF_X al_3b8343fc (
+  AL_DFF_X al_cb3d60b7 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -7923,7 +5375,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_2fc0f064[12]));
-  AL_DFF_X al_bd06ff71 (
+  AL_DFF_X al_5a147783 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -7932,7 +5384,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_2fc0f064[13]));
-  AL_DFF_X al_a9dddd3a (
+  AL_DFF_X al_823353cb (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -7941,7 +5393,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_2fc0f064[14]));
-  AL_DFF_X al_37d2cf39 (
+  AL_DFF_X al_ce19b6f8 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -7950,7 +5402,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_2fc0f064[15]));
-  AL_DFF_X al_1032901 (
+  AL_DFF_X al_bad3147f (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -7959,7 +5411,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_2fc0f064[16]));
-  AL_DFF_X al_1f965578 (
+  AL_DFF_X al_ec0bf094 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -7968,7 +5420,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_2fc0f064[17]));
-  AL_DFF_X al_f405b828 (
+  AL_DFF_X al_87c44ef5 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -7977,7 +5429,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_2fc0f064[0]));
-  AL_DFF_X al_c9dc536d (
+  AL_DFF_X al_d97704ef (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -7986,7 +5438,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_2fc0f064[18]));
-  AL_DFF_X al_c008d929 (
+  AL_DFF_X al_74272628 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -7995,7 +5447,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_2fc0f064[19]));
-  AL_DFF_X al_c5f46f5f (
+  AL_DFF_X al_54dd845a (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8004,7 +5456,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_2fc0f064[20]));
-  AL_DFF_X al_4ad700b0 (
+  AL_DFF_X al_6157745c (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8013,7 +5465,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_2fc0f064[21]));
-  AL_DFF_X al_47e751e3 (
+  AL_DFF_X al_1f7bf6af (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8022,7 +5474,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_2fc0f064[22]));
-  AL_DFF_X al_cfdef369 (
+  AL_DFF_X al_72678665 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8031,7 +5483,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_2fc0f064[23]));
-  AL_DFF_X al_44686d66 (
+  AL_DFF_X al_25fc5773 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8040,7 +5492,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_2fc0f064[24]));
-  AL_DFF_X al_bbcf31b8 (
+  AL_DFF_X al_216dcd8b (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8049,7 +5501,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_2fc0f064[25]));
-  AL_DFF_X al_d74a3678 (
+  AL_DFF_X al_a9581d71 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8058,7 +5510,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_2fc0f064[26]));
-  AL_DFF_X al_4b5ec9a9 (
+  AL_DFF_X al_4fd21f4c (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8067,7 +5519,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_2fc0f064[27]));
-  AL_DFF_X al_e2c72155 (
+  AL_DFF_X al_67fe22ba (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8076,7 +5528,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_2fc0f064[1]));
-  AL_DFF_X al_e93783b2 (
+  AL_DFF_X al_b3fe40f4 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8085,7 +5537,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_2fc0f064[28]));
-  AL_DFF_X al_49b895d3 (
+  AL_DFF_X al_22d1016d (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8094,7 +5546,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_2fc0f064[29]));
-  AL_DFF_X al_7ecc318 (
+  AL_DFF_X al_12edf336 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8103,7 +5555,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_2fc0f064[30]));
-  AL_DFF_X al_9f9cb2c5 (
+  AL_DFF_X al_b329657a (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8112,7 +5564,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_2fc0f064[31]));
-  AL_DFF_X al_7dd886c0 (
+  AL_DFF_X al_e625d767 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8121,7 +5573,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_2fc0f064[2]));
-  AL_DFF_X al_5987efe6 (
+  AL_DFF_X al_6d1e9f4b (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8130,7 +5582,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_2fc0f064[3]));
-  AL_DFF_X al_3daa3114 (
+  AL_DFF_X al_67d9a12d (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8139,7 +5591,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_2fc0f064[4]));
-  AL_DFF_X al_86102fda (
+  AL_DFF_X al_f0e27fb (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8148,7 +5600,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_2fc0f064[5]));
-  AL_DFF_X al_c9ea4bc7 (
+  AL_DFF_X al_5bb451a6 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8157,7 +5609,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_2fc0f064[6]));
-  AL_DFF_X al_78c44601 (
+  AL_DFF_X al_4b1214b2 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8166,7 +5618,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_2fc0f064[7]));
-  AL_DFF_X al_80f3d39a (
+  AL_DFF_X al_6f646297 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8175,7 +5627,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(wave_cos[8]));
-  AL_DFF_X al_601fbdc2 (
+  AL_DFF_X al_e9f5eab5 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8184,7 +5636,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(wave_cos[9]));
-  AL_DFF_X al_55318a6 (
+  AL_DFF_X al_73eb83df (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8193,7 +5645,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(wave_cos[10]));
-  AL_DFF_X al_84118ef1 (
+  AL_DFF_X al_2f1827e9 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8202,7 +5654,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(wave_cos[11]));
-  AL_DFF_X al_4d5bdb82 (
+  AL_DFF_X al_1f4569df (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8211,7 +5663,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(wave_cos[12]));
-  AL_DFF_X al_3f441238 (
+  AL_DFF_X al_663c9601 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8220,7 +5672,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(wave_cos[13]));
-  AL_DFF_X al_bd23c490 (
+  AL_DFF_X al_6d500715 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8229,7 +5681,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(wave_cos[14]));
-  AL_DFF_X al_6f92e1c6 (
+  AL_DFF_X al_a1505949 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8238,7 +5690,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(wave_cos[15]));
-  AL_DFF_X al_8f8690ae (
+  AL_DFF_X al_2c6e7404 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8247,7 +5699,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(wave_cos[16]));
-  AL_DFF_X al_b6b4dab1 (
+  AL_DFF_X al_268928b1 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8256,7 +5708,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(wave_cos[17]));
-  AL_DFF_X al_6752fdd0 (
+  AL_DFF_X al_bb8e61f6 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8265,7 +5717,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(wave_cos[0]));
-  AL_DFF_X al_c758a81a (
+  AL_DFF_X al_47641678 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8274,7 +5726,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(wave_cos[18]));
-  AL_DFF_X al_46b66c00 (
+  AL_DFF_X al_73683ddd (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8283,7 +5735,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(wave_cos[19]));
-  AL_DFF_X al_b8bb7c0e (
+  AL_DFF_X al_dbfe227c (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8292,7 +5744,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(wave_cos[20]));
-  AL_DFF_X al_b34162b9 (
+  AL_DFF_X al_5542e6f4 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8301,7 +5753,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(wave_cos[21]));
-  AL_DFF_X al_42ab8c04 (
+  AL_DFF_X al_a7e1139b (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8310,7 +5762,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(wave_cos[22]));
-  AL_DFF_X al_aca31095 (
+  AL_DFF_X al_1409141a (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8319,7 +5771,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(wave_cos[23]));
-  AL_DFF_X al_37aa13a5 (
+  AL_DFF_X al_66ab83d (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8328,7 +5780,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(wave_cos[24]));
-  AL_DFF_X al_74c94599 (
+  AL_DFF_X al_53e7291c (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8337,7 +5789,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(wave_cos[25]));
-  AL_DFF_X al_e329c639 (
+  AL_DFF_X al_cdcc863a (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8346,7 +5798,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(wave_cos[26]));
-  AL_DFF_X al_4965a889 (
+  AL_DFF_X al_ded83a89 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8355,7 +5807,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(wave_cos[27]));
-  AL_DFF_X al_7448eb2c (
+  AL_DFF_X al_cac62b2f (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8364,7 +5816,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(wave_cos[1]));
-  AL_DFF_X al_a7043a5a (
+  AL_DFF_X al_4f4242dc (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8373,7 +5825,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(wave_cos[28]));
-  AL_DFF_X al_c9a455fe (
+  AL_DFF_X al_e918d966 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8382,7 +5834,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(wave_cos[29]));
-  AL_DFF_X al_9c0e55f9 (
+  AL_DFF_X al_a50abdd1 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8391,7 +5843,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(wave_cos[30]));
-  AL_DFF_X al_96f56dd8 (
+  AL_DFF_X al_ca73761c (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8400,7 +5852,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(wave_cos[31]));
-  AL_DFF_X al_ddc32b41 (
+  AL_DFF_X al_640d9f02 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8409,7 +5861,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(wave_cos[2]));
-  AL_DFF_X al_2df93afe (
+  AL_DFF_X al_57fa46a5 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8418,7 +5870,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(wave_cos[3]));
-  AL_DFF_X al_f0c9e6c4 (
+  AL_DFF_X al_3e8f5316 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8427,7 +5879,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(wave_cos[4]));
-  AL_DFF_X al_75b48974 (
+  AL_DFF_X al_7fa0bf (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8436,7 +5888,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(wave_cos[5]));
-  AL_DFF_X al_f7208ae6 (
+  AL_DFF_X al_62a03df9 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8445,7 +5897,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(wave_cos[6]));
-  AL_DFF_X al_c0347f07 (
+  AL_DFF_X al_617dc28a (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8454,7 +5906,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(wave_cos[7]));
-  AL_DFF_X al_c49228bf (
+  AL_DFF_X al_e94e1ee5 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8463,7 +5915,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(wave_sin[8]));
-  AL_DFF_X al_2602aec6 (
+  AL_DFF_X al_41d42908 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8472,7 +5924,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(wave_sin[9]));
-  AL_DFF_X al_2e96e73a (
+  AL_DFF_X al_2482afa0 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8481,7 +5933,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(wave_sin[10]));
-  AL_DFF_X al_48d21ce2 (
+  AL_DFF_X al_c191b8f5 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8490,7 +5942,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(wave_sin[11]));
-  AL_DFF_X al_de16a3a5 (
+  AL_DFF_X al_3a4fc7c6 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8499,7 +5951,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(wave_sin[12]));
-  AL_DFF_X al_201c475f (
+  AL_DFF_X al_b11e790b (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8508,7 +5960,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(wave_sin[13]));
-  AL_DFF_X al_87f8a2b1 (
+  AL_DFF_X al_ca91ccf0 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8517,7 +5969,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(wave_sin[14]));
-  AL_DFF_X al_d9d76698 (
+  AL_DFF_X al_9c9da05e (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8526,7 +5978,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(wave_sin[15]));
-  AL_DFF_X al_4bf11efd (
+  AL_DFF_X al_e8909fde (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8535,7 +5987,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(wave_sin[16]));
-  AL_DFF_X al_ccfb25c8 (
+  AL_DFF_X al_733a102a (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8544,7 +5996,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(wave_sin[17]));
-  AL_DFF_X al_13184e1c (
+  AL_DFF_X al_1ecdc64e (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8553,7 +6005,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(wave_sin[0]));
-  AL_DFF_X al_963c6915 (
+  AL_DFF_X al_b792646b (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8562,7 +6014,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(wave_sin[18]));
-  AL_DFF_X al_318fe9b5 (
+  AL_DFF_X al_9e8108c8 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8571,7 +6023,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(wave_sin[19]));
-  AL_DFF_X al_c9fe9563 (
+  AL_DFF_X al_baaf2e23 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8580,7 +6032,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(wave_sin[20]));
-  AL_DFF_X al_8efea179 (
+  AL_DFF_X al_edb33071 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8589,7 +6041,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(wave_sin[21]));
-  AL_DFF_X al_3a3eb6b8 (
+  AL_DFF_X al_b4783005 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8598,7 +6050,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(wave_sin[22]));
-  AL_DFF_X al_4ed65343 (
+  AL_DFF_X al_eb774221 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8607,7 +6059,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(wave_sin[23]));
-  AL_DFF_X al_986a7318 (
+  AL_DFF_X al_c9f9551d (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8616,7 +6068,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(wave_sin[24]));
-  AL_DFF_X al_edeeb3d3 (
+  AL_DFF_X al_6af9f7dd (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8625,7 +6077,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(wave_sin[25]));
-  AL_DFF_X al_f1c623d9 (
+  AL_DFF_X al_6ca71dab (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8634,7 +6086,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(wave_sin[26]));
-  AL_DFF_X al_dda9dc9 (
+  AL_DFF_X al_e99d45a7 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8643,7 +6095,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(wave_sin[27]));
-  AL_DFF_X al_f302db52 (
+  AL_DFF_X al_dd12912b (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8652,7 +6104,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(wave_sin[1]));
-  AL_DFF_X al_530f5a6 (
+  AL_DFF_X al_8eef3389 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8661,7 +6113,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(wave_sin[28]));
-  AL_DFF_X al_ca4591ea (
+  AL_DFF_X al_71ca74a5 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8670,7 +6122,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(wave_sin[29]));
-  AL_DFF_X al_b75d9089 (
+  AL_DFF_X al_fe381611 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8679,7 +6131,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(wave_sin[30]));
-  AL_DFF_X al_88793b17 (
+  AL_DFF_X al_14874ebb (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8688,7 +6140,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(wave_sin[31]));
-  AL_DFF_X al_a80503f4 (
+  AL_DFF_X al_52a21520 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8697,7 +6149,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(wave_sin[2]));
-  AL_DFF_X al_d897d548 (
+  AL_DFF_X al_484fdc03 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8706,7 +6158,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(wave_sin[3]));
-  AL_DFF_X al_8e32cf6b (
+  AL_DFF_X al_8cc9e864 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8715,7 +6167,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(wave_sin[4]));
-  AL_DFF_X al_7b4e52a9 (
+  AL_DFF_X al_2f7c5fd5 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8724,7 +6176,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(wave_sin[5]));
-  AL_DFF_X al_215385fb (
+  AL_DFF_X al_e6bf6678 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8733,7 +6185,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(wave_sin[6]));
-  AL_DFF_X al_b1daca73 (
+  AL_DFF_X al_4f91ad1f (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -8742,610 +6194,88 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(wave_sin[7]));
-  AL_DFF_X al_ce6e5997 (
+  AL_DFF_X al_c1e3ea45 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
-    .d(al_8aaaf100[8]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_6790cfef[8]));
-  AL_DFF_X al_7c322425 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_8aaaf100[9]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_6790cfef[9]));
-  AL_DFF_X al_1f65ec13 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_8aaaf100[10]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_6790cfef[10]));
-  AL_DFF_X al_63457b5b (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_8aaaf100[11]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_6790cfef[11]));
-  AL_DFF_X al_11fe6cd4 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_8aaaf100[12]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_6790cfef[12]));
-  AL_DFF_X al_9cfb6f54 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_8aaaf100[13]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_6790cfef[13]));
-  AL_DFF_X al_40b705d7 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_8aaaf100[14]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_6790cfef[14]));
-  AL_DFF_X al_cbb21b57 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_8aaaf100[15]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_6790cfef[15]));
-  AL_DFF_X al_a743530c (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_8aaaf100[16]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_6790cfef[16]));
-  AL_DFF_X al_50032887 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_8aaaf100[17]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_6790cfef[17]));
-  AL_DFF_X al_5e904a35 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_8aaaf100[0]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_6790cfef[0]));
-  AL_DFF_X al_db3b2b53 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_8aaaf100[18]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_6790cfef[18]));
-  AL_DFF_X al_4496adb2 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_8aaaf100[19]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_6790cfef[19]));
-  AL_DFF_X al_db38e2c4 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_8aaaf100[20]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_6790cfef[20]));
-  AL_DFF_X al_b910420c (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_8aaaf100[21]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_6790cfef[21]));
-  AL_DFF_X al_90d7e42b (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_8aaaf100[22]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_6790cfef[22]));
-  AL_DFF_X al_f16a60a9 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_8aaaf100[23]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_6790cfef[23]));
-  AL_DFF_X al_91adf23 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_8aaaf100[24]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_6790cfef[24]));
-  AL_DFF_X al_77ecd5d6 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_8aaaf100[25]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_6790cfef[25]));
-  AL_DFF_X al_149f3658 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_8aaaf100[26]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_6790cfef[26]));
-  AL_DFF_X al_8734a4b5 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_8aaaf100[27]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_6790cfef[27]));
-  AL_DFF_X al_116f1db3 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_8aaaf100[1]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_6790cfef[1]));
-  AL_DFF_X al_5bba43cf (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_8aaaf100[28]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_6790cfef[28]));
-  AL_DFF_X al_6c993e82 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_8aaaf100[2]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_6790cfef[2]));
-  AL_DFF_X al_23963ea6 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_8aaaf100[3]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_6790cfef[3]));
-  AL_DFF_X al_6c25cf29 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_8aaaf100[4]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_6790cfef[4]));
-  AL_DFF_X al_e7cc423c (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_8aaaf100[5]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_6790cfef[5]));
-  AL_DFF_X al_2c6ea385 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_8aaaf100[6]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_6790cfef[6]));
-  AL_DFF_X al_a356779f (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_8aaaf100[7]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_6790cfef[7]));
-  AL_DFF_X al_f27b108d (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_6790cfef[8]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_8378b540[8]));
-  AL_DFF_X al_d1a67c2f (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_6790cfef[9]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_8378b540[9]));
-  AL_DFF_X al_a7f95d18 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_6790cfef[10]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_8378b540[10]));
-  AL_DFF_X al_da9c9cea (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_6790cfef[11]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_8378b540[11]));
-  AL_DFF_X al_40fd9462 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_6790cfef[12]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_8378b540[12]));
-  AL_DFF_X al_ac95b5a9 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_6790cfef[13]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_8378b540[13]));
-  AL_DFF_X al_1a9bbf3f (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_6790cfef[14]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_8378b540[14]));
-  AL_DFF_X al_66512653 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_6790cfef[15]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_8378b540[15]));
-  AL_DFF_X al_ec92959e (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_6790cfef[16]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_8378b540[16]));
-  AL_DFF_X al_efe05263 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_6790cfef[17]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_8378b540[17]));
-  AL_DFF_X al_cbbb4490 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_6790cfef[0]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_8378b540[0]));
-  AL_DFF_X al_79481707 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_6790cfef[18]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_8378b540[18]));
-  AL_DFF_X al_ed94bd54 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_6790cfef[19]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_8378b540[19]));
-  AL_DFF_X al_a15c98bd (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_6790cfef[20]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_8378b540[20]));
-  AL_DFF_X al_131a28da (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_6790cfef[21]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_8378b540[21]));
-  AL_DFF_X al_73557a1d (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_6790cfef[22]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_8378b540[22]));
-  AL_DFF_X al_a7de7e20 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_6790cfef[23]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_8378b540[23]));
-  AL_DFF_X al_4c32dd42 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_6790cfef[24]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_8378b540[24]));
-  AL_DFF_X al_e05106af (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_6790cfef[25]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_8378b540[25]));
-  AL_DFF_X al_2d9f3ce8 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_6790cfef[26]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_8378b540[26]));
-  AL_DFF_X al_de36f4d0 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_6790cfef[27]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_8378b540[27]));
-  AL_DFF_X al_30153836 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_6790cfef[1]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_8378b540[1]));
-  AL_DFF_X al_f763c3ab (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_6790cfef[28]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_8378b540[28]));
-  AL_DFF_X al_37ead40d (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_6790cfef[2]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_8378b540[2]));
-  AL_DFF_X al_7625712c (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_6790cfef[3]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_8378b540[3]));
-  AL_DFF_X al_2531de5d (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_6790cfef[4]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_8378b540[4]));
-  AL_DFF_X al_2ccbdc6d (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_6790cfef[5]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_8378b540[5]));
-  AL_DFF_X al_2c62c395 (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_6790cfef[6]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_8378b540[6]));
-  AL_DFF_X al_ee1990ef (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_6790cfef[7]),
-    .en(1'b1),
-    .sr(1'b0),
-    .ss(1'b0),
-    .q(al_8378b540[7]));
-  AL_DFF_X al_db0079e (
-    .ar(~rst_n),
-    .as(1'b0),
-    .clk(clk),
-    .d(al_b33e7450[8]),
+    .d(al_80d2564a[8]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
     .q(al_582c7f1a[8]));
-  AL_DFF_X al_876f7db (
+  AL_DFF_X al_b7aa029f (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
-    .d(al_b33e7450[9]),
+    .d(al_80d2564a[9]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
     .q(al_582c7f1a[9]));
-  AL_DFF_X al_69a0ebce (
+  AL_DFF_X al_2f4f18cf (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
-    .d(al_b33e7450[10]),
+    .d(al_80d2564a[10]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
     .q(al_582c7f1a[10]));
-  AL_DFF_X al_a6c89e95 (
+  AL_DFF_X al_42a7eb97 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
-    .d(al_b33e7450[11]),
+    .d(al_80d2564a[11]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
     .q(al_582c7f1a[11]));
-  AL_DFF_X al_f3acd144 (
+  AL_DFF_X al_f77c099a (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
-    .d(al_b33e7450[12]),
+    .d(al_80d2564a[12]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
     .q(al_582c7f1a[12]));
-  AL_DFF_X al_f6a3bd12 (
+  AL_DFF_X al_6893ba8f (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
-    .d(al_b33e7450[13]),
+    .d(al_80d2564a[13]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
     .q(al_582c7f1a[13]));
-  AL_DFF_X al_22c71420 (
+  AL_DFF_X al_d6d1e991 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
-    .d(al_b33e7450[14]),
+    .d(al_80d2564a[14]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
     .q(al_582c7f1a[14]));
-  AL_DFF_X al_32b9df1 (
+  AL_DFF_X al_4d3bf6cf (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
-    .d(al_b33e7450[15]),
+    .d(al_80d2564a[15]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
     .q(al_582c7f1a[15]));
-  AL_DFF_X al_93449db5 (
+  AL_DFF_X al_aa8c310 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
-    .d(al_b33e7450[16]),
+    .d(al_80d2564a[16]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
     .q(al_582c7f1a[16]));
-  AL_DFF_X al_4ad3d5d0 (
+  AL_DFF_X al_d8095998 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -9354,16 +6284,16 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_582c7f1a[17]));
-  AL_DFF_X al_e87e6f9a (
+  AL_DFF_X al_53efe64b (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
-    .d(al_b33e7450[0]),
+    .d(al_80d2564a[0]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
     .q(al_582c7f1a[0]));
-  AL_DFF_X al_72b591a6 (
+  AL_DFF_X al_68082bd4 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -9372,7 +6302,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_582c7f1a[18]));
-  AL_DFF_X al_5ee7048b (
+  AL_DFF_X al_d9e8ef9f (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -9381,7 +6311,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_582c7f1a[19]));
-  AL_DFF_X al_96431618 (
+  AL_DFF_X al_39169fb8 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -9390,7 +6320,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_582c7f1a[20]));
-  AL_DFF_X al_7c36bdf8 (
+  AL_DFF_X al_c179532 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -9399,7 +6329,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_582c7f1a[21]));
-  AL_DFF_X al_dae48226 (
+  AL_DFF_X al_7d105784 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -9408,7 +6338,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_582c7f1a[22]));
-  AL_DFF_X al_672d8cbe (
+  AL_DFF_X al_573a0a58 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -9417,7 +6347,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_582c7f1a[23]));
-  AL_DFF_X al_71b1275f (
+  AL_DFF_X al_d0deffcb (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -9426,7 +6356,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_582c7f1a[24]));
-  AL_DFF_X al_8abb1dc0 (
+  AL_DFF_X al_150254f9 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -9435,7 +6365,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_582c7f1a[25]));
-  AL_DFF_X al_ffbcf3 (
+  AL_DFF_X al_47f1ba67 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -9444,7 +6374,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_582c7f1a[26]));
-  AL_DFF_X al_c42575cd (
+  AL_DFF_X al_3f6c28d5 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -9453,16 +6383,16 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_582c7f1a[27]));
-  AL_DFF_X al_43ae41e1 (
+  AL_DFF_X al_26890f76 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
-    .d(al_b33e7450[1]),
+    .d(al_80d2564a[1]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
     .q(al_582c7f1a[1]));
-  AL_DFF_X al_95276817 (
+  AL_DFF_X al_930b6560 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -9471,7 +6401,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_582c7f1a[28]));
-  AL_DFF_X al_e27d67aa (
+  AL_DFF_X al_46a886ac (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -9480,7 +6410,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_582c7f1a[29]));
-  AL_DFF_X al_551037ca (
+  AL_DFF_X al_5c18d1b4 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -9489,61 +6419,61 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_582c7f1a[30]));
-  AL_DFF_X al_32098dc2 (
+  AL_DFF_X al_802c7023 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
-    .d(al_b33e7450[2]),
+    .d(al_80d2564a[2]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
     .q(al_582c7f1a[2]));
-  AL_DFF_X al_1771790f (
+  AL_DFF_X al_9c45670 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
-    .d(al_b33e7450[3]),
+    .d(al_80d2564a[3]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
     .q(al_582c7f1a[3]));
-  AL_DFF_X al_4e0fd4b (
+  AL_DFF_X al_b0a0e999 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
-    .d(al_b33e7450[4]),
+    .d(al_80d2564a[4]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
     .q(al_582c7f1a[4]));
-  AL_DFF_X al_1d1fe749 (
+  AL_DFF_X al_739d9f2f (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
-    .d(al_b33e7450[5]),
+    .d(al_80d2564a[5]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
     .q(al_582c7f1a[5]));
-  AL_DFF_X al_f8b279ec (
+  AL_DFF_X al_7f9eee7d (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
-    .d(al_b33e7450[6]),
+    .d(al_80d2564a[6]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
     .q(al_582c7f1a[6]));
-  AL_DFF_X al_75a93bc1 (
+  AL_DFF_X al_741313a7 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
-    .d(al_b33e7450[7]),
+    .d(al_80d2564a[7]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
     .q(al_582c7f1a[7]));
-  AL_DFF_X al_8117d99a (
+  AL_DFF_X al_ce6e5997 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -9552,7 +6482,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_7cb3139[8]));
-  AL_DFF_X al_170fafe0 (
+  AL_DFF_X al_7c322425 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -9561,7 +6491,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_7cb3139[9]));
-  AL_DFF_X al_d7229bc1 (
+  AL_DFF_X al_1f65ec13 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -9570,7 +6500,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_7cb3139[10]));
-  AL_DFF_X al_d80ca115 (
+  AL_DFF_X al_63457b5b (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -9579,7 +6509,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_7cb3139[11]));
-  AL_DFF_X al_a73edca8 (
+  AL_DFF_X al_11fe6cd4 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -9588,7 +6518,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_7cb3139[12]));
-  AL_DFF_X al_e38dfe07 (
+  AL_DFF_X al_9cfb6f54 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -9597,7 +6527,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_7cb3139[13]));
-  AL_DFF_X al_3e2268e3 (
+  AL_DFF_X al_40b705d7 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -9606,7 +6536,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_7cb3139[14]));
-  AL_DFF_X al_9bbe1751 (
+  AL_DFF_X al_cbb21b57 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -9615,7 +6545,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_7cb3139[15]));
-  AL_DFF_X al_71f8ee87 (
+  AL_DFF_X al_a743530c (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -9624,7 +6554,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_7cb3139[16]));
-  AL_DFF_X al_619c7086 (
+  AL_DFF_X al_50032887 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -9633,7 +6563,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_7cb3139[17]));
-  AL_DFF_X al_2e8a2570 (
+  AL_DFF_X al_5e904a35 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -9642,7 +6572,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_7cb3139[0]));
-  AL_DFF_X al_5c85a8ee (
+  AL_DFF_X al_db3b2b53 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -9651,7 +6581,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_7cb3139[18]));
-  AL_DFF_X al_305d1bd6 (
+  AL_DFF_X al_4496adb2 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -9660,7 +6590,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_7cb3139[19]));
-  AL_DFF_X al_b10cb1af (
+  AL_DFF_X al_db38e2c4 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -9669,7 +6599,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_7cb3139[20]));
-  AL_DFF_X al_36f67ad0 (
+  AL_DFF_X al_b910420c (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -9678,7 +6608,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_7cb3139[21]));
-  AL_DFF_X al_7d865209 (
+  AL_DFF_X al_90d7e42b (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -9687,7 +6617,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_7cb3139[22]));
-  AL_DFF_X al_15041684 (
+  AL_DFF_X al_f16a60a9 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -9696,7 +6626,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_7cb3139[23]));
-  AL_DFF_X al_5c4a4841 (
+  AL_DFF_X al_91adf23 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -9705,7 +6635,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_7cb3139[24]));
-  AL_DFF_X al_1fec1184 (
+  AL_DFF_X al_77ecd5d6 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -9714,7 +6644,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_7cb3139[25]));
-  AL_DFF_X al_bcf79049 (
+  AL_DFF_X al_149f3658 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -9723,7 +6653,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_7cb3139[26]));
-  AL_DFF_X al_ad6f7df0 (
+  AL_DFF_X al_8734a4b5 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -9732,7 +6662,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_7cb3139[27]));
-  AL_DFF_X al_4c05617e (
+  AL_DFF_X al_116f1db3 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -9741,7 +6671,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_7cb3139[1]));
-  AL_DFF_X al_877b3174 (
+  AL_DFF_X al_5bba43cf (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -9750,7 +6680,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_7cb3139[28]));
-  AL_DFF_X al_49f858f9 (
+  AL_DFF_X al_505e168f (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -9759,7 +6689,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_7cb3139[29]));
-  AL_DFF_X al_15de7d2c (
+  AL_DFF_X al_a288ce99 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -9768,7 +6698,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_7cb3139[30]));
-  AL_DFF_X al_7cbb1b5f (
+  AL_DFF_X al_6c993e82 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -9777,7 +6707,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_7cb3139[2]));
-  AL_DFF_X al_1851373 (
+  AL_DFF_X al_23963ea6 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -9786,7 +6716,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_7cb3139[3]));
-  AL_DFF_X al_6ef4721c (
+  AL_DFF_X al_6c25cf29 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -9795,7 +6725,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_7cb3139[4]));
-  AL_DFF_X al_ef14836c (
+  AL_DFF_X al_e7cc423c (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -9804,7 +6734,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_7cb3139[5]));
-  AL_DFF_X al_29111b42 (
+  AL_DFF_X al_2c6ea385 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -9813,7 +6743,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_7cb3139[6]));
-  AL_DFF_X al_9e5c600b (
+  AL_DFF_X al_a356779f (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -9822,88 +6752,88 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_7cb3139[7]));
-  AL_DFF_X al_8ff57d60 (
+  AL_DFF_X al_f27b108d (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
-    .d(al_8378b540[8]),
+    .d(al_8aaaf100[8]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
     .q(al_7c6da17f[8]));
-  AL_DFF_X al_47b511ab (
+  AL_DFF_X al_d1a67c2f (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
-    .d(al_8378b540[9]),
+    .d(al_8aaaf100[9]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
     .q(al_7c6da17f[9]));
-  AL_DFF_X al_89005d1a (
+  AL_DFF_X al_a7f95d18 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
-    .d(al_8378b540[10]),
+    .d(al_8aaaf100[10]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
     .q(al_7c6da17f[10]));
-  AL_DFF_X al_f5b5ca38 (
+  AL_DFF_X al_da9c9cea (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
-    .d(al_8378b540[11]),
+    .d(al_8aaaf100[11]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
     .q(al_7c6da17f[11]));
-  AL_DFF_X al_7907a48 (
+  AL_DFF_X al_40fd9462 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
-    .d(al_8378b540[12]),
+    .d(al_8aaaf100[12]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
     .q(al_7c6da17f[12]));
-  AL_DFF_X al_f3e31ce5 (
+  AL_DFF_X al_ac95b5a9 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
-    .d(al_8378b540[13]),
+    .d(al_8aaaf100[13]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
     .q(al_7c6da17f[13]));
-  AL_DFF_X al_55389588 (
+  AL_DFF_X al_1a9bbf3f (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
-    .d(al_8378b540[14]),
+    .d(al_8aaaf100[14]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
     .q(al_7c6da17f[14]));
-  AL_DFF_X al_dc2b1ee5 (
+  AL_DFF_X al_66512653 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
-    .d(al_8378b540[15]),
+    .d(al_8aaaf100[15]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
     .q(al_7c6da17f[15]));
-  AL_DFF_X al_220615c4 (
+  AL_DFF_X al_ec92959e (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
-    .d(al_8378b540[16]),
+    .d(al_8aaaf100[16]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
     .q(al_7c6da17f[16]));
-  AL_DFF_X al_c7aa6b57 (
+  AL_DFF_X al_efe05263 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -9912,16 +6842,16 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_7c6da17f[17]));
-  AL_DFF_X al_3176eb22 (
+  AL_DFF_X al_cbbb4490 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
-    .d(al_8378b540[0]),
+    .d(al_8aaaf100[0]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
     .q(al_7c6da17f[0]));
-  AL_DFF_X al_7e7c7f57 (
+  AL_DFF_X al_79481707 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -9930,7 +6860,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_7c6da17f[18]));
-  AL_DFF_X al_468a55d3 (
+  AL_DFF_X al_ed94bd54 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -9939,7 +6869,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_7c6da17f[19]));
-  AL_DFF_X al_91e9312e (
+  AL_DFF_X al_a15c98bd (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -9948,7 +6878,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_7c6da17f[20]));
-  AL_DFF_X al_a0cf43ca (
+  AL_DFF_X al_131a28da (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -9957,7 +6887,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_7c6da17f[21]));
-  AL_DFF_X al_9f396afe (
+  AL_DFF_X al_73557a1d (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -9966,7 +6896,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_7c6da17f[22]));
-  AL_DFF_X al_51c24a23 (
+  AL_DFF_X al_a7de7e20 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -9975,7 +6905,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_7c6da17f[23]));
-  AL_DFF_X al_65f8cdae (
+  AL_DFF_X al_4c32dd42 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -9984,7 +6914,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_7c6da17f[24]));
-  AL_DFF_X al_56721f8 (
+  AL_DFF_X al_e05106af (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -9993,7 +6923,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_7c6da17f[25]));
-  AL_DFF_X al_1b27aca1 (
+  AL_DFF_X al_2d9f3ce8 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -10002,7 +6932,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_7c6da17f[26]));
-  AL_DFF_X al_e1f446ed (
+  AL_DFF_X al_de36f4d0 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -10011,16 +6941,16 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_7c6da17f[27]));
-  AL_DFF_X al_1ec04f80 (
+  AL_DFF_X al_30153836 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
-    .d(al_8378b540[1]),
+    .d(al_8aaaf100[1]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
     .q(al_7c6da17f[1]));
-  AL_DFF_X al_e8be028 (
+  AL_DFF_X al_f763c3ab (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -10029,7 +6959,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_7c6da17f[28]));
-  AL_DFF_X al_816d2e4f (
+  AL_DFF_X al_f3dc4f4c (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -10038,7 +6968,7 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_7c6da17f[29]));
-  AL_DFF_X al_42427c4a (
+  AL_DFF_X al_d8cfba43 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
@@ -10047,60 +6977,915 @@ module dds_phy
     .sr(1'b0),
     .ss(1'b0),
     .q(al_7c6da17f[30]));
-  AL_DFF_X al_ec2280f (
+  AL_DFF_X al_37ead40d (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
-    .d(al_8378b540[2]),
+    .d(al_8aaaf100[2]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
     .q(al_7c6da17f[2]));
-  AL_DFF_X al_ecb5afd4 (
+  AL_DFF_X al_7625712c (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
-    .d(al_8378b540[3]),
+    .d(al_8aaaf100[3]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
     .q(al_7c6da17f[3]));
-  AL_DFF_X al_d15fb662 (
+  AL_DFF_X al_2531de5d (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
-    .d(al_8378b540[4]),
+    .d(al_8aaaf100[4]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
     .q(al_7c6da17f[4]));
-  AL_DFF_X al_e22992ea (
+  AL_DFF_X al_2ccbdc6d (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
-    .d(al_8378b540[5]),
+    .d(al_8aaaf100[5]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
     .q(al_7c6da17f[5]));
-  AL_DFF_X al_c3bb0c4f (
+  AL_DFF_X al_2c62c395 (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
-    .d(al_8378b540[6]),
+    .d(al_8aaaf100[6]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
     .q(al_7c6da17f[6]));
-  AL_DFF_X al_5b797485 (
+  AL_DFF_X al_ee1990ef (
     .ar(~rst_n),
     .as(1'b0),
     .clk(clk),
-    .d(al_8378b540[7]),
+    .d(al_8aaaf100[7]),
     .en(1'b1),
     .sr(1'b0),
     .ss(1'b0),
     .q(al_7c6da17f[7]));
+  AL_DFF_X al_3b229c23 (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_e1c1520b[8]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_75776e99[8]));
+  AL_DFF_X al_cf6e7591 (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_e1c1520b[9]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_75776e99[9]));
+  AL_DFF_X al_5a2f8048 (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_e1c1520b[10]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_75776e99[10]));
+  AL_DFF_X al_1abb3ac8 (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_e1c1520b[11]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_75776e99[11]));
+  AL_DFF_X al_78a4a9ce (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_e1c1520b[12]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_75776e99[12]));
+  AL_DFF_X al_65b6d202 (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_e1c1520b[13]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_75776e99[13]));
+  AL_DFF_X al_647eb39 (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_e1c1520b[14]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_75776e99[14]));
+  AL_DFF_X al_369b90e9 (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_e1c1520b[15]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_75776e99[15]));
+  AL_DFF_X al_24bd455c (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_e1c1520b[16]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_75776e99[16]));
+  AL_DFF_X al_40c43c87 (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_e1c1520b[17]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_75776e99[17]));
+  AL_DFF_X al_139c5590 (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_e1c1520b[0]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_75776e99[0]));
+  AL_DFF_X al_5e893d24 (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_e1c1520b[18]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_75776e99[18]));
+  AL_DFF_X al_68600e9e (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_e1c1520b[19]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_75776e99[19]));
+  AL_DFF_X al_df3864d4 (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_e1c1520b[20]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_75776e99[20]));
+  AL_DFF_X al_4ada283a (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_e1c1520b[21]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_75776e99[21]));
+  AL_DFF_X al_b8853f5f (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_e1c1520b[22]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_75776e99[22]));
+  AL_DFF_X al_73a118b (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_e1c1520b[23]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_75776e99[23]));
+  AL_DFF_X al_d574702c (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_e1c1520b[24]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_75776e99[24]));
+  AL_DFF_X al_c40abbb9 (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_e1c1520b[25]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_75776e99[25]));
+  AL_DFF_X al_f44b6762 (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_e1c1520b[26]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_75776e99[26]));
+  AL_DFF_X al_7e86e513 (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_e1c1520b[27]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_75776e99[27]));
+  AL_DFF_X al_39f4cfe5 (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_e1c1520b[1]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_75776e99[1]));
+  AL_DFF_X al_5cd26eed (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_e1c1520b[28]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_75776e99[28]));
+  AL_DFF_X al_339f6b0e (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_e1c1520b[29]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_75776e99[29]));
+  AL_DFF_X al_eeda67cf (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_e1c1520b[30]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_75776e99[30]));
+  AL_DFF_X al_164ed6d9 (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_e1c1520b[2]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_75776e99[2]));
+  AL_DFF_X al_2d1248a (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_e1c1520b[3]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_75776e99[3]));
+  AL_DFF_X al_d8e1e88b (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_e1c1520b[4]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_75776e99[4]));
+  AL_DFF_X al_f380c478 (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_e1c1520b[5]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_75776e99[5]));
+  AL_DFF_X al_22301a07 (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_e1c1520b[6]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_75776e99[6]));
+  AL_DFF_X al_b389eb27 (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_e1c1520b[7]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_75776e99[7]));
+  AL_DFF_X al_db0079e (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(fword[8]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_5e800bf9[8]));
+  AL_DFF_X al_876f7db (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(fword[9]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_5e800bf9[9]));
+  AL_DFF_X al_69a0ebce (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(fword[10]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_5e800bf9[10]));
+  AL_DFF_X al_a6c89e95 (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(fword[11]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_5e800bf9[11]));
+  AL_DFF_X al_f3acd144 (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(fword[12]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_5e800bf9[12]));
+  AL_DFF_X al_f6a3bd12 (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(fword[13]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_5e800bf9[13]));
+  AL_DFF_X al_22c71420 (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(fword[14]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_5e800bf9[14]));
+  AL_DFF_X al_32b9df1 (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(fword[15]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_5e800bf9[15]));
+  AL_DFF_X al_93449db5 (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(fword[16]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_5e800bf9[16]));
+  AL_DFF_X al_4ad3d5d0 (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(fword[17]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_5e800bf9[17]));
+  AL_DFF_X al_e87e6f9a (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(fword[0]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_5e800bf9[0]));
+  AL_DFF_X al_72b591a6 (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(fword[18]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_5e800bf9[18]));
+  AL_DFF_X al_5ee7048b (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(fword[19]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_5e800bf9[19]));
+  AL_DFF_X al_96431618 (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(fword[20]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_5e800bf9[20]));
+  AL_DFF_X al_7c36bdf8 (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(fword[21]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_5e800bf9[21]));
+  AL_DFF_X al_dae48226 (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(fword[22]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_5e800bf9[22]));
+  AL_DFF_X al_672d8cbe (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(fword[23]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_5e800bf9[23]));
+  AL_DFF_X al_71b1275f (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(fword[24]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_5e800bf9[24]));
+  AL_DFF_X al_8abb1dc0 (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(fword[25]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_5e800bf9[25]));
+  AL_DFF_X al_ffbcf3 (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(fword[26]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_5e800bf9[26]));
+  AL_DFF_X al_c42575cd (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(fword[27]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_5e800bf9[27]));
+  AL_DFF_X al_43ae41e1 (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(fword[1]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_5e800bf9[1]));
+  AL_DFF_X al_95276817 (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(fword[28]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_5e800bf9[28]));
+  AL_DFF_X al_e27d67aa (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(fword[29]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_5e800bf9[29]));
+  AL_DFF_X al_551037ca (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(fword[30]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_5e800bf9[30]));
+  AL_DFF_X al_7f606122 (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(fword[31]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_5e800bf9[31]));
+  AL_DFF_X al_32098dc2 (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(fword[2]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_5e800bf9[2]));
+  AL_DFF_X al_1771790f (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(fword[3]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_5e800bf9[3]));
+  AL_DFF_X al_4e0fd4b (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(fword[4]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_5e800bf9[4]));
+  AL_DFF_X al_1d1fe749 (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(fword[5]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_5e800bf9[5]));
+  AL_DFF_X al_f8b279ec (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(fword[6]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_5e800bf9[6]));
+  AL_DFF_X al_75a93bc1 (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(fword[7]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_5e800bf9[7]));
+  AL_DFF_X al_8117d99a (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_ac33d53a[8]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_2adbf503[8]));
+  AL_DFF_X al_170fafe0 (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_ac33d53a[9]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_2adbf503[9]));
+  AL_DFF_X al_d7229bc1 (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_ac33d53a[10]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_2adbf503[10]));
+  AL_DFF_X al_d80ca115 (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_ac33d53a[11]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_2adbf503[11]));
+  AL_DFF_X al_a73edca8 (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_ac33d53a[12]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_2adbf503[12]));
+  AL_DFF_X al_e38dfe07 (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_ac33d53a[13]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_2adbf503[13]));
+  AL_DFF_X al_3e2268e3 (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_ac33d53a[14]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_2adbf503[14]));
+  AL_DFF_X al_9bbe1751 (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_ac33d53a[15]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_2adbf503[15]));
+  AL_DFF_X al_71f8ee87 (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_ac33d53a[16]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_2adbf503[16]));
+  AL_DFF_X al_619c7086 (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_ac33d53a[17]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_2adbf503[17]));
+  AL_DFF_X al_2e8a2570 (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_ac33d53a[0]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_2adbf503[0]));
+  AL_DFF_X al_5c85a8ee (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_ac33d53a[18]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_2adbf503[18]));
+  AL_DFF_X al_305d1bd6 (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_ac33d53a[19]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_2adbf503[19]));
+  AL_DFF_X al_b10cb1af (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_ac33d53a[20]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_2adbf503[20]));
+  AL_DFF_X al_36f67ad0 (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_ac33d53a[21]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_2adbf503[21]));
+  AL_DFF_X al_7d865209 (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_ac33d53a[22]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_2adbf503[22]));
+  AL_DFF_X al_15041684 (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_ac33d53a[23]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_2adbf503[23]));
+  AL_DFF_X al_5c4a4841 (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_ac33d53a[24]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_2adbf503[24]));
+  AL_DFF_X al_1fec1184 (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_ac33d53a[25]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_2adbf503[25]));
+  AL_DFF_X al_bcf79049 (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_ac33d53a[26]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_2adbf503[26]));
+  AL_DFF_X al_ad6f7df0 (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_ac33d53a[27]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_2adbf503[27]));
+  AL_DFF_X al_4c05617e (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_ac33d53a[1]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_2adbf503[1]));
+  AL_DFF_X al_877b3174 (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_ac33d53a[28]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_2adbf503[28]));
+  AL_DFF_X al_49f858f9 (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_ac33d53a[29]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_2adbf503[29]));
+  AL_DFF_X al_15de7d2c (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_ac33d53a[30]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_2adbf503[30]));
+  AL_DFF_X al_1f1bc82f (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_ac33d53a[31]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_2adbf503[31]));
+  AL_DFF_X al_7cbb1b5f (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_ac33d53a[2]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_2adbf503[2]));
+  AL_DFF_X al_1851373 (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_ac33d53a[3]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_2adbf503[3]));
+  AL_DFF_X al_6ef4721c (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_ac33d53a[4]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_2adbf503[4]));
+  AL_DFF_X al_ef14836c (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_ac33d53a[5]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_2adbf503[5]));
+  AL_DFF_X al_29111b42 (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_ac33d53a[6]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_2adbf503[6]));
+  AL_DFF_X al_9e5c600b (
+    .ar(~rst_n),
+    .as(1'b0),
+    .clk(clk),
+    .d(al_ac33d53a[7]),
+    .en(1'b1),
+    .sr(1'b0),
+    .ss(1'b0),
+    .q(al_2adbf503[7]));
   AL_MAP_LUT3 #(
     .EQN("(A*~(C)*~(B)+A*C*~(B)+~(A)*C*B+A*C*B)"),
     .INIT(8'he2))
@@ -10352,8 +8137,8 @@ module dds_phy
     .EQN("(B@A)"),
     .INIT(4'h6))
     al_78e72845 (
-    .a(al_411d7869[30]),
-    .b(al_411d7869[31]),
+    .a(al_8fd1686[30]),
+    .b(al_8fd1686[31]),
     .o(al_5fbe7497));
   AL_DFF_X al_f27e26c4 (
     .ar(~rst_n),
@@ -10365,250 +8150,250 @@ module dds_phy
     .ss(1'b0),
     .q(al_8e2f713c));
   AL_MAP_LUT3 #(
-    .EQN("(A*~(C)*~(B)+A*C*~(B)+~(A)*C*B+A*C*B)"),
-    .INIT(8'he2))
+    .EQN("(B*~(C)*~(A)+B*C*~(A)+~(B)*C*A+B*C*A)"),
+    .INIT(8'he4))
     al_d456667 (
-    .a(al_75776e99[10]),
-    .b(al_347def8c[31]),
+    .a(al_4fdd6779[31]),
+    .b(al_75776e99[10]),
     .c(al_747bea5[10]),
     .o(al_bc5c8fc3[10]));
   AL_MAP_LUT3 #(
-    .EQN("(A*~(C)*~(B)+A*C*~(B)+~(A)*C*B+A*C*B)"),
-    .INIT(8'he2))
+    .EQN("(B*~(C)*~(A)+B*C*~(A)+~(B)*C*A+B*C*A)"),
+    .INIT(8'he4))
     al_d9de8342 (
-    .a(al_75776e99[11]),
-    .b(al_347def8c[31]),
+    .a(al_4fdd6779[31]),
+    .b(al_75776e99[11]),
     .c(al_747bea5[11]),
     .o(al_bc5c8fc3[11]));
   AL_MAP_LUT3 #(
-    .EQN("(A*~(C)*~(B)+A*C*~(B)+~(A)*C*B+A*C*B)"),
-    .INIT(8'he2))
+    .EQN("(B*~(C)*~(A)+B*C*~(A)+~(B)*C*A+B*C*A)"),
+    .INIT(8'he4))
     al_c593df9f (
-    .a(al_75776e99[12]),
-    .b(al_347def8c[31]),
+    .a(al_4fdd6779[31]),
+    .b(al_75776e99[12]),
     .c(al_747bea5[12]),
     .o(al_bc5c8fc3[12]));
   AL_MAP_LUT3 #(
-    .EQN("(A*~(C)*~(B)+A*C*~(B)+~(A)*C*B+A*C*B)"),
-    .INIT(8'he2))
+    .EQN("(B*~(C)*~(A)+B*C*~(A)+~(B)*C*A+B*C*A)"),
+    .INIT(8'he4))
     al_fce59cb7 (
-    .a(al_75776e99[13]),
-    .b(al_347def8c[31]),
+    .a(al_4fdd6779[31]),
+    .b(al_75776e99[13]),
     .c(al_747bea5[13]),
     .o(al_bc5c8fc3[13]));
   AL_MAP_LUT3 #(
-    .EQN("(A*~(C)*~(B)+A*C*~(B)+~(A)*C*B+A*C*B)"),
-    .INIT(8'he2))
+    .EQN("(B*~(C)*~(A)+B*C*~(A)+~(B)*C*A+B*C*A)"),
+    .INIT(8'he4))
     al_3f2a4f12 (
-    .a(al_75776e99[14]),
-    .b(al_347def8c[31]),
+    .a(al_4fdd6779[31]),
+    .b(al_75776e99[14]),
     .c(al_747bea5[14]),
     .o(al_bc5c8fc3[14]));
   AL_MAP_LUT3 #(
-    .EQN("(A*~(C)*~(B)+A*C*~(B)+~(A)*C*B+A*C*B)"),
-    .INIT(8'he2))
+    .EQN("(B*~(C)*~(A)+B*C*~(A)+~(B)*C*A+B*C*A)"),
+    .INIT(8'he4))
     al_b6adf20 (
-    .a(al_75776e99[15]),
-    .b(al_347def8c[31]),
+    .a(al_4fdd6779[31]),
+    .b(al_75776e99[15]),
     .c(al_747bea5[15]),
     .o(al_bc5c8fc3[15]));
   AL_MAP_LUT3 #(
-    .EQN("(A*~(C)*~(B)+A*C*~(B)+~(A)*C*B+A*C*B)"),
-    .INIT(8'he2))
+    .EQN("(B*~(C)*~(A)+B*C*~(A)+~(B)*C*A+B*C*A)"),
+    .INIT(8'he4))
     al_5810a42f (
-    .a(al_75776e99[16]),
-    .b(al_347def8c[31]),
+    .a(al_4fdd6779[31]),
+    .b(al_75776e99[16]),
     .c(al_747bea5[16]),
     .o(al_bc5c8fc3[16]));
   AL_MAP_LUT3 #(
-    .EQN("(A*~(C)*~(B)+A*C*~(B)+~(A)*C*B+A*C*B)"),
-    .INIT(8'he2))
+    .EQN("(B*~(C)*~(A)+B*C*~(A)+~(B)*C*A+B*C*A)"),
+    .INIT(8'he4))
     al_72c2c5b2 (
-    .a(al_75776e99[17]),
-    .b(al_347def8c[31]),
+    .a(al_4fdd6779[31]),
+    .b(al_75776e99[17]),
     .c(al_747bea5[17]),
     .o(al_bc5c8fc3[17]));
   AL_MAP_LUT3 #(
-    .EQN("(A*~(C)*~(B)+A*C*~(B)+~(A)*C*B+A*C*B)"),
-    .INIT(8'he2))
+    .EQN("(B*~(C)*~(A)+B*C*~(A)+~(B)*C*A+B*C*A)"),
+    .INIT(8'he4))
     al_30bbc9cc (
-    .a(al_75776e99[18]),
-    .b(al_347def8c[31]),
+    .a(al_4fdd6779[31]),
+    .b(al_75776e99[18]),
     .c(al_747bea5[18]),
     .o(al_bc5c8fc3[18]));
   AL_MAP_LUT3 #(
-    .EQN("(A*~(C)*~(B)+A*C*~(B)+~(A)*C*B+A*C*B)"),
-    .INIT(8'he2))
+    .EQN("(B*~(C)*~(A)+B*C*~(A)+~(B)*C*A+B*C*A)"),
+    .INIT(8'he4))
     al_f94fee8 (
-    .a(al_75776e99[19]),
-    .b(al_347def8c[31]),
+    .a(al_4fdd6779[31]),
+    .b(al_75776e99[19]),
     .c(al_747bea5[19]),
     .o(al_bc5c8fc3[19]));
   AL_MAP_LUT3 #(
-    .EQN("(A*~(C)*~(B)+A*C*~(B)+~(A)*C*B+A*C*B)"),
-    .INIT(8'he2))
+    .EQN("(B*~(C)*~(A)+B*C*~(A)+~(B)*C*A+B*C*A)"),
+    .INIT(8'he4))
     al_d6aba0b6 (
-    .a(al_75776e99[1]),
-    .b(al_347def8c[31]),
+    .a(al_4fdd6779[31]),
+    .b(al_75776e99[1]),
     .c(al_747bea5[1]),
     .o(al_bc5c8fc3[1]));
   AL_MAP_LUT3 #(
-    .EQN("(A*~(C)*~(B)+A*C*~(B)+~(A)*C*B+A*C*B)"),
-    .INIT(8'he2))
+    .EQN("(B*~(C)*~(A)+B*C*~(A)+~(B)*C*A+B*C*A)"),
+    .INIT(8'he4))
     al_12d92857 (
-    .a(al_75776e99[20]),
-    .b(al_347def8c[31]),
+    .a(al_4fdd6779[31]),
+    .b(al_75776e99[20]),
     .c(al_747bea5[20]),
     .o(al_bc5c8fc3[20]));
   AL_MAP_LUT3 #(
-    .EQN("(A*~(C)*~(B)+A*C*~(B)+~(A)*C*B+A*C*B)"),
-    .INIT(8'he2))
+    .EQN("(B*~(C)*~(A)+B*C*~(A)+~(B)*C*A+B*C*A)"),
+    .INIT(8'he4))
     al_71664824 (
-    .a(al_75776e99[21]),
-    .b(al_347def8c[31]),
+    .a(al_4fdd6779[31]),
+    .b(al_75776e99[21]),
     .c(al_747bea5[21]),
     .o(al_bc5c8fc3[21]));
   AL_MAP_LUT3 #(
-    .EQN("(A*~(C)*~(B)+A*C*~(B)+~(A)*C*B+A*C*B)"),
-    .INIT(8'he2))
+    .EQN("(B*~(C)*~(A)+B*C*~(A)+~(B)*C*A+B*C*A)"),
+    .INIT(8'he4))
     al_140def52 (
-    .a(al_75776e99[22]),
-    .b(al_347def8c[31]),
+    .a(al_4fdd6779[31]),
+    .b(al_75776e99[22]),
     .c(al_747bea5[22]),
     .o(al_bc5c8fc3[22]));
   AL_MAP_LUT3 #(
-    .EQN("(A*~(C)*~(B)+A*C*~(B)+~(A)*C*B+A*C*B)"),
-    .INIT(8'he2))
+    .EQN("(B*~(C)*~(A)+B*C*~(A)+~(B)*C*A+B*C*A)"),
+    .INIT(8'he4))
     al_e47f3abb (
-    .a(al_75776e99[23]),
-    .b(al_347def8c[31]),
+    .a(al_4fdd6779[31]),
+    .b(al_75776e99[23]),
     .c(al_747bea5[23]),
     .o(al_bc5c8fc3[23]));
   AL_MAP_LUT3 #(
-    .EQN("(A*~(C)*~(B)+A*C*~(B)+~(A)*C*B+A*C*B)"),
-    .INIT(8'he2))
+    .EQN("(B*~(C)*~(A)+B*C*~(A)+~(B)*C*A+B*C*A)"),
+    .INIT(8'he4))
     al_793f3f4a (
-    .a(al_75776e99[24]),
-    .b(al_347def8c[31]),
+    .a(al_4fdd6779[31]),
+    .b(al_75776e99[24]),
     .c(al_747bea5[24]),
     .o(al_bc5c8fc3[24]));
   AL_MAP_LUT3 #(
-    .EQN("(A*~(C)*~(B)+A*C*~(B)+~(A)*C*B+A*C*B)"),
-    .INIT(8'he2))
+    .EQN("(B*~(C)*~(A)+B*C*~(A)+~(B)*C*A+B*C*A)"),
+    .INIT(8'he4))
     al_b67f5d6f (
-    .a(al_75776e99[25]),
-    .b(al_347def8c[31]),
+    .a(al_4fdd6779[31]),
+    .b(al_75776e99[25]),
     .c(al_747bea5[25]),
     .o(al_bc5c8fc3[25]));
   AL_MAP_LUT3 #(
-    .EQN("(A*~(C)*~(B)+A*C*~(B)+~(A)*C*B+A*C*B)"),
-    .INIT(8'he2))
+    .EQN("(B*~(C)*~(A)+B*C*~(A)+~(B)*C*A+B*C*A)"),
+    .INIT(8'he4))
     al_b21e36bd (
-    .a(al_75776e99[26]),
-    .b(al_347def8c[31]),
+    .a(al_4fdd6779[31]),
+    .b(al_75776e99[26]),
     .c(al_747bea5[26]),
     .o(al_bc5c8fc3[26]));
   AL_MAP_LUT3 #(
-    .EQN("(A*~(C)*~(B)+A*C*~(B)+~(A)*C*B+A*C*B)"),
-    .INIT(8'he2))
+    .EQN("(B*~(C)*~(A)+B*C*~(A)+~(B)*C*A+B*C*A)"),
+    .INIT(8'he4))
     al_8a3a1b57 (
-    .a(al_75776e99[27]),
-    .b(al_347def8c[31]),
+    .a(al_4fdd6779[31]),
+    .b(al_75776e99[27]),
     .c(al_747bea5[27]),
     .o(al_bc5c8fc3[27]));
   AL_MAP_LUT3 #(
-    .EQN("(A*~(C)*~(B)+A*C*~(B)+~(A)*C*B+A*C*B)"),
-    .INIT(8'he2))
+    .EQN("(B*~(C)*~(A)+B*C*~(A)+~(B)*C*A+B*C*A)"),
+    .INIT(8'he4))
     al_79985b62 (
-    .a(al_75776e99[28]),
-    .b(al_347def8c[31]),
+    .a(al_4fdd6779[31]),
+    .b(al_75776e99[28]),
     .c(al_747bea5[28]),
     .o(al_bc5c8fc3[28]));
   AL_MAP_LUT3 #(
-    .EQN("(A*~(C)*~(B)+A*C*~(B)+~(A)*C*B+A*C*B)"),
-    .INIT(8'he2))
+    .EQN("(B*~(C)*~(A)+B*C*~(A)+~(B)*C*A+B*C*A)"),
+    .INIT(8'he4))
     al_b5f8d761 (
-    .a(al_75776e99[29]),
-    .b(al_347def8c[31]),
+    .a(al_4fdd6779[31]),
+    .b(al_75776e99[29]),
     .c(al_747bea5[29]),
     .o(al_bc5c8fc3[29]));
   AL_MAP_LUT3 #(
-    .EQN("(A*~(C)*~(B)+A*C*~(B)+~(A)*C*B+A*C*B)"),
-    .INIT(8'he2))
+    .EQN("(B*~(C)*~(A)+B*C*~(A)+~(B)*C*A+B*C*A)"),
+    .INIT(8'he4))
     al_bba87de2 (
-    .a(al_75776e99[2]),
-    .b(al_347def8c[31]),
+    .a(al_4fdd6779[31]),
+    .b(al_75776e99[2]),
     .c(al_747bea5[2]),
     .o(al_bc5c8fc3[2]));
   AL_MAP_LUT3 #(
-    .EQN("(A*~(C)*~(B)+A*C*~(B)+~(A)*C*B+A*C*B)"),
-    .INIT(8'he2))
+    .EQN("(B*~(C)*~(A)+B*C*~(A)+~(B)*C*A+B*C*A)"),
+    .INIT(8'he4))
     al_482b61f8 (
-    .a(al_75776e99[30]),
-    .b(al_347def8c[31]),
+    .a(al_4fdd6779[31]),
+    .b(al_75776e99[30]),
     .c(al_747bea5[30]),
     .o(al_bc5c8fc3[30]));
   AL_MAP_LUT2 #(
     .EQN("(B*A)"),
     .INIT(4'h8))
     al_36476473 (
-    .a(al_347def8c[31]),
+    .a(al_4fdd6779[31]),
     .b(al_747bea5[31]),
     .o(al_bc5c8fc3[31]));
   AL_MAP_LUT3 #(
-    .EQN("(A*~(C)*~(B)+A*C*~(B)+~(A)*C*B+A*C*B)"),
-    .INIT(8'he2))
+    .EQN("(B*~(C)*~(A)+B*C*~(A)+~(B)*C*A+B*C*A)"),
+    .INIT(8'he4))
     al_a8d32043 (
-    .a(al_75776e99[3]),
-    .b(al_347def8c[31]),
+    .a(al_4fdd6779[31]),
+    .b(al_75776e99[3]),
     .c(al_747bea5[3]),
     .o(al_bc5c8fc3[3]));
   AL_MAP_LUT3 #(
-    .EQN("(A*~(C)*~(B)+A*C*~(B)+~(A)*C*B+A*C*B)"),
-    .INIT(8'he2))
+    .EQN("(B*~(C)*~(A)+B*C*~(A)+~(B)*C*A+B*C*A)"),
+    .INIT(8'he4))
     al_c61147f4 (
-    .a(al_75776e99[4]),
-    .b(al_347def8c[31]),
+    .a(al_4fdd6779[31]),
+    .b(al_75776e99[4]),
     .c(al_747bea5[4]),
     .o(al_bc5c8fc3[4]));
   AL_MAP_LUT3 #(
-    .EQN("(A*~(C)*~(B)+A*C*~(B)+~(A)*C*B+A*C*B)"),
-    .INIT(8'he2))
+    .EQN("(B*~(C)*~(A)+B*C*~(A)+~(B)*C*A+B*C*A)"),
+    .INIT(8'he4))
     al_b08d86be (
-    .a(al_75776e99[5]),
-    .b(al_347def8c[31]),
+    .a(al_4fdd6779[31]),
+    .b(al_75776e99[5]),
     .c(al_747bea5[5]),
     .o(al_bc5c8fc3[5]));
   AL_MAP_LUT3 #(
-    .EQN("(A*~(C)*~(B)+A*C*~(B)+~(A)*C*B+A*C*B)"),
-    .INIT(8'he2))
+    .EQN("(B*~(C)*~(A)+B*C*~(A)+~(B)*C*A+B*C*A)"),
+    .INIT(8'he4))
     al_4326cc2d (
-    .a(al_75776e99[6]),
-    .b(al_347def8c[31]),
+    .a(al_4fdd6779[31]),
+    .b(al_75776e99[6]),
     .c(al_747bea5[6]),
     .o(al_bc5c8fc3[6]));
   AL_MAP_LUT3 #(
-    .EQN("(A*~(C)*~(B)+A*C*~(B)+~(A)*C*B+A*C*B)"),
-    .INIT(8'he2))
+    .EQN("(B*~(C)*~(A)+B*C*~(A)+~(B)*C*A+B*C*A)"),
+    .INIT(8'he4))
     al_dfe3ec93 (
-    .a(al_75776e99[7]),
-    .b(al_347def8c[31]),
+    .a(al_4fdd6779[31]),
+    .b(al_75776e99[7]),
     .c(al_747bea5[7]),
     .o(al_bc5c8fc3[7]));
   AL_MAP_LUT3 #(
-    .EQN("(A*~(C)*~(B)+A*C*~(B)+~(A)*C*B+A*C*B)"),
-    .INIT(8'he2))
+    .EQN("(B*~(C)*~(A)+B*C*~(A)+~(B)*C*A+B*C*A)"),
+    .INIT(8'he4))
     al_faff0718 (
-    .a(al_75776e99[8]),
-    .b(al_347def8c[31]),
+    .a(al_4fdd6779[31]),
+    .b(al_75776e99[8]),
     .c(al_747bea5[8]),
     .o(al_bc5c8fc3[8]));
   AL_MAP_LUT3 #(
-    .EQN("(A*~(C)*~(B)+A*C*~(B)+~(A)*C*B+A*C*B)"),
-    .INIT(8'he2))
+    .EQN("(B*~(C)*~(A)+B*C*~(A)+~(B)*C*A+B*C*A)"),
+    .INIT(8'he4))
     al_249078a7 (
-    .a(al_75776e99[9]),
-    .b(al_347def8c[31]),
+    .a(al_4fdd6779[31]),
+    .b(al_75776e99[9]),
     .c(al_747bea5[9]),
     .o(al_bc5c8fc3[9]));
 
